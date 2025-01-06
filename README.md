@@ -1,8 +1,8 @@
-# Svelte 5 UI Lib (OdJ Edition)
+# OdJ Svelte UI
 
-This is a fork from Flowbite. I just made some changes that fits better my taste.
+This is a fork from [Flowbite Svelte 5 with Runes](https://svelte-5-ui-lib.codewithshin.com/). I just made some changes that fits better my taste.
 
-- [Docs](https://svelte-5-ui-lib.codewithshin.com/)
+- [Original Docs](https://svelte-5-ui-lib.codewithshin.com/)
 
 ## Installation
 
