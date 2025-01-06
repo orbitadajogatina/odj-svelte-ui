@@ -1,6 +1,6 @@
-# Svelte 5 UI Lib
+# Svelte 5 UI Lib (OdJ Edition)
 
-Svelte 5 UI Lib is a UI library built from scratch to leverage Svelte 5's runes system, creating smooth, reactive components.
+This is a fork from Flowbite. I just made some changes that fits better my taste.
 
 - [Docs](https://svelte-5-ui-lib.codewithshin.com/)
 
@@ -13,7 +13,7 @@ npx sv create myapp // select to install tailwindcss
 cd myapp
 pnpm install
 pnpm run dev
-pnpm i -D svelte-5-ui-lib
+pnpm i -D odj-svelte-ui
 ```
 
 Add the following to tailwind.config.js:
@@ -22,7 +22,7 @@ Add the following to tailwind.config.js:
 import type { Config } from 'tailwindcss';
 
 export default {
-  content: ['./src/**/*.{html,js,svelte,ts}', './node_modules/svelte-5-ui-lib/**/*.{html,js,svelte,ts}'],
+  content: ['./src/**/*.{html,js,svelte,ts}', './node_modules/odj-svelte-ui/**/*.{html,js,svelte,ts}'],
   darkMode: 'selector',
   theme: {
     extend: {
