@@ -31,7 +31,6 @@
   let navClass = "w-full divide-gray-200 border-gray-200 bg-gray-50 dark_bg_theme text-gray-500 dark:divide-gray-700 dark:border-gray-700 dark:transparent dark:text-gray-400 sm:px-4";
   let { children, data } = $props();
 
-  const analyticsId = data.ANALYTICS_ID_RUNES_LIB;
   // meta tags
   let metaTags = $state($page.data.pageMetaTags ? deepMerge($page.data.layoutMetaTags, $page.data.pageMetaTags) : data.layoutMetaTags);
 
@@ -42,7 +41,6 @@
   });
 </script>
 
-<Runatics {analyticsId} />
 <RunesMetaTags {...metaTags} />
 
 <header class="sticky top-0 z-50 mx-auto w-full flex-none border-b border-gray-200 bg-gray-50 lg:pl-4 dark:border-gray-600 dark:bg-gray-950">
