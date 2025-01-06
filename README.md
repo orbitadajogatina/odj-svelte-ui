@@ -6,7 +6,7 @@ This is a fork from Flowbite. I just made some changes that fits better my taste
 
 ## Installation
 
-Install `svelte`, `tailwindcss`, and `svelte-5-ui-lib`, update dependencies and install the latest:
+Install `svelte`, `tailwindcss`, and `odj-svelte-ui`, update dependencies and install the latest:
 
 ```sh
 npx sv create myapp // select to install tailwindcss
