@@ -5,25 +5,26 @@ export const button = tv({
   variants: {
     color: {
       // "primary" | "dark" | "alternative" | "light" | "secondary" | "gray" | "red" | "orange" | "amber" | "yellow" | "lime" | "green" | "emerald" | "teal" | "cyan" | "sky" | "blue" | "indigo" | "violet" | "purple" | "fuchsia" | "pink" | "rose"
-      primary: "text-white bg-primary-700 hover:bg-primary-800 dark:bg-primary-600 dark:hover:bg-primary-700 focus-within:ring-primary-300 dark:focus-within:ring-primary-800",
-      dark: "text-white bg-gray-800 hover:bg-gray-900 dark:bg-gray-800 dark:hover:bg-gray-700 focus-within:ring-gray-300 dark:focus-within:ring-gray-700",
-      alternative: "text-gray-900 bg-white border border-gray-200 hover:bg-gray-100 dark:bg-gray-800 dark:text-gray-400 hover:text-primary-700 focus-within:text-primary-700 dark:focus-within:text-white dark:hover:text-white focus-within:ring-gray-200 dark:focus-within:ring-gray-700",
-      light: "text-gray-900 bg-white border border-gray-300 hover:bg-gray-100 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 focus-within:ring-gray-200 dark:focus-within:ring-gray-700",
-      secondary: "text-white bg-secondary-700 hover:bg-secondary-800 dark:bg-secondary-600 dark:hover:bg-secondary-700 focus-within:ring-secondary-300 dark:focus-within:ring-secondary-800",
-      gray: "text-white bg-gray-700 hover:bg-gray-800 dark:bg-gray-600 dark:hover:bg-gray-700 focus-within:ring-gray-300 dark:focus-within:ring-gray-800",
-      red: "text-white bg-red-700 hover:bg-red-800 dark:bg-red-600 dark:hover:bg-red-700 focus-within:ring-red-300 dark:focus-within:ring-red-900",
-      orange: "text-white bg-orange-700 hover:bg-orange-800 dark:bg-orange-600 dark:hover:bg-orange-700 focus-within:ring-orange-300 dark:focus-within:ring-orange-900",
-      amber: "text-white bg-amber-700 hover:bg-amber-800 dark:bg-amber-600 dark:hover:bg-amber-700 focus-within:ring-amber-300 dark:focus-within:ring-amber-900",
-      yellow: "text-white bg-yellow-400 hover:bg-yellow-500 focus-within:ring-yellow-300 dark:focus-within:ring-yellow-900",
-      lime: "text-white bg-lime-700 hover:bg-lime-800 dark:bg-lime-600 dark:hover:bg-lime-700 focus-within:ring-lime-300 dark:focus-within:ring-lime-800",
-      green: "text-white bg-green-700 hover:bg-green-800 dark:bg-green-600 dark:hover:bg-green-700 focus-within:ring-green-300 dark:focus-within:ring-green-800",
-      emerald: "text-white bg-emerald-700 hover:bg-emerald-800 dark:bg-emerald-600 dark:hover:bg-emerald-700 focus-within:ring-emerald-300 dark:focus-within:ring-emerald-800",
-      teal: "text-white bg-teal-700 hover:bg-teal-800 dark:bg-teal-600 dark:hover:bg-teal-700 focus-within:ring-teal-300 dark:focus-within:ring-teal-800",
-      cyan: "text-white bg-cyan-700 hover:bg-cyan-800 dark:bg-cyan-600 dark:hover:bg-cyan-700 focus-within:ring-cyan-300 dark:focus-within:ring-cyan-800",
-      sky: "text-white bg-sky-700 hover:bg-sky-800 dark:bg-sky-600 dark:hover:bg-sky-700 focus-within:ring-sky-300 dark:focus-within:ring-sky-800",
-      blue: "text-white bg-blue-700 hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700 focus-within:ring-blue-300 dark:focus-within:ring-blue-800",
-      indigo: "text-white bg-indigo-700 hover:bg-indigo-800 dark:bg-indigo-600 dark:hover:bg-indigo-700 focus-within:ring-indigo-300 dark:focus-within:ring-indigo-800",
-      violet: "text-white bg-violet-700 hover:bg-violet-800 dark:bg-violet-600 dark:hover:bg-violet-700 focus-within:ring-violet-300 dark:focus-within:ring-violet-800",
+      // text-white bg-primary-700 hover:bg-primary-800 dark:bg-primary-600 dark:hover:bg-primary-700
+      primary: "text-white bg-primary-700 hover:bg-primary-800 dark:bg-primary-600 dark:hover:bg-primary-700 focus-visible:ring-primary-300 dark:focus-visible:ring-primary-800",
+      dark: "text-white bg-neutral-800 hover:bg-neutral-900 dark:bg-neutral-800 dark:hover:bg-neutral-700 focus-visible:ring-neutral-300 dark:focus-visible:ring-neutral-700",
+      alternative: "text-neutral-900 bg-white border border-neutral-200 hover:bg-neutral-100 dark:bg-neutral-800 dark:text-neutral-400 hover:text-primary-700 focus-visible:text-primary-700 dark:focus-visible:text-white dark:hover:text-white focus-visible:ring-neutral-200 dark:focus-visible:ring-neutral-700",
+      light: "text-neutral-900 bg-white border border-neutral-300 hover:bg-neutral-100 dark:bg-neutral-800 dark:text-white dark:border-neutral-600 dark:hover:bg-neutral-700 dark:hover:border-neutral-600 focus-visible:ring-neutral-200 dark:focus-visible:ring-neutral-700",
+      secondary: "text-white bg-secondary-700 hover:bg-secondary-800 dark:bg-secondary-600 dark:hover:bg-secondary-700 focus-visible:ring-secondary-300 dark:focus-visible:ring-secondary-800",
+      gray: "text-white bg-gray-700 hover:bg-gray-800 dark:bg-gray-600 dark:hover:bg-gray-700 focus-visible:ring-gray-300 dark:focus-visible:ring-gray-800",
+      red: "text-white bg-red-700 hover:bg-red-800 dark:bg-red-600 dark:hover:bg-red-700 focus-visible:ring-red-300 dark:focus-visible:ring-red-900",
+      orange: "text-white bg-orange-700 hover:bg-orange-800 dark:bg-orange-600 dark:hover:bg-orange-700 focus-visible:ring-orange-300 dark:focus-visible:ring-orange-900",
+      amber: "text-white bg-amber-700 hover:bg-amber-800 dark:bg-amber-600 dark:hover:bg-amber-700 focus-visible:ring-amber-300 dark:focus-visible:ring-amber-900",
+      yellow: "text-white bg-yellow-400 hover:bg-yellow-500 focus-visible:ring-yellow-300 dark:focus-visible:ring-yellow-900",
+      lime: "text-white bg-lime-700 hover:bg-lime-800 dark:bg-lime-600 dark:hover:bg-lime-700 focus-visible:ring-lime-300 dark:focus-visible:ring-lime-800",
+      green: "text-white bg-green-700 hover:bg-green-800 dark:bg-green-600 dark:hover:bg-green-700 focus-visible:ring-green-300 dark:focus-visible:ring-green-800",
+      emerald: "text-white bg-emerald-700 hover:bg-emerald-800 dark:bg-emerald-600 dark:hover:bg-emerald-700 focus-visible:ring-emerald-300 dark:focus-visible:ring-emerald-800",
+      teal: "text-white bg-teal-700 hover:bg-teal-800 dark:bg-teal-600 dark:hover:bg-teal-700 focus-visible:ring-teal-300 dark:focus-visible:ring-teal-800",
+      cyan: "text-white bg-cyan-700 hover:bg-cyan-800 dark:bg-cyan-600 dark:hover:bg-cyan-700 focus-visible:ring-cyan-300 dark:focus-visible:ring-cyan-800",
+      sky: "text-white bg-sky-700 hover:bg-sky-800 dark:bg-sky-600 dark:hover:bg-sky-700 focus-visible:ring-sky-300 dark:focus-visible:ring-sky-800",
+      blue: "text-white bg-blue-700 hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700 focus-visible:ring-blue-300 dark:focus-visible:ring-blue-800",
+      indigo: "text-white bg-indigo-700 hover:bg-indigo-800 dark:bg-indigo-600 dark:hover:bg-indigo-700 focus-visible:ring-indigo-300 dark:focus-visible:ring-indigo-800",
+      violet: "text-white bg-violet-700 hover:bg-violet-800 dark:bg-violet-600 dark:hover:bg-violet-700 focus-visible:ring-violet-300 dark:focus-visible:ring-violet-800",
       purple: "text-white bg-purple-700 hover:bg-purple-800 dark:bg-purple-600 dark:hover:bg-purple-700",
       fuchsia: "text-white bg-fuchsia-700 hover:bg-fuchsia-800 dark:bg-fuchsia-600 dark:hover:bg-fuchsia-700",
       pink: "text-white bg-pink-700 hover:bg-pink-800 dark:bg-pink-600 dark:hover:bg-pink-700",
@@ -37,11 +38,11 @@ export const button = tv({
       xl: "px-6 py-3.5 text-base"
     },
     group: {
-      true: "focus-within:ring-2 focus-within:z-10",
-      false: "focus-within:ring-4 focus-within:outline-none"
+      true: "focus-visible:ring-2 focus-visible:z-10",
+      false: "focus-visible:ring-4 focus-visible:outline-none"
     },
     outline: {
-      true: "border border-gray-300 dark:border-gray-400"
+      true: "border border-neutral-300 dark:border-neutral-400"
     },
     shadow: {
       true: "shadow-lg"
@@ -60,24 +61,24 @@ export const button = tv({
   compoundVariants: [
     // {
     //   outline: true,
-    //   class: 'border dark:border-gray-900'
+    //   class: 'border dark:border-neutral-900'
     // },
     // dark, alternative, light
-    // primary, secondary, gray, red, orange, amber, yellow, lime, green, emerald, teal, cyan, sky, blue, indigo, violet, purple, fuchsia, pink, rose
+    // primary, secondary, neutral, red, orange, amber, yellow, lime, green, emerald, teal, cyan, sky, blue, indigo, violet, purple, fuchsia, pink, rose
     {
       shadow: true,
       color: "dark",
-      class: "shadow-gray-500/50 dark:shadow-gray-800/80"
+      class: "shadow-neutral-500/50 dark:shadow-neutral-800/80"
     },
     {
       shadow: true,
       color: "alternative",
-      class: "shadow-gray-500/50 dark:shadow-gray-800/80"
+      class: "shadow-neutral-500/50 dark:shadow-neutral-800/80"
     },
     {
       shadow: true,
       color: "light",
-      class: "shadow-gray-500/50 dark:shadow-gray-800/80"
+      class: "shadow-neutral-500/50 dark:shadow-neutral-800/80"
     },
     {
       shadow: true,
@@ -182,24 +183,24 @@ export const button = tv({
     {
       color: "alternative",
       group: true,
-      class: "dark:bg-gray-700 dark:text-white dark:border-gray-700 dark:hover:border-gray-600 dark:hover:bg-gray-600"
+      class: "dark:bg-neutral-700 dark:text-white dark:border-neutral-700 dark:hover:border-neutral-600 dark:hover:bg-neutral-600"
     },
     {
       color: "alternative",
       group: true,
-      class: "dark:bg-transparent dark:border-gray-600 dark:hover:border-gray-700"
+      class: "dark:bg-transparent dark:border-neutral-600 dark:hover:border-neutral-700"
     },
     {
       outline: true,
       color: "dark",
       group: true,
-      class: "bg-gray-900 border-gray-800 dark:border-white dark:bg-gray-600"
+      class: "bg-neutral-900 border-neutral-800 dark:border-white dark:bg-neutral-600"
     },
     {
       outline: true,
       color: "dark",
       group: true,
-      class: "dark:text-gray-400 dark:border-gray-700"
+      class: "dark:text-neutral-400 dark:border-neutral-700"
     },
     {
       outline: true,
@@ -254,7 +255,7 @@ export const gradientButton = tv({
       },
       cyan: { base: "text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-cyan-300 dark:focus:ring-cyan-800" },
       teal: { base: "text-white bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br focus:ring-teal-300 dark:focus:ring-teal-800" },
-      lime: { base: "text-gray-900 bg-gradient-to-r from-lime-200 via-lime-400 to-lime-500 hover:bg-gradient-to-br focus:ring-lime-300 dark:focus:ring-lime-800" },
+      lime: { base: "text-neutral-900 bg-gradient-to-r from-lime-200 via-lime-400 to-lime-500 hover:bg-gradient-to-br focus:ring-lime-300 dark:focus:ring-lime-800" },
       red: { base: "text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-red-300 dark:focus:ring-red-800" },
       pink: { base: "text-white bg-gradient-to-r from-pink-400 via-pink-500 to-pink-600 hover:bg-gradient-to-br focus:ring-pink-300 dark:focus:ring-pink-800" },
       purple: { base: "text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-purple-300 dark:focus:ring-purple-800" },
@@ -263,13 +264,13 @@ export const gradientButton = tv({
       greenToBlue: { base: "text-white bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-green-200 dark:focus:ring-green-800" },
       purpleToPink: { base: "text-white bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l focus:ring-purple-200 dark:focus:ring-purple-800" },
       pinkToOrange: { base: "text-white bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-pink-200 dark:focus:ring-pink-800" },
-      tealToLime: { base: "text-gray-900 bg-gradient-to-r from-teal-200 to-lime-200 hover:bg-gradient-to-l focus:ring-lime-200 dark:focus:ring-teal-700" },
-      redToYellow: { base: "text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-red-100 dark:focus:ring-red-400" }
+      tealToLime: { base: "text-neutral-900 bg-gradient-to-r from-teal-200 to-lime-200 hover:bg-gradient-to-l focus:ring-lime-200 dark:focus:ring-teal-700" },
+      redToYellow: { base: "text-neutral-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-red-100 dark:focus:ring-red-400" }
     },
     outline: {
       true: {
         base: "p-0.5",
-        outlineWrapper: "bg-white !text-gray-900 dark:bg-gray-900 dark:!text-white hover:bg-transparent hover:!text-inherit group-hover:!bg-opacity-0 group-hover:!text-inherit"
+        outlineWrapper: "bg-white !text-neutral-900 dark:bg-neutral-900 dark:!text-white hover:bg-transparent hover:!text-inherit group-hover:!bg-opacity-0 group-hover:!text-inherit"
       }
     },
     pill: {
