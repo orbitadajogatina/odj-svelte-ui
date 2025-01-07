@@ -4,8 +4,8 @@ export const input = tv({
   slots: {
     base: "relative w-full",
     input: "block w-full disabled:cursor-not-allowed disabled:opacity-50 rtl:text-right",
-    left: "flex absolute inset-y-0 items-center text-gray-500 dark:text-gray-400 pointer-events-none start-0 ps-2.5",
-    right: "flex absolute inset-y-0 items-center text-gray-500 dark:text-gray-400 end-0 p-2.5"
+    left: "flex absolute inset-y-0 items-center text-light-surface-500 dark:text-dark-surface-400 pointer-events-none start-0 ps-2.5",
+    right: "flex absolute inset-y-0 items-center text-light-surface-500 dark:text-dark-surface-400 end-0 p-2.5"
   },
   variants: {
     size: {
@@ -15,10 +15,10 @@ export const input = tv({
     },
     color: {
       default: {
-        input: "border border-light-background-300 dark:border-dark-surface-600 focus:border-primary-500 focus:ring-primary-500 dark:focus:border-primary-500 dark:focus:ring-primary-50 bg-light-background-50 text-gray-900 dark:bg-dark-surface-700 dark:text-white dark:placeholder-dark-surface-400 bg-light-background-50 text-gray-900 dark:bg-dark-surface-700 dark:text-white dark:placeholder-dark-surface-400"
+        input: "border border-light-surface-300 dark:border-dark-surface-600 focus:border-primary-500 focus:ring-primary-500 dark:focus:border-primary-500 dark:focus:ring-primary-500 bg-light-surface-50 text-light-surface-900 dark:bg-dark-surface-700 dark:text-white dark:placeholder-dark-surface-400 bg-light-surface-50 text-light-surface-900 dark:bg-dark-surface-700 dark:text-white dark:placeholder-dark-surface-400 outline-none focus:ring-1"
       },
       tinted: {
-        input: "border border-neutral-300 dark:border-neutral-500 bg-light-background-50 text-neutral-900 dark:bg-dark-surface-600 dark:text-white dark:placeholder-dark-surface-400"
+        input: "border border-neutral-300 dark:border-neutral-500 bg-light-surface-50 text-neutral-900 dark:bg-dark-surface-600 dark:text-white dark:placeholder-dark-surface-400"
       },
       primary: {
         input: "border border-primary-200 dark:border-primary-400 focus:ring-primary-500 focus:border-primary-600 dark:focus:ring-primary-500 dark:focus:border-primary-500 bg-primary-50 text-primary-900 placeholder-primary-700 dark:text-primary-400 dark:placeholder-primary-500 dark:bg-dark-surface-700"
@@ -45,7 +45,7 @@ export const input = tv({
         input: "border border-orange-200 dark:border-orange-400 focus:ring-orange-500 focus:border-orange-600 dark:focus:ring-orange-500 dark:focus:border-orange-500 bg-orange-50 text-orange-900 placeholder-orange-700 dark:text-orange-400 dark:placeholder-orange-500 dark:bg-dark-surface-700"
       },
       gray: {
-        input: "border border-gray-200 dark:border-gray-400 focus:ring-gray-500 focus:border-gray-600 dark:focus:ring-gray-500 dark:focus:border-gray-500 bg-light-background-50 text-gray-900 placeholder-gray-700 dark:text-gray-400 dark:placeholder-dark-surface-500 dark:bg-dark-surface-700"
+        input: "border border-gray-200 dark:border-gray-400 focus:ring-gray-500 focus:border-gray-600 dark:focus:ring-gray-500 dark:focus:border-gray-500 bg-light-surface-50 text-gray-900 placeholder-gray-700 dark:text-gray-400 dark:placeholder-dark-surface-500 dark:bg-dark-surface-700"
       },
       teal: {
         input: "border border-teal-200 dark:border-teal-400 focus:ring-teal-500 focus:border-teal-600 dark:focus:ring-teal-500 dark:focus:border-teal-500 bg-teal-50 text-teal-900 placeholder-teal-700 dark:text-teal-400 dark:placeholder-teal-500 dark:bg-dark-surface-700"
