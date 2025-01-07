@@ -49,10 +49,10 @@
           {/if}
         </button>
       {:else if onclick}
-        <CloseButton class="-my-1.5 -me-1.5 ms-auto dark:hover:bg-gray-700" {color} ariaLabel="Remove badge" {onclick} />
+        <CloseButton class="-my-1.5 -me-1.5 ms-auto" {color} ariaLabel="Remove badge" {onclick} />
       {:else}
         <CloseButton
-          class="-my-1.5 -me-1.5 ms-auto dark:hover:bg-gray-700"
+          class="-my-1.5 -me-1.5 ms-auto"
           {color}
           ariaLabel="Remove alert"
           onclick={() => {
