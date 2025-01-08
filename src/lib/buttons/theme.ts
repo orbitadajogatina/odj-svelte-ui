@@ -1,7 +1,7 @@
 import { tv } from "tailwind-variants";
 
 export const button = tv({
-  base: "text-center font-medium inline-flex items-center justify-center",
+  base: "text-center font-medium inline-flex items-center justify-center active:brightness-[0.85]",
   variants: {
     color: {
       // "primary" | "dark" | "alternative" | "light" | "secondary" | "gray" | "red" | "orange" | "amber" | "yellow" | "lime" | "green" | "emerald" | "teal" | "cyan" | "sky" | "blue" | "indigo" | "violet" | "purple" | "fuchsia" | "pink" | "rose"
@@ -42,7 +42,7 @@ export const button = tv({
       false: "focus-visible:ring-4 focus-visible:outline-none"
     },
     outline: {
-      true: "border border-light-surface-300 dark:border-dark-surface-400"
+      true: "border bg-"
     },
     shadow: {
       true: "shadow-lg"
