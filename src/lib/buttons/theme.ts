@@ -42,7 +42,7 @@ export const button = tv({
       false: "focus-visible:ring-4 focus-visible:outline-none"
     },
     outline: {
-      true: "border bg-"
+      true: "border !bg-transparent"
     },
     shadow: {
       true: "shadow-lg"
@@ -180,6 +180,119 @@ export const button = tv({
       color: "rose",
       class: "shadow-rose-500/50 dark:shadow-rose-800/80"
     },
+    {
+      outline: true,
+      color: "dark",
+      class: "text-dark-surface-900 hover:text-white border border-dark-surface-800 hover:!bg-dark-surface-900 dark:border-dark-surface-600 dark:hover:text-white dark:hover:!bg-dark-surface-600"
+    },
+    {
+      outline: true,
+      color: "alternative",
+      class: "text-neutral-900 hover:text-white border border-neutral-800 hover:bg-neutral-900 focus:!bg-neutral-900 dark:border-neutral-600 dark:hover:text-white dark:hover:!bg-neutral-600"
+    },
+    {
+      outline: true,
+      color: "light",
+      class: "text-neutral-500 hover:text-neutral-900 bg-white border border-neutral-200 dark:border-neutral-600 dark:hover:text-white dark:text-neutral-400 hover:bg-neutral-50 dark:bg-neutral-700 dark:hover:bg-neutral-600"
+    },
+    {
+      outline: true,
+      color: "primary",
+      class: "text-primary-700 hover:text-white border-primary-700 hover:!bg-primary-800 dark:border-primary-500 dark:text-primary-500 dark:hover:text-white dark:hover:!bg-primary-600"
+    },
+    { 
+      outline: true,
+      color: "secondary", 
+      class: "text-secondary-700 hover:text-white border-secondary-700 hover:!bg-secondary-800 dark:border-secondary-500 dark:text-secondary-500 dark:hover:text-white dark:hover:!bg-secondary-600" 
+    },
+    { 
+      outline: true,
+      color: "gray", 
+      class: "text-gray-700 hover:text-white border-gray-700 hover:!bg-gray-800 dark:border-gray-500 dark:text-gray-500 dark:hover:text-white dark:hover:!bg-gray-600" 
+    },
+    { 
+      outline: true,
+      color: "red", 
+      class: "text-red-700 hover:text-white border-red-700 hover:!bg-red-800 dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:!bg-red-600" 
+    },
+    { 
+      outline: true,
+      color: "orange", 
+      class: "text-orange-700 hover:text-white border-orange-700 hover:!bg-orange-800 dark:border-orange-500 dark:text-orange-500 dark:hover:text-white dark:hover:!bg-orange-600" 
+    },
+    { 
+      outline: true,
+      color: "amber", 
+      class: "text-amber-700 hover:text-white border-amber-700 hover:!bg-amber-800 dark:border-amber-500 dark:text-amber-500 dark:hover:text-white dark:hover:!bg-amber-600" 
+    },
+    { 
+      outline: true,
+      color: "yellow", 
+      class: "text-yellow-700 hover:text-white border-yellow-700 hover:!bg-yellow-800 dark:border-yellow-500 dark:text-yellow-500 dark:hover:text-white dark:hover:!bg-yellow-600" 
+    },
+    { 
+      outline: true,
+      color: "lime", 
+      class: "text-lime-700 hover:text-white border-lime-700 hover:!bg-lime-800 dark:border-lime-500 dark:text-lime-500 dark:hover:text-white dark:hover:!bg-lime-600" 
+    },
+    { 
+      outline: true,
+      color: "green", 
+      class: "text-green-700 hover:text-white border-green-700 hover:!bg-green-800 dark:border-green-500 dark:text-green-500 dark:hover:text-white dark:hover:!bg-green-600" 
+    },
+    { 
+      outline: true,
+      color: "emerald", 
+      class: "text-emerald-700 hover:text-white border-emerald-700 hover:!bg-emerald-800 dark:border-emerald-500 dark:text-emerald-500 dark:hover:text-white dark:hover:!bg-emerald-600" 
+    },
+    { 
+      outline: true,
+      color: "teal", 
+      class: "text-teal-700 hover:text-white border-teal-700 hover:!bg-teal-800 dark:border-teal-500 dark:text-teal-500 dark:hover:text-white dark:hover:!bg-teal-600" 
+    },
+    { 
+      outline: true,
+      color: "cyan", 
+      class: "text-cyan-700 hover:text-white border-cyan-700 hover:!bg-cyan-800 dark:border-cyan-500 dark:text-cyan-500 dark:hover:text-white dark:hover:!bg-cyan-600" 
+    },
+    { 
+      outline: true,
+      color: "sky", 
+      class: "text-sky-700 hover:text-white border-sky-700 hover:!bg-sky-800 dark:border-sky-500 dark:text-sky-500 dark:hover:text-white dark:hover:!bg-sky-600" 
+    },
+    { 
+      outline: true,
+      color: "blue", 
+      class: "text-blue-700 hover:text-white border-blue-700 hover:!bg-blue-800 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:!bg-blue-600" 
+    },
+    { 
+      outline: true,
+      color: "indigo", 
+      class: "text-indigo-700 hover:text-white border-indigo-700 hover:!bg-indigo-800 dark:border-indigo-500 dark:text-indigo-500 dark:hover:text-white dark:hover:!bg-indigo-600" 
+    },
+    { 
+      outline: true,
+      color: "violet", 
+      class: "text-violet-700 hover:text-white border-violet-700 hover:!bg-violet-800 dark:border-violet-500 dark:text-violet-500 dark:hover:text-white dark:hover:!bg-violet-600" 
+    },
+    { 
+      outline: true,
+      color: "purple", 
+      class: "text-purple-700 hover:text-white border-purple-700 hover:!bg-purple-800 dark:border-purple-500 dark:text-purple-500 dark:hover:text-white dark:hover:!bg-purple-600" 
+    },
+    { 
+      outline: true,
+      color: "fuchsia", 
+      class: "text-fuchsia-700 hover:text-white border-fuchsia-700 hover:!bg-fuchsia-800 dark:border-fuchsia-500 dark:text-fuchsia-500 dark:hover:text-white dark:hover:!bg-fuchsia-600" 
+    },
+    { 
+      outline: true,
+      color: "pink", 
+      class: "text-pink-700 hover:text-white border-pink-700 hover:!bg-pink-800 dark:border-pink-500 dark:text-pink-500 dark:hover:text-white dark:hover:!bg-pink-600" },
+    { 
+      outline: true,
+      color: "rose", 
+      class: "text-rose-700 hover:text-white border-rose-700 hover:!bg-rose-800 dark:border-rose-500 dark:text-rose-500 dark:hover:text-white dark:hover:!bg-rose-600" },
     {
       color: "alternative",
       group: true,
