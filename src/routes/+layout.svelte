@@ -6,6 +6,7 @@
   import Footer from "./utils/Footer.svelte";
   import { Navbar, NavLi, NavBrand, NavUl, uiHelpers, Darkmode, Sidebar, SidebarGroup, SidebarItem, SidebarDropdownWrapper } from "$lib";
   import GitHub from "./utils/GitHub.svelte";
+  import Docs from "./utils/icons/Quote.svelte";
   import DynamicCodeBlockStyle from "./utils/DynamicCodeBlockStyle.svelte";
 
   const sidebarUi = uiHelpers();
@@ -43,7 +44,7 @@
 
 <RunesMetaTags {...metaTags} />
 
-<header class="sticky top-0 z-50 mx-auto w-full flex-none border-b border-gray-200 bg-gray-50 lg:pl-4 dark:border-gray-600 dark:bg-gray-950">
+<header class="sticky top-0 z-50 mx-auto w-full flex-none border-b border-gray-200 bg-gray-50 lg:pl-4 dark:border-gray-600 dark:bg-gray-900">
   <Navbar {navClass} {toggleNav} {closeNav} {navStatus} fluid div2Class="ml-auto w-full">
     {#snippet brand()}
       <button onclick={sidebarUi.toggle} type="button" class="z-50 mr-4 mt-1 lg:hidden" aria-controls="sidebar" aria-expanded={isOpen}>
@@ -52,13 +53,16 @@
           <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
         </svg>
       </button>
-      <NavBrand siteName="Svelte 5 UI lib" spanClass="text-xl sm:text-3xl">
+      <NavBrand siteName="OdJ Svelte UI" spanClass="text-xl sm:text-3xl">
         <img width="30" src="/images/svelte-icon.png" class="h-6 w-5 sm:h-10 sm:w-8" alt="svelte icon" />
       </NavBrand>
 
       <div class="ml-auto flex items-center space-x-2 md:order-1">
         <DynamicCodeBlockStyle class="mr-4 hidden sm:block" />
-        <a class="inline-block whitespace-normal rounded-lg p-1 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:ring-0 focus:ring-gray-400 dark:hover:bg-gray-600 dark:hover:text-white" href="https://github.com/shinokada/svelte-5-ui-lib" aria-label="View project on GitHub">
+        <a class="inline-block whitespace-normal rounded-lg p-1 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:ring-0 focus:ring-gray-400 dark:hover:bg-gray-600 dark:hover:text-white" href="https://svelte-5-ui-lib.codewithshin.com" aria-label="Original Docs" target="_blank">
+          <Docs width=20 height=20/>
+        </a>
+        <a class="inline-block whitespace-normal rounded-lg p-1 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:ring-0 focus:ring-gray-400 dark:hover:bg-gray-600 dark:hover:text-white" href="https://github.com/orbitadajogatina/odj-svelte-ui" aria-label="View project on GitHub" target="_blank">
           <GitHub class="hidden sm:block" tabindex={0} />
         </a>
         <Darkmode class="hidden sm:block" />
