@@ -17,7 +17,7 @@
     "dev": "vite dev",
     "build": "vite build",
     "preview": "vite preview",
-    "package": "svelte-kit sync && svelte-package && publint",
+    "package": "svelte-kit sync && svelte-package && publint && bun link",
     "prepublishOnly": "npm run package",
     "test": "npm run test:integration && npm run test:unit",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
@@ -91,6 +91,7 @@
   "type": "module",
   "dependencies": {
     "@floating-ui/dom": "^1.6.12",
+    "@skeletonlabs/floating-ui-svelte": "^0.3.9",
     "apexcharts": "^3.54.1",
     "clsx": "^2.1.1",
     "deepmerge": "^4.3.1",
