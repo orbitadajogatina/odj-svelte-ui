@@ -108,7 +108,7 @@
   {/snippet}
 </CodeWrapper>
 
-<H2>Show on click</H2>
+<!-- <H2>Show on click</H2>
 <CodeWrapper>
   <ExampleComponents.ShowOnClick />
   {#snippet codeblock()}
@@ -130,7 +130,7 @@
   {#snippet codeblock()}
     <HighlightCompo codeLang="ts" code={exampleModules["./examples/ExternalReference.svelte"] as string} />
   {/snippet}
-</CodeWrapper>
+</CodeWrapper> -->
 
 <H2>Inline</H2>
 <CodeWrapper>

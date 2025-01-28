@@ -3,14 +3,14 @@
   "props": [
     ["children", "any", ""],
     ["color", "any", "\"default\""],
-    ["showOn", "any", "\"hover\""],
-    ["arrow", "any", "true"],
+    ["arrow", "any", "false"],
     ["offset", "any", "8"],
     ["triggeredBy", "any", ""],
-    ["reference", "any", ""],
     ["position", "any", "\"top\" as Placement"],
-    ["strategy", "any", "\"absolute\""],
     ["class", "string", ""],
-    ["visible", "any", "false"]
+    ["arrowClass", "string", ""],
+    ["open", "boolean", "false"],
+    ["transition", "any", "fade"],
+    ["transitionOptions", "object", "{ duration: 200 }"]
   ]
 }
