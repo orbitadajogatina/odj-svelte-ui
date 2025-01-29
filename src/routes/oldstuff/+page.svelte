@@ -1,5 +1,5 @@
 <script>
-  import { Input, Alert, Badge, Button, Textarea } from '$lib/elements';
+  import { Input, Alert, Badge, Button, Textarea, Select } from '$lib/elements';
 </script>
 
 <Input type="text" />
@@ -16,3 +16,4 @@
 <br>
 <Input type="text" />
 <Textarea/>
+<Select items={[{value: 'A', name: 'B'}]}/>

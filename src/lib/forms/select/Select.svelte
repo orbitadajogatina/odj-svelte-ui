@@ -1,7 +1,7 @@
 <script lang="ts" generics="T">
   import { type SelectProps as Props, select as selectCls } from ".";
 
-  let { children, items, value = $bindable(), underline, size = "md", class: className, placeholder = "Choose option ...", ...restProps }: Props<T> = $props();
+  let { children, items, value = $bindable(), underline, size = "md", class: className, placeholder = "Choose option...", ...restProps }: Props<T> = $props();
 
   const selectStyle = $derived(selectCls({ underline, size, className }));
 </script>
@@ -13,7 +13,7 @@
 
   {#if items}
     {#each items as { value, name }}
-      <option {value}>{name}</option>
+      <option {value} class="text-dark-surface-950 dark:text-white required:invalid:text-dark-surface-400">{name}</option>
     {/each}
   {/if}
 
