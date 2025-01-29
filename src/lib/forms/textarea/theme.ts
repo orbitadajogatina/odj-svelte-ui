@@ -2,11 +2,11 @@ import { tv } from "tailwind-variants";
 
 export const textarea = tv({
   slots: {
-    base: "block text-sm border-0 px-0 bg-inherit dark:bg-inherit focus:outline-none focus:ring-0 disabled:cursor-not-allowed disabled:opacity-50",
-    wrapper: "rounded-lg bg-gray-50 dark:bg-gray-600 text-gray-900 dark:placeholder-gray-400 dark:text-white border border-gray-200 dark:border-gray-500",
-    innerWrapper: "py-2 px-4 bg-white dark:bg-gray-800",
-    headerCls: "py-2 px-3 border-gray-200 dark:border-gray-500",
-    footerCls: "py-2 px-3 border-gray-200 dark:border-gray-500"
+    base: "block text-sm bg-inherit dark:bg-inherit focus:outline-none disabled:cursor-not-allowed disabled:opacity-50",
+    wrapper: "",
+    innerWrapper: "",
+    headerCls: "py-2 px-3 border-light-surface-200 dark:border-dark-surface-500",
+    footerCls: "py-2 px-3 border-light-surface-200 dark:border-dark-surface-500"
   },
   variants: {
     cols: {
@@ -16,7 +16,14 @@ export const textarea = tv({
       }
     },
     wrapped: {
-      false: { base: "p-2.5 text-sm focus:ring-primary-500 border-gray-300 focus:border-primary-500 dark:focus:ring-primary-500 dark:focus:border-primary-500 disabled:cursor-not-allowed disabled:opacity-50" }
+      false: { 
+        base: "text-sm p-2.5 border border-light-surface-300 dark:border-dark-surface-600 focus:border-primary-500 focus:ring-primary-500 dark:focus:border-primary-500 dark:focus:ring-primary-500 bg-light-surface-50 text-light-surface-900 dark:bg-dark-surface-700 dark:text-white dark:placeholder-dark-surface-400 focus:ring-1 rounded-lg" 
+      },
+      true: { 
+        base: "focus:ring-0 border-0 px-0", 
+        wrapper: "rounded-lg bg-light-surface-50 dark:bg-dark-surface-600 text-light-surface-900 dark:placeholder-light-surface-400 dark:text-white border-light-surface-300 dark:border-dark-surface-600",
+        innerWrapper: "py-2 px-4 bg-white dark:bg-dark-surface-800" 
+      }
     },
     hasHeader: {
       true: {

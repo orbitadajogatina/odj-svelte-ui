@@ -1,5 +1,5 @@
 <script>
-  import { Input, Alert, Badge, Button } from '$lib/elements';
+  import { Input, Alert, Badge, Button, Textarea } from '$lib/elements';
 </script>
 
 <Input type="text" />
@@ -14,3 +14,5 @@
 <Button color="light">River Below</Button>
 <Button color="light" outline>River Below</Button>
 <br>
+<Input type="text" />
+<Textarea/>
