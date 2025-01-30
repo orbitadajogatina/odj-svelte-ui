@@ -14,7 +14,7 @@
 <nav aria-label={ariaLabel}>
   <ul class={paginationClass}>
     {#if typeof previous === "function"}
-      <li {...restProps}>
+      <li {...restProps} class="shrink-0">
         <PaginationItem {size} onclick={() => previous()} class={table ? "rounded-none rounded-l" : "rounded-none  rounded-s-lg"}>
           {#if prevContent}
             {@render prevContent()}
@@ -24,15 +24,17 @@
         </PaginationItem>
       </li>
     {/if}
-    {#each pages as { name, href, active, size }}
-      <li {...restProps}>
-        <PaginationItem {size} {active} {href}>
-          {name}
-        </PaginationItem>
-      </li>
-    {/each}
+    <div class="grid grid-flow-col auto-cols-[minmax(2.5rem,1fr)] overflow-x-auto">
+      {#each pages as { name, href, active }, index}
+        <li {...restProps}>
+          <PaginationItem {size} {active} {href} class={active || index == 0 || pages[index - 1]?.active ? "" : "border-l-0"}>
+            {name}
+          </PaginationItem>
+        </li>
+      {/each}
+    </div>
     {#if typeof next === "function"}
-      <li {...restProps}>
+      <li {...restProps} class="shrink-0">
         <PaginationItem {size} onclick={() => next()} class={table ? "rounded-none rounded-r" : "rounded-none rounded-e-lg"}>
           {#if nextContent}
             {@render nextContent()}
