@@ -2,7 +2,7 @@ import { tv } from "tailwind-variants";
 
 export const radio = tv({
   slots: {
-    input: "relative flex items-center w-4 h-4 bg-gray-100 border-gray-300 dark:ring-offset-gray-800 focus:ring-2 mr-2",
+    input: "relative flex items-center w-4 h-4 bg-light-surface-100 border-light-surface-300 dark:bg-dark-surface-100 dark:border-dark-surface-300 dark:ring-offset-dark-surface-800 focus:ring-2 mr-2",
     label: "flex items-center"
   },
   variants: {
@@ -66,8 +66,11 @@ export const radio = tv({
       }
     },
     tinted: {
-      true: { input: "dark:bg-gray-600 dark:border-gray-500" },
-      false: { input: "dark:bg-gray-700 dark:border-gray-600" }
+      true: { input: "dark:bg-dark-surface-600 dark:border-dark-surface-500" },
+      false: { input: "dark:bg-dark-surface-700 dark:border-dark-surface-600" }
+    },
+    custom: {
+      true: { input: "!sr-only peer" }
     }
   },
   defaultVariants: {
