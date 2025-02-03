@@ -12,8 +12,6 @@
     wrapped = false;
   }
 
-  $inspect(wrapped, hasHeader, hasFooter)
-
   const { base, wrapper, innerWrapper, headerCls, footerCls } = $derived(textarea({ wrapped, hasHeader, hasFooter, cols: !!cols }));
   // $inspect('wrapped: ', wrapped);
 </script>

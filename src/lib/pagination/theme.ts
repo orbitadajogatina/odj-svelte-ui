@@ -1,7 +1,7 @@
 import { tv } from "tailwind-variants";
 
 export const paginationItem = tv({
-  base: "flex items-center font-medium justify-center",
+  base: "flex items-center font-medium w-full justify-center",
   variants: {
     size: {
       default: "h-8 px-3 text-sm",
