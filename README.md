@@ -9,7 +9,7 @@ This is a fork from [Flowbite for Svelte 5 with Runes](https://svelte-5-ui-lib.c
   - All components: instead of using focus-within, uses focus-visible;
   - Forms: When focus, border slightly thicker;
   - The `Tooltip` is completely different;
-  - Some small design changes on `Alert`, `Button`, `Textarea`, `Modal`;
+  - Some small design changes on `Alert`, `Button`, `Textarea`, `Pagination`, `Modal`;
   - New `Tabs` styles;
 
 - You can choose the "background" color instead of using the hard-coded `gray` color. You have to choose your colors defining `light-surface` and `dark-surface` on `tailwind.config.js`.
