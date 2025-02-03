@@ -14,7 +14,7 @@ const closeButtonVariants = tv({
     color: {
       primary: "text-primary-500 focus-visible:ring-primary-400 active:bg-primary-300 dark:active:bg-primary-800/10 hover:bg-primary-200 dark:hover:bg-primary-800/20 dark:hover:text-primary-400",
       secondary: "text-secondary-500 focus-visible:ring-secondary-400 active:bg-secondary-300 dark:active:bg-secondary-800/10 hover:bg-secondary-200 dark:hover:bg-secondary-800/20 dark:hover:text-secondary-400",
-      surface: "text-light-surface-500 focus-visible:ring-light-surface-400 dark:focus-visible:ring-dark-surface-400 active:bg-light-surface-300 dark:active:bg-dark-surface-800/10 hover:bg-light-surface-200 dark:hover:bg-dark-surface-800/20 dark:hover:text-dark-surface-400",
+      surface: "text-light-surface-500 focus-visible:ring-light-surface-400 dark:focus-visible:ring-dark-surface-400 active:bg-light-surface-300 dark:active:bg-dark-surface-700/30 hover:bg-light-surface-200 dark:hover:bg-dark-surface-700/40 dark:hover:text-dark-surface-400",
       gray: "text-gray-500 focus-visible:ring-gray-400 active:bg-gray-300 dark:active:bg-gray-800/10 hover:bg-gray-200 dark:hover:bg-gray-800/20 dark:hover:text-gray-400",
       red: "text-red-500 focus-visible:ring-red-400 active:bg-red-300 dark:active:bg-red-800/10 hover:bg-red-200 dark:hover:bg-red-800/20 dark:hover:text-red-400",
       orange: "text-orange-500 focus-visible:ring-orange-400 active:bg-orange-300 dark:active:bg-orange-800/10 hover:bg-orange-200 dark:hover:bg-orange-800/20 dark:hover:text-orange-400",

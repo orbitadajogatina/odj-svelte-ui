@@ -50,13 +50,13 @@
               {@render header()}
             {/if}
             {#if dismissable}
-              <CloseButton onclick={closeModal} class={closeBtn({ class: closeBtnClass })} />
+              <CloseButton onclick={closeModal} color="surface" class={closeBtn({ class: closeBtnClass })} />
             {/if}
           </div>
         {/if}
         <div class={body({ class: bodyClass })}>
           {#if dismissable && !title && !header}
-            <CloseButton onclick={closeModal} class={closeBtn({ class: closeBtnClass })} />
+            <CloseButton onclick={closeModal} color="surface" class={closeBtn({ class: closeBtnClass })} />
           {/if}
           {@render children()}
         </div>
