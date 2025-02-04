@@ -5,14 +5,17 @@ This is a fork from [Flowbite for Svelte 5 with Runes](https://svelte-5-ui-lib.c
 - [Original Docs](https://svelte-5-ui-lib.codewithshin.com/)
 
 ## Differences to Flowbite
+- You can choose the "background" color instead of using the hard-coded `gray` color. You have to choose your colors defining `light-surface` and `dark-surface` on `tailwind.config.js`.
 - Some components have the design slightly different:
   - All components: instead of using focus-within, uses focus-visible;
   - Forms: When focus, border slightly thicker;
-  - The `Tooltip` is completely different;
-  - Some small design changes on `Alert`, `Button`, `Textarea`, `Pagination`, `Modal`;
-  - New `Tabs` styles;
-
-- You can choose the "background" color instead of using the hard-coded `gray` color. You have to choose your colors defining `light-surface` and `dark-surface` on `tailwind.config.js`.
+  - `Alert` has new colors
+  - `Button` has a new design for some variations and a response when clicked
+  - `Textarea` is fixed
+  - `Pagination` respect max-width
+  - `Modal` title has a better size and removed the outdated divider
+- `Tabs` styles are fixed and introduced underline animations and a complete modern redesign for "Full" style;
+- The `Tooltip` component received a rework;
 
 ## Installation
 
@@ -30,6 +33,7 @@ Add the following to tailwind.config.js:
 
 ```js
 import type { Config } from 'tailwindcss';
+import colors from 'tailwindcss/colors';
 
 export default {
   content: ['./src/**/*.{html,js,svelte,ts}', './node_modules/odj-svelte-ui/**/*.{html,js,svelte,ts}'],
@@ -37,8 +41,19 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: { 50: '#FFF5F2', 100: '#FFF1EE', 200: '#FFE4DE', 300: '#FFD5CC', 400: '#FFBCAD', 500: '#FE795D', 600: '#EF562F', 700: '#EB4F27', 800: '#CC4522', 900: '#A5371B' },
-        secondary: { "50": "#f0f9ff", "100": "#e0f2fe", "200": "#bae6fd", "300": "#7dd3fc", "400": "#38bdf8", "500": "#0ea5e9", "600": "#0284c7", "700": "#0369a1", "800": "#075985", "900": "#0c4a6e" },
+        primary: {
+          50: '#FFF5F2',
+          100: '#FFF1EE',
+          200: '#FFE4DE',
+          300: '#FFD5CC',
+          400: '#FFBCAD',
+          500: '#FE795D',
+          600: '#EF562F',
+          700: '#EB4F27',
+          800: '#CC4522',
+          900: '#A5371B'
+        },
+        secondary: colors.blue,
         "light-surface": colors.gray,
         "dark-surface": colors.gray
       }
