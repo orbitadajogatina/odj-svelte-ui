@@ -36,7 +36,7 @@
       const selectedTab = document.querySelector(`#${id}`) as HTMLElement;
 
       if (slider && selectedTab) {
-        slider.style.width = `${selectedTab.offsetWidth}px`;
+        slider.style.width = `${selectedTab.getBoundingClientRect().width}px`;
         slider.style.left = `${selectedTab.offsetLeft}px`;
       }
     }
