@@ -11,7 +11,9 @@
   const { active, inactive } = $derived(tabs({ tabStyle: compoTabStyle, hasDivider: true }));
   let selected = ctx.selected ?? writable<HTMLElement>();
   // Generate a unique ID for this tab button
-  const tabId = `tab-${Math.random().toString(36).substring(2)}`;
+  const tabId = `tab-${crypto.randomUUID()}`;
+
+  if (open) ctx.currentTab.set(tabId);
 
   function init(node: HTMLElement) {
     selected.set(node);
@@ -31,7 +33,10 @@
 <li {...restProps} class={base({ class: className })} role="presentation">
   <button
     type="button"
-    onclick={() => (open = true)}
+    onclick={() => {
+      open = true
+      ctx.currentTab.set(tabId);
+    }}
     role="tab"
     id={tabId}
     aria-controls={ctx.panelId}

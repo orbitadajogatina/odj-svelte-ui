@@ -1,5 +1,5 @@
 <script>
-  import { Input, Alert, Badge, Button, Textarea, Select, Modal, Radio } from '$lib/elements';
+  import { Input, Alert, Badge, Button, Textarea, Tabs, TabItem, Select, Modal, Radio } from '$lib/elements';
   
   let defaultModal = false;
 </script>
@@ -31,3 +31,11 @@
 </Modal>
 <br>
 <Radio>Teste</Radio>
+<Tabs style="underline">
+  <TabItem open title="Profile">
+    <p class="text-sm text-gray-500 dark:text-gray-400">
+      <b>Profile:</b>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </p>
+  </TabItem>
+</Tabs>

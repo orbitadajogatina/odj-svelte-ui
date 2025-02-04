@@ -7,6 +7,7 @@ interface TabsProps extends HTMLAttributes<HTMLUListElement> {
   tabStyle?: "full" | "pill" | "underline" | "none";
   ulClass?: string;
   contentClass?: string;
+  sliderClass?: string;
   divider?: boolean;
   class?: string;
 }
@@ -29,6 +30,7 @@ interface TabCtxType {
   tabStyle?: "full" | "pill" | "underline" | "none";
   selected: Writable<HTMLElement>;
   panelId: string;
+  currentTab: Writable<string>;
 }
 
 export { type TabsProps, type TabitemProps, type TabCtxType };
