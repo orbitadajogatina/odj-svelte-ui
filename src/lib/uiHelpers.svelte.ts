@@ -58,8 +58,6 @@ export function clickOutside(element: HTMLElement, callbackFunction?: () => void
   };
 }
 
-let n = Date.now();
-
 export function idGenerator() {
-  return (++n).toString(36);
+  return crypto.randomUUID();
 }
