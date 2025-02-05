@@ -1,10 +1,10 @@
 import { tv } from "tailwind-variants";
 
 export const label = tv({
-  base: "text-sm rtl:text-right font-medium block",
+  base: "text-sm rtl:text-right font-medium block space-y-1",
   variants: {
     color: {
-      disabled: "text-gray-500 dark:text-gray-500",
+      disabled: "text-light-surface-500 dark:text-dark-surface-500",
       primary: "text-primary-700 dark:text-primary-500",
       secondary: "text-secondary-700 dark:text-secondary-500",
       green: "text-green-700 dark:text-green-500",
