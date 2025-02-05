@@ -13,9 +13,10 @@ This is a fork from [Flowbite for Svelte 5 with Runes](https://svelte-5-ui-lib.c
   - `Button` has a new design for some variations and a response when clicked
   - `Textarea` is fixed
   - `Pagination` respect max-width
-  - `Modal` title has a better size and removed the outdated divider
+  - `Modal` title has a better size, improved default animations with control of backdrop's animations and removed the outdated divider
 - `Tabs` styles are fixed and introduced underline animations and a complete modern redesign for "Full" style;
 - The `Tooltip` component received a rework;
+- `Modal` has <kbd>Esc</kbd> to close again;
 
 ## Installation
 

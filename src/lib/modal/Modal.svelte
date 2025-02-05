@@ -4,6 +4,7 @@
   import { type ModalProps as Props, modal } from ".";
   import { fade, fly } from "svelte/transition";
   import { sineIn } from "svelte/easing";
+  import { onMount, onDestroy } from "svelte";
 
   let { children, header, footer, title, modalStatus, dismissable = true, closeModal, divClass, contentClass, closeBtnClass, h3Class, headerClass, bodyClass, footerClass, outsideClose = true, size = "md", backdrop = true, backdropClass, position = "center", class: className, params = { duration: 100, easing: sineIn, y: 25, opacity: 0 }, transition = fly, backdropParams = { duration: 200, easing: sineIn }, backdropTransition = fade, rounded = true, ...restProps }: Props = $props();
 
@@ -25,6 +26,20 @@
       rounded
     })
   );
+
+  function handleKeydown(event: KeyboardEvent) {
+    if (modalStatus && outsideClose && event.key === "Escape" && typeof closeModal === 'function') {
+      closeModal();
+    }
+  }
+
+  onMount(() => {
+    document.addEventListener("keydown", handleKeydown);
+  });
+
+  onDestroy(() => {
+    document.removeEventListener("keydown", handleKeydown);
+  });
 </script>
 
 {#if backdrop && modalStatus}
