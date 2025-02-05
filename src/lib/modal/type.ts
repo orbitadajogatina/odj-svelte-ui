@@ -30,6 +30,8 @@ interface ModalProps extends HTMLAttributes<HTMLDivElement> {
   class?: string;
   params?: ParamsType;
   transition?: TransitionFunc;
+  backdropParams?: ParamsType;
+  backdropTransition?: TransitionFunc;
 }
 
 export { type ModalProps };
