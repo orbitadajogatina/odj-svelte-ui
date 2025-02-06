@@ -27,7 +27,7 @@
     return { destroy };
   }
 
-  const { base, button, content } = $derived(tabItem({ open, disabled }));
+  const { base, button, content } = $derived(tabItem({ open, disabled, tabStyle: compoTabStyle }));
 </script>
 
 <li {...restProps} class={base({ class: className })} role="presentation">

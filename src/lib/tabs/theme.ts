@@ -67,6 +67,14 @@ export const tabItem = tv({
       true: {
         button: "cursor-not-allowed"
       }
+    },
+    tabStyle: {
+      full: {
+        base: "flex-1"
+      },
+      pill: {},
+      underline: {},
+      none: {}
     }
   },
   compoundVariants: [
