@@ -35,10 +35,8 @@
 
   onMount(() => {
     document.addEventListener("keydown", handleKeydown);
-  });
 
-  onDestroy(() => {
-    document.removeEventListener("keydown", handleKeydown);
+    return () => document.removeEventListener("keydown", handleKeydown);
   });
 </script>
 
