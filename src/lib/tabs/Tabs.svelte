@@ -2,6 +2,7 @@
   import { writable, get } from "svelte/store";
   import { setContext } from "svelte";
   import { type TabsProps as Props, type TabCtxType, tabs } from ".";
+  import { onMount, onDestroy } from "svelte";
 
   let { children, tabStyle = "none", ulClass, contentClass, sliderClass, divider = true, ...restProps }: Props = $props();
 
@@ -43,15 +44,34 @@
   }
 
   $effect(() => {
-    ctx.currentTab.subscribe((id) => {
+    const unsubscribe = ctx.currentTab.subscribe((id) => {
       updateUnderlineSlider(id);
     });
+
+    return unsubscribe;
   });
+
+  onMount(() => {
+    const observer = new ResizeObserver(() => {
+      console.log('changed')
+      updateUnderlineSlider(get(ctx.currentTab));
+    });
+
+    const container = document.querySelector("#tabs-" + panelId);
+    if (container) {
+      observer.observe(container);
+    }
+
+    onDestroy(() => {
+      observer.disconnect();
+    });
+  });
+  
 </script>
 
-<svelte:window onresize={() => updateUnderlineSlider(get(ctx.currentTab))}/>
+<!-- <svelte:window onresize={() => updateUnderlineSlider(get(ctx.currentTab))}/> -->
 
-<ul {...restProps} class={base({ class: ulClass })}>
+<ul id="tabs-{panelId}" {...restProps} class={base({ class: ulClass })}>
   {@render children()}
   {#if ['underline', 'full'].includes(tabStyle)}
     <li class={slider({ class: sliderClass })} id="slider-{panelId}" role="presentation"></li>
