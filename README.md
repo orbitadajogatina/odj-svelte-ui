@@ -14,10 +14,13 @@ This is a fork from [Flowbite for Svelte 5 with Runes](https://svelte-5-ui-lib.c
   - `Textarea` is fixed;
   - `Pagination` respect max-width;
   - `Modal` title has a better size, improved default animations with control of backdrop's animations and removed the outdated divider;
-  - `Label` now has `space-y-1` by default
+  - `Label` now has `space-y-1` by default;
+  - `Input:Search` has a better X button for Chromium browsers;
 - `Tabs` styles are fixed and introduced underline animations and a complete modern redesign for "Full" style;
 - The `Tooltip` component received a rework;
 - `Modal` has <kbd>Esc</kbd> to close again;
+- `Button` has now a built-in loading state and can be controlled by the `loading` prop;
+- `Textarea` can autoexpand as user type, control this by `autoexpand` and `maxRows` props;
 
 ## Installation
 
