@@ -18,6 +18,7 @@ interface ButtonProps extends HTMLAttributesWithoutAbort {
   class?: string;
   disabled?: boolean;
   href?: string;
+  loading?: boolean;
 }
 
 type GradientButtonColorType = "red" | "lime" | "green" | "teal" | "cyan" | "blue" | "purple" | "pink" | "purpleToBlue" | "cyanToBlue" | "greenToBlue" | "purpleToPink" | "pinkToOrange" | "tealToLime" | "redToYellow" | undefined;

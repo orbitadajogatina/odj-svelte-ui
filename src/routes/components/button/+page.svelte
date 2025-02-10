@@ -27,6 +27,10 @@
     btnClass = btnClass === "" ? "w-48" : "";
   };
 
+  let btnLoading = $state(false);
+  const changeBtnLoading = () => {
+    btnLoading = !btnLoading;
+  };
   let btnLink = $state("");
   const changeBtnLink = () => {
     btnLink = btnLink === "" ? "/" : "";
@@ -95,6 +99,7 @@
       if (btnLink) props.push(` href="${btnLink}"`);
       if (btnDisabled) props.push(" disabled");
       if (btnSize !== "md") props.push(` size="${btnSize}"`);
+      if (btnLoading) props.push(" loading");
 
       const propsString = props.length > 0 ? props.map((prop) => `\n  ${prop}`).join("") + "\n" : "";
 
@@ -141,7 +146,7 @@
 
 <CodeWrapper innerClass="flex flex-wrap gap-2">
   <div class="h-16">
-    <Button color={btnColor as ButtonProps["color"]} class={btnClass} outline={btnOutline} shadow={btnShadow} pill={btnPill} disabled={btnDisabled} size={btnSize as ButtonProps["size"]} href={btnLink ? btnLink : ""}>Button</Button>
+    <Button color={btnColor as ButtonProps["color"]} class={btnClass} outline={btnOutline} shadow={btnShadow} pill={btnPill} disabled={btnDisabled} size={btnSize as ButtonProps["size"]} href={btnLink ? btnLink : ""} loading={btnLoading}>Button</Button>
   </div>
   <div class="mb-4 flex flex-wrap space-x-2">
     <Label class="mb-4 w-full font-bold">Color</Label>
@@ -162,6 +167,7 @@
     <Button class="w-40" color="red" onclick={changeBtnDisabled}>{btnDisabled === false ? "Add disabled" : "Remove disabled"}</Button>
     <Button class="w-40" onclick={changeBtnClass}>{btnClass === "" ? "Add class" : "Remove class"}</Button>
     <Button class="w-40" color="sky" onclick={changeBtnLink}>{btnLink === "" ? "Add link" : "Remove link"}</Button>
+    <Button class="w-40" color="pink" onclick={changeBtnLoading}>{btnLoading === false ? "Add loading" : "Remove loading"}</Button>
   </div>
   {#snippet codeblock()}
     <DynamicCodeBlockHighlight handleExpandClick={handleBuilderExpandClick} expand={builderExpand} showExpandButton={showBuilderExpandButton} code={generatedCode} />
@@ -231,7 +237,8 @@
   {/snippet}
 </CodeWrapper>
 
-<H2>Loader</H2>
+<H2>Alternative loader</H2>
+<p>Instead of using the default loading prop, you can try something like this:</p>
 <CodeWrapper>
   <ExampleComponents.Loader />
   {#snippet codeblock()}
