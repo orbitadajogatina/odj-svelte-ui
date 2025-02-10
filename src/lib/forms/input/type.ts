@@ -15,6 +15,7 @@ interface InputProps<T extends InputValue = string> extends Omit<HTMLInputAttrib
   classRight?: string;
   class?: string;
   divClass?: string;
+  classSearchInputXButton?: string;
 }
 
 export { type InputProps, type InputValue };
