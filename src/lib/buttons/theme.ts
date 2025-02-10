@@ -188,12 +188,12 @@ export const button = tv({
     {
       outline: true,
       color: "alternative",
-      class: "text-neutral-900 hover:text-white border border-neutral-800 hover:bg-neutral-900 focus:!bg-neutral-900 dark:border-neutral-600 dark:hover:text-white dark:hover:!bg-neutral-600"
+      class: "text-light-surface-900 hover:text-white border hover:!bg-primary-800 dark:border-neutral-600 dark:hover:text-white dark:hover:!bg-neutral-600"
     },
     {
       outline: true,
       color: "light",
-      class: "text-neutral-500 hover:text-neutral-900 bg-white border border-neutral-200 dark:border-neutral-600 dark:hover:text-white dark:text-neutral-400 hover:bg-neutral-50 dark:bg-neutral-700 dark:hover:bg-neutral-600"
+      class: "text-light-surface-900 bg-white dark:border-dark-surface-600 dark:hover:text-white dark:text-dark-surface-400 hover:!bg-light-surface-100 hover:dark:!bg-dark-surface-600"
     },
     {
       outline: true,
