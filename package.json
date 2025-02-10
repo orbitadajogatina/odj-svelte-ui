@@ -1,7 +1,7 @@
 {
   "name": "odj-svelte-ui",
   "author": "orbitadajogatina",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "This is a fork from Flowbite Svelte 5 with Runes. I just made some changes that fits better my taste.",
   "license": "MIT",
   "main": "dist/index.js",
@@ -18,7 +18,7 @@
     "dev": "vite dev",
     "build": "vite build",
     "preview": "vite preview",
-    "package": "svelte-kit sync && svelte-package && publint && bun link",
+    "package": "svelte-kit sync && svelte-package && publint",
     "prepublishOnly": "npm run package",
     "test": "npm run test:integration && npm run test:unit",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
