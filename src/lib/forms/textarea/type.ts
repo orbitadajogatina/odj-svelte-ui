@@ -11,6 +11,8 @@ interface TextareaProps extends HTMLTextareaAttributes {
   headerClass?: string;
   footerClass?: string;
   cols?: number;
+  autoexpand?: boolean;
+  maxRows?: number;
 }
 
 export { type TextareaProps };
