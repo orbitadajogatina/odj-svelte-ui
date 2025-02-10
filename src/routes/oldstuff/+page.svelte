@@ -1,5 +1,5 @@
 <script>
-  import { Input, Alert, Badge, Button, Textarea, Tabs, TabItem, Select, Modal, Radio } from '$lib/elements';
+  import { Input, Alert, Badge, Button, Textarea, Tabs, TabItem, Select, Modal, Radio } from '$lib/_legacy';
   
   let defaultModal = false;
 </script>
