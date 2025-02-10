@@ -24,7 +24,10 @@ export const spinner = tv({
       purple: "fill-purple-600",
       fuchsia: "fill-fuchsia-600",
       pink: "fill-pink-600",
-      rose: "fill-rose-600"
+      rose: "fill-rose-600",
+      light: "fill-light-surface-600",
+      dark: "fill-dark-surface-600",
+      alternative: "fill-primary-600 dark:fill-dark-surface-100"
     },
     size: {
       "4": "w-4 h-4",
