@@ -53,7 +53,6 @@
 
   onMount(() => {
     const observer = new ResizeObserver(() => {
-      console.log('changed')
       updateUnderlineSlider(get(ctx.currentTab));
     });
 
