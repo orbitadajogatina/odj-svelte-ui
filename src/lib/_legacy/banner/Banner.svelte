@@ -16,7 +16,7 @@
   const divClasses = {
     default: 'top-0 left-0 w-full border-b border-neutral-200 bg-neutral-50',
     bottom: 'bottom-0 left-0 w-full border-t border-neutral-200 bg-neutral-50',
-    cta: 'flex-col md:flex-row  w-[calc(100%-2rem)] -translate-x-1/2 bg-white border border-neutral-100 rounded-lg shadow-sm lg:max-w-7xl left-1/2 top-6',
+    cta: 'flex-col md:flex-row  w-[calc(100%-2rem)] -translate-x-1/2 bg-white border border-neutral-100 rounded-lg shadow-xs lg:max-w-7xl left-1/2 top-6',
     signup: 'top-0 left-0 w-full border-b border-neutral-200 bg-neutral-50',
     info: 'top-0 left-0 flex-col w-full border-b border-neutral-200 md:flex-row bg-neutral-50'
   };
@@ -25,8 +25,8 @@
     default: 'items-center mx-auto',
     bottom: 'items-center mx-auto',
     cta: 'flex-col items-start mb-3 mr-4 md:items-center md:flex-row md:mb-0',
-    signup: 'items-center flex-shrink-0 w-full mx-auto sm:w-auto',
-    info: 'items-center flex-shrink-0'
+    signup: 'items-center shrink-0 w-full mx-auto sm:w-auto',
+    info: 'items-center shrink-0'
   };
 
   $: divClass = twMerge(position, divClass, divClasses[bannerType], $$props.classDiv);

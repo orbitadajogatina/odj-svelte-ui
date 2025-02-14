@@ -4,7 +4,7 @@
   import type { SizeType } from '$lib/_legacy/types';
 
   export let size: SizeType = 'md';
-  export let divClass: string = 'inline-flex rounded-lg shadow-sm';
+  export let divClass: string = 'inline-flex rounded-lg shadow-xs';
 
   setContext('group', { size });
 </script>
@@ -18,5 +18,5 @@
 [Go to docs](https://flowbite-svelte.com/)
 ## Props
 @prop export let size: SizeType = 'md';
-@prop export let divClass: string = 'inline-flex rounded-lg shadow-sm';
+@prop export let divClass: string = 'inline-flex rounded-lg shadow-xs';
 -->

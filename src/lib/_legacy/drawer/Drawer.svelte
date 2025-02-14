@@ -14,7 +14,6 @@
   export let width: string = 'w-80';
   export let backdrop: boolean = true;
   export let bgColor: string = 'bg-neutral-900';
-  export let bgOpacity: string = 'bg-opacity-75';
   export let placement: 'left' | 'right' | 'top' | 'bottom' = 'left';
   export let id: string = 'drawer-example';
   export let divClass: string = 'overflow-y-auto z-50 p-4 bg-white dark:bg-neutral-800';
@@ -80,7 +79,6 @@
 @prop export let width: string = 'w-80';
 @prop export let backdrop: boolean = true;
 @prop export let bgColor: string = 'bg-neutral-900';
-@prop export let bgOpacity: string = 'bg-opacity-75';
 @prop export let placement: 'left' | 'right' | 'top' | 'bottom' = 'left';
 @prop export let id: string = 'drawer-example';
 @prop export let divClass: string = 'overflow-y-auto z-50 p-4 bg-white dark:bg-neutral-800';

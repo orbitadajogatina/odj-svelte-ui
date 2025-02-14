@@ -22,7 +22,7 @@ export const drawer = tv({
       half: { base: "w-1/2" }
     },
     backdrop: {
-      true: { backdrop: "bg-gray-900 bg-opacity-75" }
+      true: { backdrop: "bg-gray-900/75" }
     }
   },
   defaultVariants: {

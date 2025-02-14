@@ -9,7 +9,7 @@
   export let currentClass: string = 'text-white bg-primary-700 dark:text-white dark:bg-neutral-800';
   export let normalClass: string = '';
   export let disabledClass: string = 'text-neutral-900 bg-neutral-100 dark:bg-neutral-600 dark:text-neutral-400';
-  export let focusClass: string = 'focus:z-40 focus:outline-none focus:ring-2 focus:ring-primary-700 focus:text-primary-700 dark:focus:ring-neutral-500 dark:focus:text-white';
+  export let focusClass: string = 'focus:z-40 focus:outline-hidden focus:ring-2 focus:ring-primary-700 focus:text-primary-700 dark:focus:ring-neutral-500 dark:focus:text-white';
   export let hoverClass: string = 'hover:bg-neutral-100 hover:text-primary-700 dark:hover:bg-neutral-600 dark:hover:text-white';
   export let itemDefaultClass: string = 'py-2 px-4 w-full text-sm font-medium list-none first:rounded-t-lg last:rounded-b-lg';
 
@@ -51,7 +51,7 @@
 @prop export let currentClass: string = 'text-white bg-primary-700 dark:text-white dark:bg-neutral-800';
 @prop export let normalClass: string = '';
 @prop export let disabledClass: string = 'text-neutral-900 bg-neutral-100 dark:bg-neutral-600 dark:text-neutral-400';
-@prop export let focusClass: string = 'focus:z-40 focus:outline-none focus:ring-2 focus:ring-primary-700 focus:text-primary-700 dark:focus:ring-neutral-500 dark:focus:text-white';
+@prop export let focusClass: string = 'focus:z-40 focus:outline-hidden focus:ring-2 focus:ring-primary-700 focus:text-primary-700 dark:focus:ring-neutral-500 dark:focus:text-white';
 @prop export let hoverClass: string = 'hover:bg-neutral-100 hover:text-primary-700 dark:hover:bg-neutral-600 dark:hover:text-white';
 @prop export let itemDefaultClass: string = 'py-2 px-4 w-full text-sm font-medium list-none first:rounded-t-lg last:rounded-b-lg';
 -->

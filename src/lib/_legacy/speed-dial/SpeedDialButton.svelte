@@ -8,7 +8,7 @@
 
   const context = getContext<SpeedCtxType>('speed-dial');
 
-  export let btnDefaultClass: string = 'w-[52px] h-[52px] shadow-sm !p-2';
+  export let btnDefaultClass: string = 'w-[52px] h-[52px] shadow-xs p-2!';
   export let name: string = '';
   export let tooltip: Placement | 'none' = context.tooltip;
   export let pill: boolean = context.pill;
@@ -39,7 +39,7 @@
 @component
 [Go to docs](https://flowbite-svelte.com/)
 ## Props
-@prop export let btnDefaultClass: string = 'w-[52px] h-[52px] shadow-sm !p-2';
+@prop export let btnDefaultClass: string = 'w-[52px] h-[52px] shadow-xs p-2!';
 @prop export let name: string = '';
 @prop export let tooltip: Placement | 'none' = context.tooltip;
 @prop export let pill: boolean = context.pill;

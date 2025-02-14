@@ -25,7 +25,7 @@ export const tabs = tv({
         base: "-mb-px relative",
         active: "text-primary-600 dark:text-primary-500 bg-transparent hover:border-light-surface-300 border-b-2 border-transparent",
         inactive: "hover:text-light-surface-700 dark:hover:text-dark-surface-300 text-light-surface-500 dark:text-dark-surface-400 bg-transparent hover:border-light-surface-300 border-b-2 border-transparent",
-        slider: "absolute bottom-0 transition-all duration-200 border-b-2 border-primary-600 dark:border-primary-500 !m-0 z-10"
+        slider: "absolute bottom-0 transition-all duration-200 border-b-2 border-primary-600 dark:border-primary-500 m-0! z-10"
       },
       none: {
         active: "dark:bg-dark-surface-800 dark:text-primary-500",

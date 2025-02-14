@@ -6,7 +6,7 @@
   export let liClass: string = 'mb-10 ml-6';
   export let spanClass: string = 'flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-200 rounded-full ring-8 ring-white dark:ring-neutral-900 dark:bg-blue-900';
   export let imgClass: string = 'rounded-full shadow-lg';
-  export let outerDivClass: string = 'p-4 bg-white rounded-lg border border-neutral-200 shadow-sm dark:bg-neutral-700 dark:border-neutral-600';
+  export let outerDivClass: string = 'p-4 bg-white rounded-lg border border-neutral-200 shadow-xs dark:bg-neutral-700 dark:border-neutral-600';
   export let innerDivClass: string = 'justify-between items-center mb-3 sm:flex';
   export let timeClass: string = 'mb-1 text-xs font-normal text-neutral-400 sm:order-last sm:mb-0';
   export let titleClass: string = 'text-sm font-normal text-neutral-500 lex dark:text-neutral-300';
@@ -51,7 +51,7 @@
 @prop export let liClass: string = 'mb-10 ml-6';
 @prop export let spanClass: string = 'flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-200 rounded-full ring-8 ring-white dark:ring-neutral-900 dark:bg-blue-900';
 @prop export let imgClass: string = 'rounded-full shadow-lg';
-@prop export let outerDivClass: string = 'p-4 bg-white rounded-lg border border-neutral-200 shadow-sm dark:bg-neutral-700 dark:border-neutral-600';
+@prop export let outerDivClass: string = 'p-4 bg-white rounded-lg border border-neutral-200 shadow-xs dark:bg-neutral-700 dark:border-neutral-600';
 @prop export let innerDivClass: string = 'justify-between items-center mb-3 sm:flex';
 @prop export let timeClass: string = 'mb-1 text-xs font-normal text-neutral-400 sm:order-last sm:mb-0';
 @prop export let titleClass: string = 'text-sm font-normal text-neutral-500 lex dark:text-neutral-300';

@@ -59,10 +59,10 @@
 
       <div class="ml-auto flex items-center space-x-2 md:order-1">
         <DynamicCodeBlockStyle class="mr-4 hidden sm:block" />
-        <a class="inline-block whitespace-normal rounded-lg p-1 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:ring-0 focus:ring-gray-400 dark:hover:bg-gray-600 dark:hover:text-white" href="https://svelte-5-ui-lib.codewithshin.com" aria-label="Original Docs" target="_blank">
+        <a class="inline-block whitespace-normal rounded-lg p-1 hover:bg-gray-100 hover:text-gray-900 focus:outline-hidden focus:ring-0 focus:ring-gray-400 dark:hover:bg-gray-600 dark:hover:text-white" href="https://svelte-5-ui-lib.codewithshin.com" aria-label="Original Docs" target="_blank">
           <Docs width=20 height=20/>
         </a>
-        <a class="inline-block whitespace-normal rounded-lg p-1 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:ring-0 focus:ring-gray-400 dark:hover:bg-gray-600 dark:hover:text-white" href="https://github.com/orbitadajogatina/odj-svelte-ui" aria-label="View project on GitHub" target="_blank">
+        <a class="inline-block whitespace-normal rounded-lg p-1 hover:bg-gray-100 hover:text-gray-900 focus:outline-hidden focus:ring-0 focus:ring-gray-400 dark:hover:bg-gray-600 dark:hover:text-white" href="https://github.com/orbitadajogatina/odj-svelte-ui" aria-label="View project on GitHub" target="_blank">
           <GitHub class="hidden sm:block" tabindex={0} />
         </a>
         <Darkmode class="hidden sm:block" />

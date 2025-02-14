@@ -21,7 +21,7 @@
     xl: 'w-22 h-22 md:w-26 md:h-26'
   };
 
-  let svgClass: string = twMerge('text-neutral-400 bg-neutral-100 dark:bg-neutral-600', rounded ? 'rounded' : 'rounded-full', border ? borderedSizes[size] : sizes[size], $$props.class);
+  let svgClass: string = twMerge('text-neutral-400 bg-neutral-100 dark:bg-neutral-600', rounded ? 'rounded-sm' : 'rounded-full', border ? borderedSizes[size] : sizes[size], $$props.class);
 </script>
 
 <svg class={svgClass} fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">

@@ -1,6 +1,6 @@
 <script lang="ts">
   import { twMerge } from 'tailwind-merge';
-  export let divClass: string = 'p-4 max-w-sm rounded border border-neutral-200 shadow animate-pulse md:p-6 dark:border-neutral-700';
+  export let divClass: string = 'p-4 max-w-sm rounded-sm border border-neutral-200 shadow-sm animate-pulse md:p-6 dark:border-neutral-700';
 </script>
 
 <div role="status" class={twMerge(divClass, $$props.class)}>
@@ -22,5 +22,5 @@
 @component
 [Go to docs](https://flowbite-svelte.com/)
 ## Props
-@prop export let divClass: string = 'p-4 max-w-sm rounded border border-neutral-200 shadow animate-pulse md:p-6 dark:border-neutral-700';
+@prop export let divClass: string = 'p-4 max-w-sm rounded-sm border border-neutral-200 shadow-sm animate-pulse md:p-6 dark:border-neutral-700';
 -->

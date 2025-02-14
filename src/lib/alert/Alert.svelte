@@ -37,7 +37,7 @@
       {#if closeIcon}
         <button
           type="button"
-          class="m-0.5 -me-1.5 ms-1.5 whitespace-normal rounded p-0.5 text-primary-500 hover:bg-primary-200 focus:outline-none focus:ring-1 focus:ring-primary-400 dark:hover:bg-primary-800 dark:hover:text-primary-300"
+          class="m-0.5 -me-1.5 ms-1.5 whitespace-normal rounded-sm p-0.5 text-primary-500 hover:bg-primary-200 focus:outline-hidden focus:ring-1 focus:ring-primary-400 dark:hover:bg-primary-800 dark:hover:text-primary-300"
           aria-label="Remove badge"
           onclick={() => {
             alertStatus = false;
@@ -73,7 +73,7 @@
 @props:alertStatus: any = $bindable(true);
 @props:closeIcon: any;
 @props:color: any = "primary";
-@props:rounded: any = true;
+@-props:rounded-sm: any = true;
 @props:border: any;
 @props:class: string;
 @props:dismissable: any;

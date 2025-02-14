@@ -27,7 +27,7 @@
 </script>
 
 <Popper color={full ? 'default' : 'dropdown'} border={!full} rounded={!full} activeContent arrow={false} trigger="click" placement="bottom" yOnly={full} {...$$restProps} class={wrapperClass} on:show bind:open>
-  <div class="flex flex-col md:flex-row p-4 max-w-screen-md justify-center mx-auto mt-2">
+  <div class="flex flex-col md:flex-row p-4 max-w-(--breakpoint-md) justify-center mx-auto mt-2">
     <ul class={ulCls}>
       {#each items as item, index}
         <li>

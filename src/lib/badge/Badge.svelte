@@ -24,7 +24,7 @@
       {#if icon}
         <button
           type="button"
-          class="m-0.5 -me-1.5 ms-1.5 whitespace-normal rounded p-0.5 text-primary-500 hover:bg-primary-200 focus:outline-none focus:ring-1 focus:ring-primary-400 dark:hover:bg-primary-800 dark:hover:text-primary-300"
+          class="m-0.5 -me-1.5 ms-1.5 whitespace-normal rounded-sm p-0.5 text-primary-500 hover:bg-primary-200 focus:outline-hidden focus:ring-1 focus:ring-primary-400 dark:hover:bg-primary-800 dark:hover:text-primary-300"
           aria-label="Remove badge"
           onclick={() => {
             badgeStatus = false;
@@ -64,7 +64,7 @@
 @props:border: any;
 @props:href: any;
 @props:target: any;
-@props:rounded: any;
+@-props:rounded-sm: any;
 @props:transition: any = fade;
 @props:params: any;
 @props:aClass: any;

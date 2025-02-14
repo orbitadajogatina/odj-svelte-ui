@@ -21,14 +21,14 @@
 
   // styles
   const styledActiveClasses = {
-    full: 'p-4 w-full group-first:rounded-l-lg group-last:rounded-r-lg text-neutral-900 bg-neutral-100 focus:ring-4 focus:ring-primary-300 focus:outline-none dark:bg-neutral-700 dark:text-white',
+    full: 'p-4 w-full group-first:rounded-l-lg group-last:rounded-r-lg text-neutral-900 bg-neutral-100 focus:ring-4 focus:ring-primary-300 focus:outline-hidden dark:bg-neutral-700 dark:text-white',
     pill: 'py-3 px-4 text-white bg-primary-600 rounded-lg',
     underline: 'p-4 text-primary-600 border-b-2 border-primary-600 dark:text-primary-500 dark:border-primary-500',
     none: ''
   };
 
   const styledInactiveClasses = {
-    full: 'p-4 w-full group-first:rounded-l-lg group-last:rounded-r-lg text-neutral-500 dark:text-neutral-400 bg-white hover:text-neutral-700 hover:bg-neutral-50 focus:ring-4 focus:ring-primary-300 focus:outline-none dark:hover:text-white dark:bg-neutral-800 dark:hover:bg-neutral-700',
+    full: 'p-4 w-full group-first:rounded-l-lg group-last:rounded-r-lg text-neutral-500 dark:text-neutral-400 bg-white hover:text-neutral-700 hover:bg-neutral-50 focus:ring-4 focus:ring-primary-300 focus:outline-hidden dark:hover:text-white dark:bg-neutral-800 dark:hover:bg-neutral-700',
     pill: 'py-3 px-4 text-neutral-500 rounded-lg hover:text-neutral-900 hover:bg-neutral-100 dark:text-neutral-400 dark:hover:bg-neutral-800 dark:hover:text-white',
     underline: 'p-4 border-b-2 border-transparent hover:text-neutral-600 hover:border-neutral-300 dark:hover:text-neutral-300 text-neutral-500 dark:text-neutral-400',
     none: ''

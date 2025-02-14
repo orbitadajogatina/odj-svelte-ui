@@ -9,7 +9,7 @@
   export let highlight: boolean = false;
   export let highlightClass: string = 'text-blue-600 dark:text-blue-500';
   export let decorationClass: string = 'decoration-2 decoration-blue-400 dark:decoration-blue-600';
-  export let gradientClass: string = 'text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400';
+  export let gradientClass: string = 'text-transparent bg-clip-text bg-linear-to-r to-emerald-600 from-sky-400';
 
   let underlineClass = twMerge('underline', decorationClass);
   let classSpan: string = twMerge(italic && 'italic', underline && underlineClass, linethrough && 'line-through', uppercase && 'uppercase', gradient ? gradientClass : 'font-semibold text-neutral-900 dark:text-white', highlight && highlightClass, $$props.class);
@@ -31,5 +31,5 @@
 @prop export let highlight: boolean = false;
 @prop export let highlightClass: string = 'text-blue-600 dark:text-blue-500';
 @prop export let decorationClass: string = 'decoration-2 decoration-blue-400 dark:decoration-blue-600';
-@prop export let gradientClass: string = 'text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400';
+@prop export let gradientClass: string = 'text-transparent bg-clip-text bg-linear-to-r to-emerald-600 from-sky-400';
 -->

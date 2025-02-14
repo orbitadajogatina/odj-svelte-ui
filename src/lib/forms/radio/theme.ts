@@ -70,7 +70,7 @@ export const radio = tv({
       false: { input: "dark:bg-dark-surface-700 dark:border-dark-surface-600" }
     },
     custom: {
-      true: { input: "!sr-only peer" }
+      true: { input: "sr-only! peer" }
     }
   },
   defaultVariants: {

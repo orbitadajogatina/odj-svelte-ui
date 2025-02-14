@@ -19,7 +19,7 @@
   };
 
   // Container
-  const multiSelectClass: string = 'relative flex items-center gap-1.5 text-neutral-900 bg-neutral-50 border border-neutral-300 rounded-lg outline-none focus:ring-1 focus:ring-primary-500 focus:border-primary-500 dark:bg-neutral-700 dark:border-neutral-600 dark:placeholder-neutral-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500';
+  const multiSelectClass: string = 'relative flex items-center gap-1.5 text-neutral-900 bg-neutral-50 border border-neutral-300 rounded-lg outline-hidden focus:ring-1 focus:ring-primary-500 focus:border-primary-500 dark:bg-neutral-700 dark:border-neutral-600 dark:placeholder-neutral-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500';
 
   // Dropdown
   let multiSelectDropdown: string;

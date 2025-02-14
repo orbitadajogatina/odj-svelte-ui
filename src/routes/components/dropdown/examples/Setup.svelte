@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Button, Dropdown, DropdownDivider, DropdownHeader, DropdownFooter, DropdownUl, DropdownLi, uiHelpers } from "svelte-5-ui-lib";
+  import { Button, Dropdown, DropdownDivider, DropdownHeader, DropdownFooter, DropdownUl, DropdownLi, uiHelpers } from "$lib";
   import { ChevronDownOutline } from "flowbite-svelte-icons";
   import { blur, fly, slide, scale } from "svelte/transition";
   import { sineIn, linear } from "svelte/easing";

@@ -48,9 +48,9 @@
   };
 
   const inputClasses = {
-    filled: 'block rounded-t-lg w-full text-sm text-neutral-900 bg-neutral-50 dark:bg-neutral-700 border-0 border-b-2 appearance-none dark:text-white focus:outline-none focus:ring-0 peer',
-    outlined: 'block w-full text-sm text-neutral-900 bg-transparent rounded-lg border-1 appearance-none dark:text-white  focus:outline-none focus:ring-0 peer',
-    standard: 'block w-full text-sm text-neutral-900 bg-transparent border-0 border-b-2 appearance-none dark:text-white  focus:outline-none focus:ring-0 peer'
+    filled: 'block rounded-t-lg w-full text-sm text-neutral-900 bg-neutral-50 dark:bg-neutral-700 border-0 border-b-2 appearance-none dark:text-white focus:outline-hidden focus:ring-0 peer',
+    outlined: 'block w-full text-sm text-neutral-900 bg-transparent rounded-lg border-1 appearance-none dark:text-white  focus:outline-hidden focus:ring-0 peer',
+    standard: 'block w-full text-sm text-neutral-900 bg-transparent border-0 border-b-2 appearance-none dark:text-white  focus:outline-hidden focus:ring-0 peer'
   };
 
   const labelClasses = {
@@ -66,7 +66,7 @@
   };
 
   const labelColorClasses = {
-    base: 'text-neutral-500 dark:text-neutral-400 peer-focus:text-primary-600 peer-focus:dark:text-primary-500',
+    base: 'text-neutral-500 dark:text-neutral-400 peer-focus:text-primary-600 dark:peer-focus:text-primary-500',
     green: 'text-green-600 dark:text-green-500',
     red: 'text-red-600 dark:text-red-500'
   };

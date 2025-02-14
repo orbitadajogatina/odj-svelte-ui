@@ -26,14 +26,14 @@
   };
 
   const sizing = {
-    xs: 'm-0.5 rounded-sm focus-visible:ring-1 p-0.5',
-    sm: 'm-0.5 rounded focus-visible:ring-1 p-0.5',
+    xs: 'm-0.5 rounded-xs focus-visible:ring-1 p-0.5',
+    sm: 'm-0.5 rounded-sm focus-visible:ring-1 p-0.5',
     md: 'm-0.5 rounded-lg focus-visible:ring-2 p-1.5',
     lg: 'm-0.5 rounded-lg focus-visible:ring-2 p-2.5'
   };
 
   let buttonClass: string;
-  $: buttonClass = twMerge('focus:outline-none whitespace-normal', sizing[size], colors[color], color === 'default' && (background ? 'hover:bg-neutral-100 dark:hover:bg-neutral-600' : 'hover:bg-neutral-100 dark:hover:bg-neutral-700'), $$props.class);
+  $: buttonClass = twMerge('focus:outline-hidden whitespace-normal', sizing[size], colors[color], color === 'default' && (background ? 'hover:bg-neutral-100 dark:hover:bg-neutral-600' : 'hover:bg-neutral-100 dark:hover:bg-neutral-700'), $$props.class);
 
   const svgSizes = {
     xs: 'w-3 h-3',

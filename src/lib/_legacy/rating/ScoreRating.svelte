@@ -7,12 +7,12 @@
     desc3: string;
     link: { label: string; url: string };
   };
-  export let desc1Class: string = 'bg-primary-100 w-8 text-primary-800 text-sm font-semibold inline-flex items-center p-1.5 rounded dark:bg-primary-200 dark:text-primary-800';
+  export let desc1Class: string = 'bg-primary-100 w-8 text-primary-800 text-sm font-semibold inline-flex items-center p-1.5 rounded-sm dark:bg-primary-200 dark:text-primary-800';
   export let desc2Class: string = 'ml-2 w-24 font-medium text-neutral-900 dark:text-white';
   export let desc3spanClass: string = 'mx-2 w-1 h-1 bg-neutral-900 rounded-full dark:bg-neutral-500';
   export let desc3pClass: string = 'text-sm  w-24 font-medium text-neutral-500 dark:text-neutral-400';
   export let linkClass: string = 'ml-auto w-32 text-sm font-medium text-primary-600 hover:underline dark:text-primary-500';
-  export let barColor: string = 'bg-primary-600 h-2.5 rounded dark:bg-primary-500';
+  export let barColor: string = 'bg-primary-600 h-2.5 rounded-sm dark:bg-primary-500';
 </script>
 
 <div class="flex items-center mb-5">
@@ -36,7 +36,7 @@
       <dl>
         <dt class="text-sm font-medium text-neutral-500 dark:text-neutral-400">{label}</dt>
         <dd class="flex items-center mb-3">
-          <div class="w-full bg-neutral-200 rounded h-2.5 dark:bg-neutral-700 mr-2">
+          <div class="w-full bg-neutral-200 rounded-sm h-2.5 dark:bg-neutral-700 mr-2">
             <div class={barColor} style="width: {rating * 10}%" />
           </div>
           <span class="text-sm font-medium text-neutral-500 dark:text-neutral-400">{rating}</span>
@@ -49,7 +49,7 @@
       <dl>
         <dt class="text-sm font-medium text-neutral-500 dark:text-neutral-400">{label}</dt>
         <dd class="flex items-center mb-3">
-          <div class="w-full bg-neutral-200 rounded h-2.5 dark:bg-neutral-700 mr-2">
+          <div class="w-full bg-neutral-200 rounded-sm h-2.5 dark:bg-neutral-700 mr-2">
             <div class={barColor} style="width: {rating * 10}%" />
           </div>
           <span class="text-sm font-medium text-neutral-500 dark:text-neutral-400">{rating}</span>
@@ -67,10 +67,10 @@
 @prop export let ratings2: { label: string;
 @prop export let headerLabel: {
     desc1: string;
-@prop export let desc1Class: string = 'bg-primary-100 w-8 text-primary-800 text-sm font-semibold inline-flex items-center p-1.5 rounded dark:bg-primary-200 dark:text-primary-800';
+@prop export let desc1Class: string = 'bg-primary-100 w-8 text-primary-800 text-sm font-semibold inline-flex items-center p-1.5 rounded-sm dark:bg-primary-200 dark:text-primary-800';
 @prop export let desc2Class: string = 'ml-2 w-24 font-medium text-neutral-900 dark:text-white';
 @prop export let desc3spanClass: string = 'mx-2 w-1 h-1 bg-neutral-900 rounded-full dark:bg-neutral-500';
 @prop export let desc3pClass: string = 'text-sm  w-24 font-medium text-neutral-500 dark:text-neutral-400';
 @prop export let linkClass: string = 'ml-auto w-32 text-sm font-medium text-primary-600 hover:underline dark:text-primary-500';
-@prop export let barColor: string = 'bg-primary-600 h-2.5 rounded dark:bg-primary-500';
+@prop export let barColor: string = 'bg-primary-600 h-2.5 rounded-sm dark:bg-primary-500';
 -->

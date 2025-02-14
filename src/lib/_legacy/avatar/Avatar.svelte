@@ -23,13 +23,13 @@
   };
 
   let avatarClass: string;
-  $: avatarClass = twMerge(rounded ? 'rounded' : 'rounded-full', border && 'p-1 ring-2 ring-neutral-50 dark:ring-neutral-800', sizes[size], stacked && 'border-2 -ml-4 border-white dark:border-neutral-800', 'bg-neutral-50 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-300', $$props.class);
+  $: avatarClass = twMerge(rounded ? 'rounded-sm' : 'rounded-full', border && 'p-1 ring-2 ring-neutral-50 dark:ring-neutral-800', sizes[size], stacked && 'border-2 -ml-4 border-white dark:border-neutral-800', 'bg-neutral-50 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-300', $$props.class);
 </script>
 
 {#if !src || !!href || $$slots.default || dot}
   <svelte:element this={href ? 'a' : 'div'} {href} {...$$restProps} class="relative flex justify-center items-center {avatarClass}">
     {#if src}
-      <img {alt} {src} class={rounded ? 'rounded' : 'rounded-full'} />
+      <img {alt} {src} class={rounded ? 'rounded-sm' : 'rounded-full'} />
     {:else}
       <slot><AvatarPlaceholder {rounded} {size} {border} class={twMerge($$props.classPlaceholder)} /></slot>
     {/if}

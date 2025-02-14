@@ -58,7 +58,7 @@
   const baseClass: string = 'font-medium inline-flex items-center justify-center px-2.5 py-0.5';
 
   let badgeClass: string;
-  $: badgeClass = twMerge(baseClass, large ? 'text-sm' : 'text-xs', $$restProps.border ? `border ${borderedColors[color]}` : colors[color], $$restProps.href && hoverColors[color], $$restProps.rounded ? 'rounded-full' : 'rounded', $$props.class);
+  $: badgeClass = twMerge(baseClass, large ? 'text-sm' : 'text-xs', $$restProps.border ? `border ${borderedColors[color]}` : colors[color], $$restProps.href && hoverColors[color], $$restProps.rounded ? 'rounded-full' : 'rounded-sm', $$props.class);
 
   // only overwrite necessary colors (<CloseButton> v0.29.10)
   const closeBtnColors = {

@@ -11,7 +11,7 @@
 </script>
 
 <div class="flex h-[360px] items-start justify-center">
-  <div id="bell" class="inline-flex items-center text-center text-sm font-medium text-gray-500 hover:text-gray-900 focus:outline-none dark:text-gray-400 dark:hover:text-white">
+  <div id="bell" class="inline-flex items-center text-center text-sm font-medium text-gray-500 hover:text-gray-900 focus:outline-hidden dark:text-gray-400 dark:hover:text-white">
     <BellSolid class="h-8 w-8" onclick={dropdownNotification.toggle} />
     <div class="relative flex">
       <div class="relative -top-2 end-4 inline-flex h-3 w-3 rounded-full border-2 border-white bg-red-500 dark:border-gray-900"></div>
@@ -20,7 +20,7 @@
   <div class="relative">
     <Dropdown dropdownStatus={dropdownNotificationStatus} closeDropdown={closeDropdownNotification} params={{ y: 0, duration: 200, easing: sineIn }} class="absolute -left-[230px] top-[30px] w-96">
       <DropdownHeader class="py-2 text-center font-bold">Notifications</DropdownHeader>
-      <DropdownUl class="max-w-sm space-y-2 divide-y divide-gray-100 rounded p-2 shadow dark:divide-gray-700 dark:bg-gray-800">
+      <DropdownUl class="max-w-sm space-y-2 divide-y divide-gray-100 rounded-sm p-2 shadow-sm dark:divide-gray-700 dark:bg-gray-800">
         <DropdownLi liClass="flex space-x-4 rtl:space-x-reverse p-2 hover:bg-gray-100 dark:hover:bg-gray-600">
           <Avatar src="/images/profile-picture-1.webp" dot={{ color: "gray" }} cornerStyle="rounded" />
           <div class="w-full ps-3">

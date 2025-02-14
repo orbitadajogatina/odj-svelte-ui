@@ -17,7 +17,7 @@
   export const labelClass = (inline: boolean, extraClass: string) => twMerge(inline ? 'inline-flex' : 'flex', 'items-center', extraClass);
   export let spacing: string = 'mr-2';
 
-  export const inputClass = (custom: boolean, color: FormColorType, rounded: boolean, tinted: boolean, extraClass: string) => twMerge('w-4 h-4 bg-neutral-100 border-neutral-300 dark:ring-offset-neutral-800 focus:ring-2', spacing, tinted ? 'dark:bg-neutral-600 dark:border-neutral-500' : 'dark:bg-neutral-700 dark:border-neutral-600', custom && 'sr-only peer', rounded && 'rounded', colorClasses[color], extraClass);
+  export const inputClass = (custom: boolean, color: FormColorType, rounded: boolean, tinted: boolean, extraClass: string) => twMerge('w-4 h-4 bg-neutral-100 border-neutral-300 dark:ring-offset-neutral-800 focus:ring-2', spacing, tinted ? 'dark:bg-neutral-600 dark:border-neutral-500' : 'dark:bg-neutral-700 dark:border-neutral-600', custom && 'sr-only peer', rounded && 'rounded-sm', colorClasses[color], extraClass);
 </script>
 
 <script lang="ts">

@@ -25,7 +25,7 @@
   export let placement: ModalPlacementType = 'center';
   export let autoclose: boolean = false;
   export let dismissable: boolean = true;
-  export let backdropClass: string = 'fixed inset-0 z-40 bg-neutral-900 bg-opacity-50 dark:bg-opacity-80';
+  export let backdropClass: string = 'fixed inset-0 z-40 bg-neutral-900/50 dark:bg-neutral-900/80';
   export let defaultClass: string = 'relative flex flex-col mx-auto';
   export let outsideclose: boolean = false;
   export let dialogClass: string = 'fixed top-0 left-0 right-0 h-modal md:inset-0 md:h-full z-50 w-full p-4 flex';
@@ -155,7 +155,7 @@
 @prop export let placement: ModalPlacementType = 'center';
 @prop export let autoclose: boolean = false;
 @prop export let dismissable: boolean = true;
-@prop export let backdropClass: string = 'fixed inset-0 z-40 bg-neutral-900 bg-opacity-50 dark:bg-opacity-80';
+@prop export let backdropClass: string = 'fixed inset-0 z-40 bg-neutral-900/50 dark:bg-neutral-900/80';
 @prop export let defaultClass: string = 'relative flex flex-col mx-auto';
 @prop export let outsideclose: boolean = false;
 @prop export let dialogClass: string = 'fixed top-0 left-0 right-0 h-modal md:inset-0 md:h-full z-50 w-full p-4 flex';

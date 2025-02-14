@@ -3,7 +3,7 @@
 
   export let color: string = 'text-white dark:bg-blue-500';
   export let bgColor: string = 'bg-blue-600';
-  export let markClass: string = 'px-2 rounded';
+  export let markClass: string = 'px-2 rounded-sm';
 </script>
 
 <mark {...$$restProps} class={twMerge(markClass, bgColor, color, $$props.class)}>
@@ -16,5 +16,5 @@
 ## Props
 @prop export let color: string = 'text-white dark:bg-blue-500';
 @prop export let bgColor: string = 'bg-blue-600';
-@prop export let markClass: string = 'px-2 rounded';
+@prop export let markClass: string = 'px-2 rounded-sm';
 -->

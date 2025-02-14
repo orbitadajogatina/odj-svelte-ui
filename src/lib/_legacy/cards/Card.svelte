@@ -33,7 +33,7 @@
     sm: 'max-w-sm',
     md: 'max-w-lg',
     lg: 'max-w-2xl',
-    xl: 'max-w-screen-xl'
+    xl: 'max-w-(--breakpoint-xl)'
   };
 
   let inneraPdding: string;

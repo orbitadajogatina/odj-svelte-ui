@@ -2,7 +2,7 @@ import { tv } from "tailwind-variants";
 
 export const textarea = tv({
   slots: {
-    base: "block text-sm bg-inherit dark:bg-inherit focus:outline-none disabled:cursor-not-allowed disabled:opacity-50",
+    base: "block text-sm bg-inherit dark:bg-inherit focus:outline-hidden disabled:cursor-not-allowed disabled:opacity-50",
     wrapper: "",
     innerWrapper: "",
     headerCls: "py-2 px-3 border-light-surface-200 dark:border-dark-surface-500",

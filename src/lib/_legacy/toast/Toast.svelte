@@ -21,7 +21,7 @@
   export let color: 'primary' | 'neutral' | 'red' | 'yellow' | 'green' | 'blue' | 'indigo' | 'purple' | 'orange' | 'none' = 'primary';
   export let position: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right' | 'none' = 'none';
   export let open: boolean = true;
-  export let divClass: string = 'w-full max-w-xs p-4 text-neutral-500 bg-white shadow dark:text-neutral-400 dark:bg-neutral-800 gap-3';
+  export let divClass: string = 'w-full max-w-xs p-4 text-neutral-500 bg-white shadow-sm dark:text-neutral-400 dark:bg-neutral-800 gap-3';
   export let defaultIconClass: string = 'w-8 h-8';
   export let contentClass: string = 'w-full text-sm font-normal';
   export let align: boolean = true;
@@ -61,7 +61,7 @@
   let iconClass: string;
   $: iconClass = twMerge('inline-flex items-center justify-center shrink-0', colors[color], defaultIconClass);
 
-  const clsBtnExtraClass = '-mx-1.5 -my-1.5 text-neutral-400 hover:text-neutral-900 focus:!ring-neutral-300 hover:bg-neutral-100 dark:text-neutral-500 dark:hover:text-white dark:hover:bg-neutral-700';
+  const clsBtnExtraClass = '-mx-1.5 -my-1.5 text-neutral-400 hover:text-neutral-900 focus:ring-neutral-300! hover:bg-neutral-100 dark:text-neutral-500 dark:hover:text-white dark:hover:bg-neutral-700';
 </script>
 
 {#if open}
@@ -92,7 +92,7 @@
 @prop export let color: 'primary' | 'neutral' | 'red' | 'yellow' | 'green' | 'blue' | 'indigo' | 'purple' | 'orange' | 'none' = 'primary';
 @prop export let position: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right' | 'none' = 'none';
 @prop export let open: boolean = true;
-@prop export let divClass: string = 'w-full max-w-xs p-4 text-neutral-500 bg-white shadow dark:text-neutral-400 dark:bg-neutral-800 gap-3';
+@prop export let divClass: string = 'w-full max-w-xs p-4 text-neutral-500 bg-white shadow-sm dark:text-neutral-400 dark:bg-neutral-800 gap-3';
 @prop export let defaultIconClass: string = 'w-8 h-8';
 @prop export let contentClass: string = 'w-full text-sm font-normal';
 @prop export let align: boolean = true;

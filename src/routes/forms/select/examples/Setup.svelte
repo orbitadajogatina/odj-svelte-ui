@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Select } from "svelte-5-ui-lib";
+  import { Select } from "$lib";
   interface Country {
     value: string;
     name: string;
