@@ -4,8 +4,9 @@ import { type ColorName } from "$lib/types";
 
 interface LabelProps extends HTMLLabelAttributes {
   children: Snippet;
-  color?: ColorName | "disabled" | "default";
+  color?: ColorName | "default";
   show?: boolean;
+  disabled?: boolean;
   class?: string;
   for?: string;
 }

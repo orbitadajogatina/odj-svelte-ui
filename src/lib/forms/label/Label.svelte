@@ -1,9 +1,9 @@
 <script lang="ts">
   import { type LabelProps as Props, label } from ".";
 
-  let { children, color = "gray", show = true, class: className, ...restProps }: Props = $props();
+  let { children, color = "default", show = true, disabled = false, class: className, ...restProps }: Props = $props();
 
-  const base = $derived(label({ color, className }));
+  const base = $derived(label({ color, disabled, className }));
 </script>
 
 {#if show}

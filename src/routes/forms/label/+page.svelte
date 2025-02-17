@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Label, label, Radio, type ColorName } from "$lib";
+  import { Label, label, Radio, Button, type ColorName } from "$lib";
   import HighlightCompo from "../../utils/HighlightCompo.svelte";
   import CodeWrapper from "../../utils/CodeWrapper.svelte";
   import H1 from "../../utils/H1.svelte";
@@ -15,16 +15,21 @@
   }) as Record<string, string>;
 
   const colors = Object.keys(label.variants.color);
-  let labelColor: ColorName = $state("gray");
+  let labelColor: ColorName | "default" = $state("default");
+  let disabled = $state(false);
+  const changeDisabled = () => {
+    disabled = !disabled;
+  };
   // code generator
   let generatedCode = $derived(
     (() => {
       let props = [];
-      if (labelColor !== "gray") props.push(` color="${labelColor}"`);
+      if (labelColor !== "default") props.push(`color="${labelColor}"`);
+      if (disabled) props.push("disabled");
 
       const propsString = props.length > 0 ? props.map((prop) => `\n  ${prop}`).join("") + "\n" : "";
 
-      return `<Label${propsString}>Label</Label>`;
+      return `<Label${propsString}>${capitalizeFirstLetter(labelColor)}</Label>`;
     })()
   );
 </script>
@@ -36,12 +41,15 @@
 
 <H2>Color</H2>
 <CodeWrapper>
-  <Label class="text-lg font-bold" color={labelColor}>{capitalizeFirstLetter(labelColor)}</Label>
+  <Label color={labelColor} {disabled}>{capitalizeFirstLetter(labelColor)}</Label>
   <div class="flex flex-wrap space-x-2">
     <Label class="m-4 w-full font-bold">Color</Label>
     {#each colors as colorOption}
       <Radio labelClass="w-24 my-1" name="default_alert_color" bind:group={labelColor} color={colorOption as ColorName} value={colorOption}>{colorOption}</Radio>
     {/each}
+  </div>
+  <div class="flex flex-wrap justify-center gap-2 md:justify-start">
+    <Button class="w-32" color="lime" onclick={changeDisabled}>{disabled ? "Enabled" : "Disabled"}</Button>
   </div>
   {#snippet codeblock()}
     <HighlightCompo code={generatedCode} />

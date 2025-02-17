@@ -15,7 +15,7 @@ This is a fork from [Flowbite for Svelte 5 with Runes](https://svelte-5-ui-lib.c
   - `Textarea` is fixed;
   - `Pagination` respect max-width;
   - `Modal` title has a better size, improved default animations with control of backdrop's animations and removed the outdated divider;
-  - `Label` now has `space-y-1` by default and a new default color;
+  - `Label` now has `space-y-1` by default, a new default color and the `disabled` prop;
   - `Input:Search` has a better X button for Chromium browsers;
   - `Radio` has a new design and it's animated;
 - `Tabs` styles are fixed and introduced underline animations and a complete modern redesign for "Full" style;

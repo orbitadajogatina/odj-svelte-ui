@@ -4,7 +4,6 @@ export const label = tv({
   base: "text-sm rtl:text-right font-medium block space-y-1",
   variants: {
     color: {
-      disabled: "text-light-surface-500 dark:text-dark-surface-500",
       default: "text-light-surface-700 dark:text-dark-surface-200",
       primary: "text-primary-700 dark:text-primary-500",
       secondary: "text-secondary-700 dark:text-secondary-500",
@@ -26,6 +25,9 @@ export const label = tv({
       fuchsia: "text-fuchsia-700 dark:text-fuchsia-500",
       pink: "text-pink-700 dark:text-pink-500",
       rose: "text-rose-700 dark:text-rose-500"
+    },
+    disabled: {
+      true: "opacity-50"
     }
   }
 });

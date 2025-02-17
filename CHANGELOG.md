@@ -5,7 +5,8 @@
 ### Features
 - Migration to Tailwind v4;
 - (Radio) Animated and new design;
-- (Label) Added `default` color variant using `dark-surface` and `light-surface`.
+- (Label) Added `default` color variant using `dark-surface` and `light-surface`;
+- (Label) Added `disabled` prop.
 
 ### Bug Fixes & Changes
 - (Select) Missing `disabled` classes.
