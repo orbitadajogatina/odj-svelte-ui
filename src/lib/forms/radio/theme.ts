@@ -2,72 +2,68 @@ import { tv } from "tailwind-variants";
 
 export const radio = tv({
   slots: {
-    input: "relative flex items-center w-4 h-4 bg-light-surface-100 border-light-surface-300 dark:bg-dark-surface-100 dark:border-dark-surface-300 dark:ring-offset-dark-surface-800 focus:ring-2 mr-2",
-    label: "flex items-center"
+    input: "mr-2 my-auto appearance-none size-4 shrink-0 cursor-default rounded-full transition-all duration-150 bg-light-surface-100 dark:bg-dark-surface-700 border border-light-surface-300 dark:border-dark-surface-600 hover:border-light-surface-400 checked:border-5 checked:bg-white focus-visible:ring-2 focus-visible:ring-white outline-hidden disabled:opacity-50",
+    label: "flex items-center disabled:opacity-50 transition-all duration-150"
   },
   variants: {
     color: {
       // primary, secondary, gray, red, orange, amber, yellow, lime, green, emerald, teal, cyan, sky, blue, indigo, violet, purple, fuchsia, pink, rose
       primary: {
-        input: "text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600"
+        input: "checked:border-primary-600 hover:checked:border-primary-600"
       },
       secondary: {
-        input: "text-secondary-600 focus:ring-secondary-500 dark:focus:ring-secondary-600"
+        input: "checked:border-secondary-600 hover:checked:border-secondary-600"
       },
       gray: {
-        input: "text-gray-600 focus:ring-gray-500 dark:focus:ring-gray-600"
+        input: "checked:border-gray-600 hover:checked:border-gray-600"
       },
-      red: { input: "text-red-600 focus:ring-red-500 dark:focus:ring-red-600" },
+      red: { input: "checked:border-red-600 hover:checked:border-red-600" },
       orange: {
-        input: "text-orange-500 focus:ring-orange-500 dark:focus:ring-orange-600"
+        input: "checked:border-orange-500 hover:checked:border-orange-500"
       },
       amber: {
-        input: "text-amber-600 focus:ring-amber-500 dark:focus:ring-amber-600"
+        input: "checked:border-amber-600 hover:checked:border-amber-600"
       },
       yellow: {
-        input: "text-yellow-400 focus:ring-yellow-500 dark:focus:ring-yellow-600"
+        input: "checked:border-yellow-400 hover:checked:border-yellow-400"
       },
       lime: {
-        input: "text-lime-600 focus:ring-lime-500 dark:focus:ring-lime-600"
+        input: "checked:border-lime-600 hover:checked:border-lime-600"
       },
       green: {
-        input: "text-green-600 focus:ring-green-500 dark:focus:ring-green-600"
+        input: "checked:border-green-600 hover:checked:border-green-600"
       },
       emerald: {
-        input: "text-emerald-600 focus:ring-emerald-500 dark:focus:ring-emerald-600"
+        input: "checked:border-emerald-600 hover:checked:border-emerald-600"
       },
       teal: {
-        input: "text-teal-600 focus:ring-teal-500 dark:focus:ring-teal-600"
+        input: "checked:border-teal-600 hover:checked:border-teal-600"
       },
       cyan: {
-        input: "text-cyan-600 focus:ring-cyan-500 dark:focus:ring-cyan-600"
+        input: "checked:border-cyan-600 hover:checked:border-cyan-600"
       },
-      sky: { input: "text-sky-600 focus:ring-sky-500 dark:focus:ring-sky-600" },
+      sky: { input: "checked:border-sky-600 hover:checked:border-sky-600" },
       blue: {
-        input: "text-blue-600 focus:ring-blue-500 dark:focus:ring-blue-600"
+        input: "checked:border-blue-600 hover:checked:border-blue-600"
       },
       indigo: {
-        input: "text-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600"
+        input: "checked:border-indigo-600 hover:checked:border-indigo-600"
       },
       violet: {
-        input: "text-violet-600 focus:ring-violet-500 dark:focus:ring-violet-600"
+        input: "checked:border-violet-600 hover:checked:border-violet-600"
       },
       purple: {
-        input: "text-purple-600 focus:ring-purple-500 dark:focus:ring-purple-600"
+        input: "checked:border-purple-600 hover:checked:border-purple-600"
       },
       fuchsia: {
-        input: "text-fuchsia-600 focus:ring-fuchsia-500 dark:focus:ring-fuchsia-600"
+        input: "checked:border-fuchsia-600 hover:checked:border-fuchsia-600"
       },
       pink: {
-        input: "text-pink-600 focus:ring-pink-500 dark:focus:ring-pink-600"
+        input: "checked:border-pink-600 hover:checked:border-pink-600"
       },
       rose: {
-        input: "text-rose-600 focus:ring-rose-500 dark:focus:ring-rose-600"
+        input: "checked:border-rose-600 hover:checked:border-rose-600"
       }
-    },
-    tinted: {
-      true: { input: "dark:bg-dark-surface-600 dark:border-dark-surface-500" },
-      false: { input: "dark:bg-dark-surface-700 dark:border-dark-surface-600" }
     },
     custom: {
       true: { input: "sr-only! peer" }

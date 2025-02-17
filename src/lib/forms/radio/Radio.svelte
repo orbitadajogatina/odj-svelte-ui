@@ -1,15 +1,15 @@
 <script lang="ts" generics="T">
-  import { getContext } from "svelte";
   import Label from "../label/Label.svelte";
   import { type RadioProps as Props, radio } from ".";
 
-  let { children, aria_describedby, labelClass, color = "primary", group = $bindable<T>(), value = $bindable<T>(), inputClass, custom = false, ...restProps }: Props<T> = $props();
+  let { children, aria_describedby, labelClass, color = "primary", group = $bindable<T>(), value = $bindable<T>(), inputClass, custom = false, disabled, ...restProps }: Props<T> = $props();
 
-  const { input, label } = $derived(radio({ color, custom, tinted: !!getContext("background") }));
+    $inspect(group)
+  const { input, label } = $derived(radio({ color, custom }));
 </script>
 
-<Label class={label({ class: labelClass })}>
-  <input type="radio" bind:group {value} aria-describedby={aria_describedby} {...restProps} class={input({ class: inputClass })} />
+<Label class={label({ class: labelClass })} color={disabled ? 'disabled' : undefined}>
+  <input type="radio" bind:group {value} aria-describedby={aria_describedby} {disabled} aria-checked={group === value} class={input({ class: inputClass })} {...restProps} />
   {@render children()}
 </Label>
 
