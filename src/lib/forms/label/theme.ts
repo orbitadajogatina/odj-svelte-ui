@@ -5,6 +5,7 @@ export const label = tv({
   variants: {
     color: {
       disabled: "text-light-surface-500 dark:text-dark-surface-500",
+      default: "text-light-surface-700 dark:text-dark-surface-200",
       primary: "text-primary-700 dark:text-primary-500",
       secondary: "text-secondary-700 dark:text-secondary-500",
       green: "text-green-700 dark:text-green-500",
