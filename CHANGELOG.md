@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.2.0 (2025-02-17)
+
+### Features
+- Migration to Tailwind v4;
+- (Radio) Animated and new design;
+- (Label) Added `default` color variant using `dark-surface` and `light-surface`.
+
+### Bug Fixes & Changes
+- (Select) Missing `disabled` classes.
+
 ## 0.1.1 (2025-02-11)
 
 ### Features
