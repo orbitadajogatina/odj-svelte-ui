@@ -34,6 +34,7 @@ interface DropdownLiProps extends HTMLAnchorAttributes {
   href?: string;
   activeClass?: string;
   liClass?: string;
+  custom?: boolean;
 }
 
 interface DropdownUlProps extends HTMLAttributes<HTMLUListElement> {
