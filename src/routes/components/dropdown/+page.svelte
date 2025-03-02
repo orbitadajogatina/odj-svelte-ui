@@ -49,6 +49,10 @@
   const changeFooterStatus = () => {
     footerStatus = !footerStatus;
   };
+  let lockStatus = $state(true);
+  const changeLockStatus = () => {
+    lockStatus = !lockStatus;
+  };
 
   // transition
   type TransitionOption = {
@@ -147,7 +151,7 @@
       <ChevronDownOutline class="ms-2 h-5 w-5 text-white dark:text-white" />
     </Button>
     <div class="relative h-96">
-      <Dropdown {activeUrl} dropdownStatus={dropdownDividerHeaderFooterStatus} closeDropdown={closeDropdownDividerHeaderFooter} transition={currentTransition.transition} params={currentTransition.params} class="absolute -left-[150px] top-[40px]">
+      <Dropdown {activeUrl} dropdownStatus={dropdownDividerHeaderFooterStatus} closeDropdown={closeDropdownDividerHeaderFooter} transition={currentTransition.transition} params={currentTransition.params} class="absolute -left-[150px] top-[40px]" lock={lockStatus}>
         {#if headerStatus}
           <DropdownHeader>
             <div>Bonnie Green</div>
@@ -182,6 +186,9 @@
     </Button>
     <Button onclick={changeDividerStatus}>
       Divider {#if dividerStatus}on{:else}off{/if}
+    </Button>
+    <Button onclick={changeLockStatus}>
+      Lock {#if lockStatus}on{:else}off{/if}
     </Button>
   </div>
   <div class="flex flex-wrap space-x-2">
