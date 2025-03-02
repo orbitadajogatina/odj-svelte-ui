@@ -5,7 +5,7 @@
   import { setContext } from "svelte";
   import { writable } from "svelte/store";
 
-  let { children, dropdownStatus = $bindable(), closeDropdown, class: className, backdropClass, params, transition = fly, activeUrl = "", ...restProps }: Props = $props();
+  let { children, dropdownStatus = $bindable(), closeDropdown, class: className, backdropClass, params = { y: -5 }, transition = fly, activeUrl = "", ...restProps }: Props = $props();
 
   const { base, backdrop } = $derived(dropdown());
   const activeUrlStore = writable("");
