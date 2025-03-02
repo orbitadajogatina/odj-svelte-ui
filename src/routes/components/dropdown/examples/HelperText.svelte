@@ -13,17 +13,17 @@
 <div class="relative flex h-72 items-start justify-center">
   <Button onclick={dropdownHelper.toggle}>Dropdown helper text<ChevronDownOutline class="ms-2 h-6 w-6 text-white dark:text-white" /></Button>
   <div class="relative">
-    <Dropdown dropdownStatus={dropdownHelperStatus} closeDropdown={closeDropdownHelper} class="absolute -left-[240px] top-[45px] w-64 overflow-y-auto p-2 pb-3 text-sm">
+    <Dropdown dropdownStatus={dropdownHelperStatus} closeDropdown={closeDropdownHelper} class="absolute -left-[240px] top-[45px] w-64 overflow-y-auto text-sm">
       <DropdownUl>
-        <DropdownLi aClass="block" liClass="rounded-sm p-2 hover:bg-gray-100 dark:hover:bg-gray-600">
+        <DropdownLi aClass="block cursor-default">
           <Checkbox>Enable notifications</Checkbox>
           <Helper class="ps-6">Some helpful instruction goes over here.</Helper>
         </DropdownLi>
-        <DropdownLi aClass="block" liClass="rounded-sm p-2 hover:bg-gray-100 dark:hover:bg-gray-600">
+        <DropdownLi aClass="block cursor-default">
           <Checkbox>Enable 2FA auth</Checkbox>
           <Helper class="ps-6">Some helpful instruction goes over here.</Helper>
         </DropdownLi>
-        <DropdownLi aClass="block" liClass="rounded-sm p-2 hover:bg-gray-100 dark:hover:bg-gray-600">
+        <DropdownLi aClass="block cursor-default">
           <Checkbox checked>Subscribe newsletter</Checkbox>
           <Helper class="ps-6">Some helpful instruction goes over here.</Helper>
         </DropdownLi>
