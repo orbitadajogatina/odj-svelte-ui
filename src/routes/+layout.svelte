@@ -44,8 +44,8 @@
 
 <RunesMetaTags {...metaTags} />
 
-<header class="sticky top-0 z-50 mx-auto w-full flex-none border-b border-gray-200 bg-gray-50 lg:pl-4 dark:border-gray-600 dark:bg-gray-900">
-  <Navbar {navClass} {toggleNav} {closeNav} {navStatus} fluid div2Class="ml-auto w-full">
+<header class="sticky top-0 z-50">
+  <Navbar {toggleNav} {closeNav} {navStatus} fluid div2Class="ml-auto w-full" divClass="max-w-full">
     {#snippet brand()}
       <button onclick={sidebarUi.toggle} type="button" class="z-50 mr-4 mt-1 lg:hidden" aria-controls="sidebar" aria-expanded={isOpen}>
         <span class="sr-only">Toggle sidebar menu</span>
@@ -56,7 +56,9 @@
       <NavBrand siteName="OdJ Svelte UI" spanClass="text-xl sm:text-3xl">
         <img width="30" src="/images/svelte-icon.png" class="h-6 w-5 sm:h-10 sm:w-8" alt="svelte icon" />
       </NavBrand>
+    {/snippet}
 
+    <div class="flex flex-row items-center">
       <div class="ml-auto flex items-center space-x-2 md:order-1">
         <DynamicCodeBlockStyle class="mr-4 hidden sm:block" />
         <a class="inline-block whitespace-normal rounded-lg p-1 hover:bg-gray-100 hover:text-gray-900 focus:outline-hidden focus:ring-0 focus:ring-gray-400 dark:hover:bg-gray-600 dark:hover:text-white" href="https://svelte-5-ui-lib.codewithshin.com" aria-label="Original Docs" target="_blank">
@@ -67,13 +69,13 @@
         </a>
         <Darkmode class="hidden sm:block" />
       </div>
-    {/snippet}
-    <NavUl class="md:space-x-6 lg:space-x-8" {activeUrl}>
-      <NavLi href="/pages/coverage">Coverage</NavLi>
-      <NavLi href="/pages/about">About</NavLi>
-      <NavLi class="sm:hidden" href="https://github.com/shinokada/svelte-5-ui-lib">Repo</NavLi>
-    </NavUl>
-    <div class="mt-4 flex justify-end space-x-4 sm:hidden"><DynamicCodeBlockStyle /> <Darkmode class="sm:hidden" /></div>
+      <NavUl class="md:space-x-6 lg:space-x-8" {activeUrl}>
+        <NavLi href="/pages/coverage">Coverage</NavLi>
+        <NavLi href="/pages/about">About</NavLi>
+        <NavLi class="sm:hidden" href="https://github.com/shinokada/svelte-5-ui-lib">Repo</NavLi>
+      </NavUl>
+      <div class="mt-4 flex justify-end space-x-4 sm:hidden"><DynamicCodeBlockStyle /> <Darkmode class="sm:hidden" /></div>
+    </div>
   </Navbar>
 </header>
 <div class="lg:flex" id="sidebar">
