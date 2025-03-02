@@ -2,12 +2,12 @@ import { tv } from "tailwind-variants";
 
 export const navbar = tv({
   slots: {
-    base: "bg-white dark:bg-gray-900 text-gray-700 dark:text-gray-200 border-gray-100 dark:border-gray-700 divide-gray-100 dark:divide-gray-700 px-2 sm:px-4 py-2.5 w-full",
+    base: "bg-light-surface-100/80 dark:bg-dark-surface-900/80 backdrop-blur-lg text-light-surface-700 dark:text-dark-surface-400 border-light-surface-300 dark:border-dark-surface-600 border-b px-2 sm:px-4 py-2.5 w-full",
     container: "mx-auto flex flex-wrap items-center justify-between",
-    toggleButton: "inline-flex h-10 w-10 items-center justify-center rounded-lg p-2 text-sm text-gray-500 hover:bg-gray-100 focus:outline-hidden focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600",
+    toggleButton: "inline-flex h-10 w-10 items-center justify-center rounded-lg p-2 mr-2 text-sm focus:outline-hidden text-light-surface-500 focus-visible:ring-light-surface-400 dark:focus-visible:ring-dark-surface-400 active:bg-light-surface-300 dark:active:bg-dark-surface-700/30 hover:bg-light-surface-200 dark:hover:bg-dark-surface-700/40 dark:hover:text-dark-surface-400",
     menuContainer: "w-full",
     activeLink: "block py-2 px-3 text-white bg-primary-700 rounded-sm dark:text-white",
-    inactiveLink: "block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white"
+    inactiveLink: "block py-2 px-3 text-light-surface-900 rounded-sm hover:bg-light-surface-100 dark:text-white dark:hover:bg-dark-surface-700 dark:hover:text-white"
   },
   variants: {
     fluid: {
@@ -57,13 +57,13 @@ export const navbar = tv({
 });
 
 export const navUl = tv({
-  base: "font-medium flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-transparent rtl:space-x-reverse dark:bg-gray-800 dark:border-gray-700",
+  base: "bg-light-surface-200 dark:bg-dark-surface-800 text-light-surface-700 dark:text-dark-surface-400 rounded-xl border border-light-surface-300 dark:border-dark-surface-700 divide-light-surface-100 dark:divide-dark-surface-700 flex flex-col gap-2 p-2 mt-2 rtl:space-x-reverse",
   variants: {
     breakPoint: {
-      md: "md:mt-0 md:flex-row md:space-x-8 md:border-0 md:p-0 md:dark:bg-gray-900",
-      lg: "lg:mt-0 lg:flex-row lg:space-x-8 lg:border-0 lg:p-0 lg:dark:bg-gray-900",
-      xl: "xl:mt-0 xl:flex-row xl:space-x-8 xl:border-0 lg:p-0 xl:dark:bg-gray-900",
-      xxl: "2xl:mt-0 2xl:flex-row 2xl:space-x-8 2xl:border-0 2xl:p-0 2xl:dark:bg-gray-900"
+      md: "dark:md:bg-transparent md:bg-transparent md:text-sm md:font-medium md:border-0 md:mt-0 md:flex-row md:items-center md:gap-8 md:p-0",
+      lg: "dark:lg:bg-transparent lg:bg-transparent lg:text-sm lg:font-medium lg:border-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-8 lg:p-0",
+      xl: "dark:xl:bg-transparent xl:bg-transparent xl:text-sm xl:font-medium xl:border-0 xl:mt-0 xl:flex-row xl:items-center xl:gap-8 lg:p-0",
+      xxl: "dark:2xl:bg-transparent 2xl:bg-transparent 2xl:text-sm 2xl:font-medium 2xl:border-0 2xl:mt-0 2xl:flex-row 2xl:items-center 2xl:gap-8 2xl:p-0"
     }
   }
 });
@@ -78,26 +78,26 @@ export const navbrand = tv({
 export const navLi = tv({
   slots: {
     base: "list-none",
-    link: "block py-2 pl-3 pr-4 text-gray-900 rounded-sm hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white"
+    link: "block py-2 px-4 rounded-lg text-light-surface-700 hover:text-light-surface-800 dark:text-dark-surface-400 dark:hover:text-white hover:bg-light-surface-50 dark:hover:bg-dark-surface-700 transition-all"
   },
   variants: {
     active: {
       true: {
-        link: "bg-primary-700 text-white"
+        link: "bg-primary-700 hover:bg-primary-800 dark:hover:bg-primary-800 text-white hover:text-white dark:text-white"
       }
     },
     breakPoint: {
       md: {
-        link: "md:hover:bg-transparent md:border-0 md:hover:text-primary-700 md:p-0 md:dark:hover:text-primary-500 md:dark:hover:bg-transparent"
+        link: "md:p-0 md:hover:text-dark-surface-900 md:dark:hover:text-white md:hover:bg-transparent md:dark:hover:bg-transparent md:border-0"
       },
       lg: {
-        link: "lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 lg:dark:hover:text-primary-500 lg:dark:hover:bg-transparent"
+        link: "lg:p-0 lg:hover:text-dark-surface-900 lg:dark:hover:text-white lg:hover:bg-transparent lg:dark:hover:bg-transparent lg:border-0"
       },
       xl: {
-        link: "xl:hover:bg-transparent xl:border-0 xl:hover:text-primary-700 xl:p-0 xl:dark:hover:text-primary-500 xl:dark:hover:bg-transparent"
+        link: "xl:p-0 xl:hover:text-dark-surface-900 xl:dark:hover:text-white xl:hover:bg-transparent xl:dark:hover:bg-transparent xl:border-0"
       },
       xxl: {
-        link: "2xl:hover:bg-transparent 2xl:border-0 2xl:hover:text-primary-700 2xl:p-0 2xl:dark:hover:text-primary-500 2xl:dark:hover:bg-transparent"
+        link: "2xl:p-0 2xl:hover:text-dark-surface-900 2xl:dark:hover:text-white 2xl:hover:bg-transparent 2xl:dark:hover:bg-transparent 2xl:border-0"
       }
     }
   },
@@ -106,28 +106,28 @@ export const navLi = tv({
       active: true,
       breakPoint: "md",
       class: {
-        link: "md:bg-transparent md:text-primary-700 md:p-0 md:dark:text-primary-500"
+        link: "md:bg-transparent md:text-primary-700 md:dark:text-primary-600 md:hover:text-primary-900 md:dark:hover:text-primary-500 md:font-medium md:p-0"
       }
     },
     {
       active: true,
       breakPoint: "lg",
       class: {
-        link: "lg:bg-transparent lg:text-primary-700 lg:p-0 lg:dark:text-primary-500"
+        link: "lg:bg-transparent lg:text-primary-700 lg:dark:text-primary-600 lg:hover:text-primary-900 lg:dark:hover:text-primary-500 lg:font-medium lg:p-0"
       }
     },
     {
       active: true,
       breakPoint: "xl",
       class: {
-        link: "xl:bg-transparent xl:text-primary-700 xl:p-0 xl:dark:text-primary-500"
+        link: "xl:bg-transparent xl:text-primary-700 xl:dark:text-primary-600 xl:hover:text-primary-900 xl:dark:hover:text-primary-500 xl:font-medium xl:p-0"
       }
     },
     {
       active: true,
       breakPoint: "xxl",
       class: {
-        link: "2xl:bg-transparent 2xl:text-primary-700 2xl:p-0 2xl:dark:text-primary-500"
+        link: "2xl:bg-transparent 2xl:text-primary-700 2xl:dark:text-primary-6002 xl:hover:text-primary-900 2xl:dark:hover:text-primary-500 2xl:font-medium 2xl:p-0"
       }
     }
   ],
@@ -138,7 +138,7 @@ export const navLi = tv({
 });
 
 export const navcontainer = tv({
-  base: "mx-auto flex flex-wrap justify-between items-center",
+  base: "mx-0 flex flex-wrap justify-between items-center max-w-none",
   variants: {
     fluid: {
       true: "w-full",
@@ -148,7 +148,7 @@ export const navcontainer = tv({
 });
 
 export const navhamburger = tv({
-  base: "inline-flex h-10 w-10 items-center justify-center rounded-lg p-2 text-sm text-gray-500 hover:bg-gray-100 focus:outline-hidden focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600",
+  base: "inline-flex h-10 w-10 items-center justify-center rounded-lg p-2 text-sm text-light-surface-500 hover:bg-light-surface-100 focus:outline-hidden focus-visible:ring-2 focus-visible:ring-light-surface-200 dark:text-dark-surface-400 dark:hover:bg-dark-surface-700 dark:focus-visible:ring-dark-surface-600",
   variants: {
     breakPoint: {
       md: "md:hidden",

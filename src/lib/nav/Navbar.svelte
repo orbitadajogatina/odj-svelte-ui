@@ -35,17 +35,19 @@
 
 <nav {...restProps} class={base({ class: navClass })} use:clickOutside={closeNav}>
   <div class={container({ class: divClass })}>
-    {#if brand}
-      {@render brand()}
-    {/if}
-    {#if hamburgerMenu}
-      <button onclick={toggleNav} type="button" class={toggleButton({ class: btnClass })}>
-        <span class="sr-only">Open main menu</span>
-        <svg class="h-5 w-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
-        </svg>
-      </button>
-    {/if}
+		<div class="flex flex-row items-center">
+      {#if hamburgerMenu}
+        <button onclick={toggleNav} type="button" class={toggleButton({ class: btnClass })}>
+          <span class="sr-only">Open main menu</span>
+          <svg class="h-5 w-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
+          </svg>
+        </button>
+      {/if}
+      {#if brand}
+        {@render brand()}
+      {/if}
+    </div>
     {#if navSlotBlock}
       {@render navSlotBlock()}
     {/if}
