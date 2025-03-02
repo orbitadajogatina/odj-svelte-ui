@@ -21,6 +21,7 @@ interface CheckboxProps extends HTMLInputAttributes {
   choices?: CheckboxItem[];
   classLabel?: string;
   indeterminate?: boolean;
+  disabled?: boolean;
   class?: string;
 }
 
