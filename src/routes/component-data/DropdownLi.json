@@ -5,6 +5,7 @@
     ["children", "any", ""],
     ["href", "any", ""],
     ["activeClass", "any", ""],
-    ["liClass", "any", ""]
+    ["liClass", "any", ""],
+    ["custom", "boolean", "false"]
   ]
 }

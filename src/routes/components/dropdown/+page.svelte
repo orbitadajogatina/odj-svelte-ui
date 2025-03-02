@@ -79,9 +79,9 @@
       let footerContent = footerStatus
         ? `
     <DropdownFooter>
-      <div class="py-2">
-        <a href="/" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-600 dark:hover:text-white">Sign out</a>
-      </div>
+      <DropdownUl>
+        <DropdownLi aClass="hover:bg-red-200/50 dark:hover:bg-red-500/20 text-red-700 dark:text-red-400 hover:text-red-900 dark:hover:text-red-200">Sign Out</DropdownLi>
+      </DropdownUl>
     </DropdownFooter>`
         : "";
       let dividerContent = dividerStatus
@@ -165,9 +165,9 @@
         </DropdownUl>
         {#if footerStatus}
           <DropdownFooter>
-            <div class="py-2">
-              <a href="/" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-600 dark:hover:text-white">Sign out</a>
-            </div>
+            <DropdownUl>
+              <DropdownLi aClass="hover:bg-red-200/50 dark:hover:bg-red-500/20 text-red-700 dark:text-red-400 hover:text-red-900 dark:hover:text-red-200">Sign Out</DropdownLi>
+            </DropdownUl>
           </DropdownFooter>
         {/if}
       </Dropdown>
@@ -175,13 +175,13 @@
   </div>
   <div class="mb-4 flex gap-4">
     <Button onclick={changeHeaderStatus}>
-      Header {#if headerStatus}off{:else}on{/if}
+      Header {#if headerStatus}on{:else}off{/if}
     </Button>
     <Button onclick={changeFooterStatus}>
-      Footer {#if footerStatus}off{:else}on{/if}
+      Footer {#if footerStatus}on{:else}off{/if}
     </Button>
     <Button onclick={changeDividerStatus}>
-      Divider {#if dividerStatus}off{:else}on{/if}
+      Divider {#if dividerStatus}on{:else}off{/if}
     </Button>
   </div>
   <div class="flex flex-wrap space-x-2">
