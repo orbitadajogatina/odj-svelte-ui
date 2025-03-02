@@ -18,7 +18,7 @@
 <div class="flex h-[160px] items-center justify-center">
   <Button onclick={dropdownLeft.toggle}><ChevronLeftOutline class="me-2 h-6 w-6 text-white dark:text-white" />Dropdown left</Button>
   <div class="relative">
-    <Dropdown {activeUrl} dropdownStatus={dropdownLeftStatus} closeDropdown={closeDropdownLeft} params={{ y: 0, duration: 200, easing: sineIn }} class="absolute -top-[80px] right-[175px]">
+    <Dropdown {activeUrl} dropdownStatus={dropdownLeftStatus} closeDropdown={closeDropdownLeft} params={{ x: 5 }} class="absolute -top-[80px] right-[175px]">
       <DropdownUl>
         <DropdownLi href="/">Dashboard</DropdownLi>
         <DropdownLi href="/components/drawer">Drawer</DropdownLi>

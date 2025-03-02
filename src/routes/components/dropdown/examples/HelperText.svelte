@@ -13,7 +13,7 @@
 <div class="relative flex h-72 items-start justify-center">
   <Button onclick={dropdownHelper.toggle}>Dropdown helper text<ChevronDownOutline class="ms-2 h-6 w-6 text-white dark:text-white" /></Button>
   <div class="relative">
-    <Dropdown dropdownStatus={dropdownHelperStatus} closeDropdown={closeDropdownHelper} params={{ y: 0, duration: 200, easing: sineIn }} class="absolute -left-[240px] top-[45px] w-64 overflow-y-auto p-2 pb-3 text-sm">
+    <Dropdown dropdownStatus={dropdownHelperStatus} closeDropdown={closeDropdownHelper} class="absolute -left-[240px] top-[45px] w-64 overflow-y-auto p-2 pb-3 text-sm">
       <DropdownUl>
         <DropdownLi aClass="block" liClass="rounded-sm p-2 hover:bg-gray-100 dark:hover:bg-gray-600">
           <Checkbox>Enable notifications</Checkbox>

@@ -20,7 +20,7 @@
     Bonnie Green
   </Button>
   <div class="relative">
-    <Dropdown {activeUrl} dropdownStatus={dropdownAvatarStatus} closeDropdown={closeDropdownAvatar} params={{ y: 0, duration: 200, easing: sineIn }} class="absolute -left-[160px] top-[50px]">
+    <Dropdown {activeUrl} dropdownStatus={dropdownAvatarStatus} closeDropdown={closeDropdownAvatar} class="absolute -left-[160px] top-[50px]">
       <DropdownHeader class="px-4 py-2">
         <span class="block text-sm text-gray-900 dark:text-white">Bonnie Green</span>
         <span class="block truncate text-sm font-medium">name@flowbite.com</span>

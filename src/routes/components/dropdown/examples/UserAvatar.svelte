@@ -18,7 +18,7 @@
   <Avatar onclick={dropdownUser.toggle} src="/images/profile-picture-3.webp" dot={{ color: "green" }} />
 
   <div class="relative">
-    <Dropdown {activeUrl} dropdownStatus={dropdownUserStatus} closeDropdown={closeDropdownUser} params={{ y: 0, duration: 200, easing: sineIn }} class="absolute -left-[110px] top-[40px]">
+    <Dropdown {activeUrl} dropdownStatus={dropdownUserStatus} closeDropdown={closeDropdownUser} class="absolute -left-[110px] top-[40px]">
       <DropdownHeader class="px-4 py-2">
         <span class="block text-sm text-gray-900 dark:text-white">Bonnie Green</span>
         <span class="block truncate text-sm font-medium">name@flowbite.com</span>

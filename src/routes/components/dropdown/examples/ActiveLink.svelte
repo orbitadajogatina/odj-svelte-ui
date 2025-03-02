@@ -21,7 +21,7 @@
     <ChevronDownOutline class="ms-2 h-5 w-5 text-white dark:text-white" />
   </Button>
   <div class="relative">
-    <Dropdown {activeUrl} dropdownStatus={dropdownBStatus} closeDropdown={closeDropdownB} params={{ y: 0, duration: 200, easing: sineIn }} class="absolute -left-[150px] top-[40px]">
+    <Dropdown {activeUrl} dropdownStatus={dropdownBStatus} closeDropdown={closeDropdownB} class="absolute -left-[150px] top-[40px]">
       <DropdownUl>
         <DropdownLi href="/">Dashboard</DropdownLi>
         <DropdownLi href="/components/dropdown">Dropdown</DropdownLi>

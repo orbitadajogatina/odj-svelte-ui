@@ -23,12 +23,12 @@
     <ChevronDownOutline class="ms-2 h-5 w-5 text-white dark:text-white" />
   </Button>
   <div class="relative">
-    <Dropdown dropdownStatus={dropdownMultiLevelStatus} closeDropdown={closeDropdownMultiLevel} params={{ y: 0, duration: 200, easing: sineIn }} class="absolute -left-[150px] top-[40px] overflow-visible">
+    <Dropdown dropdownStatus={dropdownMultiLevelStatus} closeDropdown={closeDropdownMultiLevel} class="absolute -left-[150px] top-[40px] overflow-visible">
       <DropdownUl>
         <DropdownLi href="/">Dashboard</DropdownLi>
         <button onclick={dropdownMultiLevel2.toggle} class="flex p-2 pl-4">Dropdown<ChevronRightOutline class="ms-2 h-6 w-6 text-primary-700 dark:text-white" /></button>
         <div class="relative">
-          <Dropdown dropdownStatus={dropdownMultiLevelStatus2} closeDropdown={closeAllMultilevel} params={{ y: 0, duration: 200, easing: sineIn }} class="absolute -top-[60px] left-[120px]">
+          <Dropdown dropdownStatus={dropdownMultiLevelStatus2} closeDropdown={closeAllMultilevel} params={{ x: -5, duration: 150, easing: sineIn }} class="absolute -top-[60px] left-[120px]">
             <DropdownUl class="z-100">
               <DropdownLi href="/">Home</DropdownLi>
               <DropdownLi href="/components/footer">Footer</DropdownLi>

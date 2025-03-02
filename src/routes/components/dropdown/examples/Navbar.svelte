@@ -29,7 +29,7 @@
         <NavLi onclick={dropdownNav.toggle} class="cursor-pointer">
           Dropdown<ChevronDownOutline class="ms-2 inline h-6 w-6 text-primary-800 dark:text-white" />
         </NavLi>
-        <Dropdown dropdownStatus={dropdownNavStatus} closeDropdown={closeDropdownNav} params={{ y: 0, duration: 200, easing: sineIn }} class="absolute -top-[20px] left-[120px] md:-left-[20px] md:top-[20px]">
+        <Dropdown dropdownStatus={dropdownNavStatus} closeDropdown={closeDropdownNav} class="absolute -top-[20px] left-[120px] md:-left-[20px] md:top-[20px]">
           <DropdownUl class="p-2">
             <DropdownLi href="/">Home</DropdownLi>
             <DropdownDivider />

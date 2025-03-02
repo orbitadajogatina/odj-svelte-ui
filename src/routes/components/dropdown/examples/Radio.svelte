@@ -15,7 +15,7 @@
 <div class="flex h-64 items-start justify-center">
   <Button onclick={dropdownRadio.toggle}>Dropdown radio<ChevronDownOutline class="ms-2 h-6 w-6 text-white dark:text-white" /></Button>
   <div class="relative">
-    <Dropdown dropdownStatus={dropdownRadioStatus} closeDropdown={closeDropdownRadio} params={{ y: 0, duration: 200, easing: sineIn }} class="absolute -left-[185px] top-[45px] w-48 overflow-y-auto pb-3 text-sm">
+    <Dropdown dropdownStatus={dropdownRadioStatus} closeDropdown={closeDropdownRadio} class="absolute -left-[185px] top-[45px] w-48 overflow-y-auto pb-3 text-sm">
       <DropdownUl>
         <DropdownHeader class="px-2 py-1">
           <Search size="md" />

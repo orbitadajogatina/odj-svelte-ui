@@ -18,7 +18,7 @@
 <div class="flex h-40 items-start justify-center">
   <DotsVerticalOutline onclick={dropdownIcon.toggle} class="dots-menu dark:text-white" />
   <div class="relative">
-    <Dropdown {activeUrl} dropdownStatus={dropdownIconStatus} closeDropdown={closeDropdownIcon} params={{ y: 0, duration: 200, easing: sineIn }} class="absolute -left-[90px] top-[20px]">
+    <Dropdown {activeUrl} dropdownStatus={dropdownIconStatus} closeDropdown={closeDropdownIcon} class="absolute -left-[90px] top-[20px]">
       <DropdownUl>
         <DropdownLi href="/">Dashboard</DropdownLi>
         <DropdownLi href="/components/drawer">Drawer</DropdownLi>

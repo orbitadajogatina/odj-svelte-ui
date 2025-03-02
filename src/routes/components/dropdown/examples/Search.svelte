@@ -25,7 +25,7 @@
     <ChevronDownOutline class="ms-2 h-5 w-5 text-white dark:text-white" />
   </Button>
   <div class="relative">
-    <Dropdown dropdownStatus={dropdownSearchStatus} closeDropdown={closeDropdownSearch} params={{ y: 0, duration: 200, easing: sineIn }} class="absolute -left-[175px] top-[40px] w-52">
+    <Dropdown dropdownStatus={dropdownSearchStatus} closeDropdown={closeDropdownSearch} class="absolute -left-[175px] top-[40px] w-52">
       <DropdownHeader>
         <Search size="md" bind:value={searchTerm} />
       </DropdownHeader>

@@ -18,7 +18,7 @@
     </div>
   </div>
   <div class="relative">
-    <Dropdown dropdownStatus={dropdownNotificationStatus} closeDropdown={closeDropdownNotification} params={{ y: 0, duration: 200, easing: sineIn }} class="absolute -left-[230px] top-[30px] w-96">
+    <Dropdown dropdownStatus={dropdownNotificationStatus} closeDropdown={closeDropdownNotification} class="absolute -left-[230px] top-[30px] w-96">
       <DropdownHeader class="py-2 text-center font-bold">Notifications</DropdownHeader>
       <DropdownUl class="max-w-sm space-y-2 divide-y divide-gray-100 rounded-sm p-2 shadow-sm dark:divide-gray-700 dark:bg-gray-800">
         <DropdownLi liClass="flex space-x-4 rtl:space-x-reverse p-2 hover:bg-gray-100 dark:hover:bg-gray-600">

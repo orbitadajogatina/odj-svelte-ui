@@ -13,7 +13,7 @@
 <div class="flex h-72 items-start justify-center">
   <Button onclick={dropdownToggle.toggle}>Dropdown radio<ChevronDownOutline class="ms-2 h-6 w-6 text-white dark:text-white" /></Button>
   <div class="relative">
-    <Dropdown dropdownStatus={dropdownToggleStatus} closeDropdown={closeDropdownToggle} params={{ y: 0, duration: 200, easing: sineIn }} class="absolute -left-[185px] top-[45px] w-48 overflow-y-auto text-sm">
+    <Dropdown dropdownStatus={dropdownToggleStatus} closeDropdown={closeDropdownToggle} class="absolute -left-[185px] top-[45px] w-48 overflow-y-auto text-sm">
       <DropdownUl>
         <DropdownLi liClass="rounded-sm p-2 hover:bg-gray-100 dark:hover:bg-gray-600">
           <Toggle class="rounded-sm p-2 hover:bg-gray-100 dark:hover:bg-gray-600">Default toggle</Toggle>

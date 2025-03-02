@@ -16,7 +16,7 @@
     <ChevronDownOutline class="ms-2 h-5 w-5 text-white dark:text-white" />
   </Button>
   <div class="relative">
-    <Dropdown dropdownStatus={dropdownScrollStatus} closeDropdown={closeDropdownScroll} params={{ y: 0, duration: 200, easing: sineIn }} class="absolute -left-[160px] top-[40px] w-48">
+    <Dropdown dropdownStatus={dropdownScrollStatus} closeDropdown={closeDropdownScroll} class="absolute -left-[160px] top-[40px] w-48">
       <DropdownUl class="h-40 w-52 overflow-y-auto py-1">
         <DropdownLi href="/" aClass="flex items-center text-base font-semibold gap-2"><Avatar src="/images/profile-picture-1.webp" size="xs" />Jese Leos</DropdownLi>
         <DropdownLi href="/" aClass="flex items-center text-base font-semibold gap-2"><Avatar src="/images/profile-picture-2.webp" size="xs" />Robert Gouth</DropdownLi>
