@@ -14,6 +14,7 @@ interface DropdownProps extends HTMLAttributes<HTMLDivElement> {
   params?: ParamsType;
   transition?: TransitionFunc;
   activeUrl?: string;
+  lock?: boolean;
 }
 
 interface DropdownDividerProps extends HTMLAttributes<HTMLDivElement> {

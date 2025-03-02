@@ -5,7 +5,7 @@
   import { setContext } from "svelte";
   import { writable } from "svelte/store";
 
-  let { children, dropdownStatus = $bindable(), closeDropdown, class: className, backdropClass, params = { y: -5 }, transition = fly, activeUrl = "", ...restProps }: Props = $props();
+  let { children, dropdownStatus = $bindable(), closeDropdown, class: className, backdropClass, params = { y: -5 }, transition = fly, activeUrl = "", lock = true, ...restProps }: Props = $props();
 
   const { base, backdrop } = $derived(dropdown());
   const activeUrlStore = writable("");
@@ -13,6 +13,17 @@
 
   $effect(() => {
     activeUrlStore.set(activeUrl ?? "");
+  });
+
+  $effect(() => {
+    if (dropdownStatus && lock) {
+      const scrollWidth = window.innerWidth - document.documentElement.clientWidth;
+      document.body.style.overflow = "hidden";
+      document.body.style.paddingRight = `${scrollWidth}px`;
+    } else if (lock) {
+      document.body.style.overflow = "";
+      document.body.style.paddingRight = "";
+    }
   });
 </script>
 
