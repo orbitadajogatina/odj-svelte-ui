@@ -19,7 +19,7 @@
 <H1>Navbar</H1>
 
 <H2>Default</H2>
-<CodeWrapper>
+<CodeWrapper innerClass="bg-[url('https://wallpapercave.com/wp/wp2202642.jpg')]">
   <ExampleComponents.Default />
   {#snippet codeblock()}
     <HighlightCompo codeLang="ts" code={exampleModules["./examples/Default.svelte"] as string} />
@@ -27,7 +27,7 @@
 </CodeWrapper>
 
 <H2>Breakpoint</H2>
-<CodeWrapper>
+<CodeWrapper innerClass="bg-[url('https://wallpapercave.com/wp/wp2202642.jpg')]">
   <ExampleComponents.Breakpoint />
   {#snippet codeblock()}
     <HighlightCompo codeLang="ts" code={exampleModules["./examples/Breakpoint.svelte"] as string} />
@@ -67,7 +67,7 @@
 </CodeWrapper>
 
 <H2>Background color</H2>
-<CodeWrapper>
+<CodeWrapper innerClass="bg-[url('https://wallpapercave.com/wp/wp2202642.jpg')]">
   <ExampleComponents.BackgroundColor />
   {#snippet codeblock()}
     <HighlightCompo codeLang="ts" code={exampleModules["./examples/BackgroundColor.svelte"] as string} />

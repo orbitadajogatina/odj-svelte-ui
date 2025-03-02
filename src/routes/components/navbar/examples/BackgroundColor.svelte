@@ -12,7 +12,7 @@
   });
 </script>
 
-<Navbar {toggleNav} {closeNav} {navStatus} breakPoint="md" navClass="bg-gray-100 rounded-xl">
+<Navbar {toggleNav} {closeNav} {navStatus} breakPoint="md" navClass="bg-purple-100/80 dark:bg-purple-900/80 rounded-xl">
   {#snippet brand()}
     <NavBrand siteName="Svelte 5">
       <img width="30" src="/images/svelte-icon.png" alt="svelte icon" />
