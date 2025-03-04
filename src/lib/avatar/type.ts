@@ -13,6 +13,8 @@ interface AvatarProps extends HTMLAttributes<HTMLDivElement> {
   size?: "xs" | "sm" | "md" | "lg" | "xl";
   onclick?: () => void;
   border?: boolean;
+  fallback?: Snippet;
+  fallbackClass?: string;
 }
 
 export { type AvatarProps };
