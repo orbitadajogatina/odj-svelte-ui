@@ -2,6 +2,7 @@
   "name": "Avatar",
   "props": [
     ["children", "any", ""],
+    ["fallback", "any", ""],
     ["src", "any", ""],
     ["href", "any", ""],
     ["target", "any", ""],
@@ -10,6 +11,7 @@
     ["stacked", "any", "false"],
     ["dot", "any", ""],
     ["class", "string", ""],
+    ["fallbackClass", "string", ""],
     ["alt", "any", ""],
     ["size", "any", "\"md\""],
     ["onclick", "any", ""]

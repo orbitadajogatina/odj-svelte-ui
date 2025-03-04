@@ -72,7 +72,7 @@
 <H2>Setup</H2>
 <HighlightCompo code={exampleModules[`./examples/Setup.svelte`] as string} />
 
-<H2>Interactive Avatar Bilder</H2>
+<H2>Interactive Avatar Builder</H2>
 <CodeWrapper>
   <div class="mb-4 flex h-36 justify-center">
     <Avatar src="/images/profile-picture-1.webp" alt="Profile picture 1" cornerStyle={isRounded ? "rounded" : undefined} {border} {stacked} class={avatarClass} size={avatarSize} />
@@ -125,6 +125,15 @@
   <ExampleComponents.PlaceholderInitial />
   {#snippet codeblock()}
     <HighlightCompo codeLang="ts" code={exampleModules["./examples/PlaceholderInitial.svelte"] as string} />
+  {/snippet}
+</CodeWrapper>
+
+<H2>Fallback</H2>
+<span>Refresh the page to see</span>
+<CodeWrapper>
+  <ExampleComponents.Fallback />
+  {#snippet codeblock()}
+    <HighlightCompo codeLang="ts" code={exampleModules["./examples/Fallback.svelte"] as string} />
   {/snippet}
 </CodeWrapper>
 
