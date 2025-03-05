@@ -17,28 +17,13 @@
 </script>
 
 <H1>Sidebar</H1>
+<p>Understand that if you want an opening and closing sidebar, you should wrap this component in the Drawer component.</p>
 
 <H2>Default</H2>
 <CodeWrapper>
   <ExampleComponents.Default />
   {#snippet codeblock()}
     <HighlightCompo codeLang="ts" code={exampleModules["./examples/Default.svelte"] as string} />
-  {/snippet}
-</CodeWrapper>
-
-<H2>Animated icons</H2>
-<CodeWrapper>
-  <ExampleComponents.AnimatedIcons />
-  {#snippet codeblock()}
-    <HighlightCompo codeLang="ts" code={exampleModules["./examples/AnimatedIcons.svelte"] as string} />
-  {/snippet}
-</CodeWrapper>
-
-<H2>Close button</H2>
-<CodeWrapper>
-  <ExampleComponents.CloseButton />
-  {#snippet codeblock()}
-    <HighlightCompo codeLang="ts" code={exampleModules["./examples/CloseButton.svelte"] as string} />
   {/snippet}
 </CodeWrapper>
 
@@ -74,7 +59,7 @@
   {/snippet}
 </CodeWrapper>
 
-<H2>Single selection</H2>
+<H2>Single level selection</H2>
 <CodeWrapper>
   <ExampleComponents.SingleSelection />
   {#snippet codeblock()}

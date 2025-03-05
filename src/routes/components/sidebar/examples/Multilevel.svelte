@@ -1,39 +1,34 @@
 <script lang="ts">
-  import { Sidebar, SidebarGroup, SidebarItem, SidebarDropdownWrapper, SidebarButton, uiHelpers } from "$lib";
+  import { Sidebar, SidebarGroup, SidebarItem, SidebarDropdownWrapper } from "$lib";
   import { ChartOutline, GridSolid, MailBoxSolid, UserSolid, ArrowRightToBracketOutline, EditSolid, ShoppingBagSolid } from "flowbite-svelte-icons";
   import PlusPlaceholder from "../../../utils/PlusPlaceholder.svelte";
   import { page } from "$app/stores";
   let activeUrl = $state($page.url.pathname);
-  const spanClass = "flex-1 ms-3 whitespace-nowrap";
-  const demoSidebarUi = uiHelpers();
-  let isDemoOpen = $state(false);
-  const closeDemoSidebar = demoSidebarUi.close;
+  const spanClass = "flex-1 ms-2 whitespace-nowrap";
   $effect(() => {
-    isDemoOpen = demoSidebarUi.isOpen;
     activeUrl = $page.url.pathname;
   });
 </script>
 
-<SidebarButton onclick={demoSidebarUi.toggle} class="mb-2" />
 <div class="relative">
-  <Sidebar {activeUrl} backdrop={false} isOpen={isDemoOpen} closeSidebar={closeDemoSidebar} params={{ x: -50, duration: 50 }} position="absolute" activeClass="p-2" nonActiveClass="p-2" class="z-50 h-full">
+  <Sidebar {activeUrl} position="absolute">
     <SidebarGroup>
       <SidebarItem label="Dashboard">
         {#snippet iconSlot()}
-          <ChartOutline class="h-5 w-5 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white" />
+          <ChartOutline />
         {/snippet}
       </SidebarItem>
-      <SidebarDropdownWrapper label="E-commerce" btnClass="p-2">
+      <SidebarDropdownWrapper label="E-commerce">
         {#snippet iconSlot()}
-          <ShoppingBagSolid class="h-5 w-5 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white" />
+          <ShoppingBagSolid />
         {/snippet}
-        <SidebarItem label="Sidebar" href="/components/sidebar" />
-        <SidebarItem label="Billing" />
-        <SidebarItem label="Invoice" />
+        <SidebarItem label="Sidebar" href="/components/sidebar" spanClass="ms-8" />
+        <SidebarItem label="Billing" spanClass="ms-8" />
+        <SidebarItem label="Invoice" spanClass="ms-8" />
       </SidebarDropdownWrapper>
       <SidebarItem label="Kanban" {spanClass} href="/">
         {#snippet iconSlot()}
-          <GridSolid class="h-5 w-5 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white" />
+          <GridSolid />
         {/snippet}
         {#snippet subtext()}
           <span class="ms-3 inline-flex items-center justify-center rounded-full bg-gray-200 px-2 text-sm font-medium text-gray-800 dark:bg-gray-700 dark:text-gray-300">Pro</span>
@@ -41,7 +36,7 @@
       </SidebarItem>
       <SidebarItem label="Inbox" {spanClass} href="/">
         {#snippet iconSlot()}
-          <MailBoxSolid class="h-5 w-5 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white" />
+          <MailBoxSolid />
         {/snippet}
         {#snippet subtext()}
           <span class="ms-3 inline-flex h-3 w-3 items-center justify-center rounded-full bg-primary-200 p-3 text-sm font-medium text-primary-600 dark:bg-primary-900 dark:text-primary-200">3</span>
@@ -49,17 +44,17 @@
       </SidebarItem>
       <SidebarItem label="Users">
         {#snippet iconSlot()}
-          <UserSolid class="h-5 w-5 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white" />
+          <UserSolid />
         {/snippet}
       </SidebarItem>
       <SidebarItem label="Sign In">
         {#snippet iconSlot()}
-          <ArrowRightToBracketOutline class="h-5 w-5 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white" />
+          <ArrowRightToBracketOutline />
         {/snippet}
       </SidebarItem>
       <SidebarItem label="Sign Up">
         {#snippet iconSlot()}
-          <EditSolid class="h-5 w-5 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white" />
+          <EditSolid />
         {/snippet}
       </SidebarItem>
     </SidebarGroup>

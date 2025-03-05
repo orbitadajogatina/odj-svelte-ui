@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Sidebar, SidebarGroup, SidebarItem, SidebarDropdownWrapper, SidebarButton, uiHelpers } from "$lib";
+  import { Sidebar, SidebarGroup, SidebarItem, SidebarDropdownWrapper } from "$lib";
   import { ChartOutline, GridSolid, MailBoxSolid, UserSolid, ArrowRightToBracketOutline, EditSolid, ShoppingBagSolid } from "flowbite-svelte-icons";
   import PlusPlaceholder from "../../../utils/PlusPlaceholder.svelte";
   import { fade } from "svelte/transition";
@@ -10,19 +10,13 @@
     duration: 700,
     easing: sineIn
   };
-  const spanClass = "flex-1 ms-3 whitespace-nowrap";
-  const demoSidebarUi = uiHelpers();
-  let isDemoOpen = $state(false);
-  const closeDemoSidebar = demoSidebarUi.close;
   $effect(() => {
-    isDemoOpen = demoSidebarUi.isOpen;
     activeUrl = $page.url.pathname;
   });
 </script>
 
-<SidebarButton onclick={demoSidebarUi.toggle} class="mb-2" />
 <div class="relative">
-  <Sidebar {activeUrl} backdrop={false} isOpen={isDemoOpen} closeSidebar={closeDemoSidebar} params={{ x: -50, duration: 50 }} position="absolute" activeClass="p-2" nonActiveClass="p-2" class="z-50 h-full">
+  <Sidebar {activeUrl} position="absolute">
     <SidebarGroup>
       <SidebarItem label="Dashboard">
         {#snippet iconSlot()}
@@ -37,7 +31,7 @@
         <SidebarItem label="Billing" />
         <SidebarItem label="Invoice" />
       </SidebarDropdownWrapper>
-      <SidebarItem label="Kanban" {spanClass} href="/">
+      <SidebarItem label="Kanban" href="/">
         {#snippet iconSlot()}
           <GridSolid class="h-5 w-5 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white" />
         {/snippet}
@@ -45,7 +39,7 @@
           <span class="ms-3 inline-flex items-center justify-center rounded-full bg-gray-200 px-2 text-sm font-medium text-gray-800 dark:bg-gray-700 dark:text-gray-300">Pro</span>
         {/snippet}
       </SidebarItem>
-      <SidebarItem label="Inbox" {spanClass} href="/">
+      <SidebarItem label="Inbox" href="/">
         {#snippet iconSlot()}
           <MailBoxSolid class="h-5 w-5 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white" />
         {/snippet}
