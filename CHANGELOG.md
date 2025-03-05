@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.2.1 (2025-03-04)
+
+### Features
+- (Header) New design;
+- (Toggle) Focus is visible only with keyboard;
+- (Dropdown) Modern design and `lock` prop to lock page scroll;
+- (DropdownLi) Added `custom` prop if you want to take full control;
+- (Avatar) Added fallback when image is loading or error and new border look;
+- (Sidebar) Can not be opened or closed anymore. If you want this behaviour, this component should be inside the `Drawer` component. On mobile, `Sidebar` will look like tabs. And a lot of design tweaks has been made;
+- (SidebarButton) Has been removed. Please use the `Drawer` component to maintain the old sidebar behaviour.
+
 ## 0.2.0 (2025-02-17)
 
 ### Features

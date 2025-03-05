@@ -18,11 +18,20 @@ This is a fork from [Flowbite for Svelte 5 with Runes](https://svelte-5-ui-lib.c
   - `Label` now has `space-y-1` by default, a new default color and the `disabled` prop;
   - `Input:Search` has a better X button for Chromium browsers;
   - `Radio` has a new design and it's animated;
+  - `Header` has blur, some small design tweaks and a fixed design for the menu on mobile;
+  - `Dropdown` is more modern;
+  - `Avatar` has better borders;
+  - `Sidebar` has better hover colors and some other design tweaks, like border radius;
 - `Tabs` styles are fixed and introduced underline animations and a complete modern redesign for "Full" style;
 - The `Tooltip` component received a rework;
 - `Modal` has <kbd>Esc</kbd> to close again;
 - `Button` has now a built-in loading state and can be controlled by the `loading` prop;
 - `Textarea` can autoexpand as user type, control this by `autoexpand` and `maxRows` props;
+- `Dropdown` now locks the page scroll and you can disable this default behaviour setting `lock` to `false`;
+- `Avatar` supports a `fallback` snippet to show when the image is loading or can't be loaded;
+- `Sidebar` can not be opened or closed anymore. If you want this behaviour, this component should be inside the `Drawer` component. On mobile, `Sidebar` will look like tabs;
+- `SidebarButton` has been removed. Please use the `Drawer` component to maintain the old sidebar behaviour;
+
 
 ## Installation
 
