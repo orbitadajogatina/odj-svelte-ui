@@ -2,7 +2,7 @@ import { tv } from "tailwind-variants";
 
 export const navbar = tv({
   slots: {
-    base: "bg-light-surface-100/80 dark:bg-dark-surface-900/80 backdrop-blur-lg text-light-surface-700 dark:text-dark-surface-400 border-light-surface-300 dark:border-dark-surface-600 border-b px-2 sm:px-4 py-2.5 w-full",
+    base: "z-50 bg-light-surface-100/80 dark:bg-dark-surface-900/80 backdrop-blur-lg text-light-surface-700 dark:text-dark-surface-400 border-light-surface-300 dark:border-dark-surface-600 border-b px-2 sm:px-4 py-2.5 w-full",
     container: "mx-auto flex flex-wrap items-center justify-between",
     toggleButton: "inline-flex h-10 w-10 items-center justify-center rounded-lg p-2 mr-2 text-sm focus:outline-hidden text-light-surface-500 focus-visible:ring-light-surface-400 dark:focus-visible:ring-dark-surface-400 active:bg-light-surface-300 dark:active:bg-dark-surface-700/30 hover:bg-light-surface-200 dark:hover:bg-dark-surface-700/40 dark:hover:text-dark-surface-400",
     menuContainer: "w-full",
