@@ -27,7 +27,7 @@
 </script>
 
 <li class={className}>
-  <a onclick={context.closeSidebar} {...restProps} {href} aria-current={(activeItem ?? sidebarUrl === href) ? "page" : undefined} class={twMerge(aCls, aClass)}>
+  <a {...restProps} {href} aria-current={(activeItem ?? sidebarUrl === href) ? "page" : undefined} class={twMerge(aCls, aClass)}>
     {#if iconSlot}
       {@render iconSlot()}
     {/if}

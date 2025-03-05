@@ -1,10 +1,14 @@
 <script lang="ts">
-  import { type SidebarGroupProps as Props } from ".";
+  import { type SidebarGroupProps as Props, sidebargroup, type SidebarCtxType } from ".";
+  import { getContext } from "svelte";
 
-  let { children, class: className = "space-y-2", borderClass = "pt-4 mt-4 border-t border-gray-200 dark:border-gray-700", border = false, ...restProps }: Props = $props();
+  const context = getContext<SidebarCtxType>("sidebarContext") ?? {};
+
+  let { children, class: className, border = false, ...restProps }: Props = $props();
+  const { base } = $derived(sidebargroup({ breakpoint: context.breakpoint, border }));
 </script>
 
-<ul {...restProps} class={border ? borderClass : className}>
+<ul {...restProps} class={base({ className })}>
   {@render children()}
 </ul>
 
@@ -14,6 +18,5 @@
 ## Props
 @props: children: any;
 @props:class: string = "space-y-2";
-@props:borderClass: any = "pt-4 mt-4 border-t border-gray-200 dark:border-gray-700";
-@props:border: any = false;
+@props:border:boolean = false;
 -->

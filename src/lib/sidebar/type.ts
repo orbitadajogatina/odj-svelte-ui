@@ -4,38 +4,27 @@ import type { HTMLAttributes, HTMLButtonAttributes, HTMLAnchorAttributes } from 
 import type { TransitionFunc, ParamsType } from "../types";
 
 type SidebarCtxType = {
-  closeSidebar?: () => void;
   activeClass?: string;
   nonActiveClass?: string;
   isSingle?: boolean;
   selected?: Writable<object>;
   activeUrl?: string;
+  breakpoint?: BreakpointType;
 };
 
-type BreakpointType = "sm" | "md" | "lg" | "xl" | "2xl" | undefined;
+type BreakpointType = "sm" | "md" | "lg" | "xl" | "2xl" | "none" | undefined;
 type PosisionType = "fixed" | "absolute" | "static" | undefined;
 
 interface SidebarProps extends HTMLAttributes<HTMLElement> {
   children: Snippet;
-  isOpen?: boolean;
-  closeSidebar?: () => void;
-  activateClickOutside?: boolean;
   isSingle?: boolean;
   breakpoint?: BreakpointType;
   position?: PosisionType;
-  ariaLabel?: string;
   divClass?: string;
+  ariaLabel?: string;
   nonActiveClass?: string;
   activeClass?: string;
-  params?: ParamsType;
-  transition?: TransitionFunc;
-  backdrop?: boolean;
-  backdropClass?: string;
   activeUrl?: string;
-}
-
-interface SidebarButtonProps extends HTMLButtonAttributes {
-  breakpoint?: BreakpointType;
 }
 
 interface SidebarCtaProps extends HTMLAttributes<HTMLDivElement> {
@@ -77,7 +66,6 @@ interface SidebarDropdownWrapperProps extends HTMLButtonAttributes {
 
 interface SidebarGroupProps extends HTMLAttributes<HTMLUListElement> {
   children: Snippet;
-  borderClass?: string;
   border?: boolean;
 }
 
@@ -92,4 +80,4 @@ interface SidebarItemProps extends HTMLAnchorAttributes {
   active?: boolean;
 }
 
-export type { SidebarProps, SidebarDropdownWrapperProps, SidebarGroupProps, SidebarItemProps, SidebarCtxType, SidebarButtonProps, SidebarCtaProps, SidebarBrandProps, BreakpointType, PosisionType };
+export type { SidebarProps, SidebarDropdownWrapperProps, SidebarGroupProps, SidebarItemProps, SidebarCtxType, SidebarCtaProps, SidebarBrandProps, BreakpointType, PosisionType };
