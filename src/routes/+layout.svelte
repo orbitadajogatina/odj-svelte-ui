@@ -85,11 +85,11 @@
   {#snippet sidebarComponents()}
     <Sidebar {activeUrl} isSingle breakpoint="none" divClass="bg-transparent dark:bg-transparent lg:bg-light-surface-100 lg:dark:bg-dark-surface-800" class="lg:top-[62px]">
       <SidebarGroup>
-        <SidebarDropdownWrapper label="Getting Started" isOpen={pageStatus} svgClass="me-4">
+        <SidebarDropdownWrapper spanClass="font-bold" label="GETTING STARTED" isOpen={pageStatus} svgClass="me-4">
           <SidebarItem label="About" href="/pages/about" />
           <SidebarItem label="Coverage" href="/pages/coverage" />
         </SidebarDropdownWrapper>
-        <SidebarDropdownWrapper label="Components" isOpen={componentStatus} svgClass="me-4">
+        <SidebarDropdownWrapper spanClass="font-bold" label="COMPONENTS" isOpen={componentStatus} svgClass="me-4">
           <SidebarItem label="Accordion" href="/components/accordion" />
           <SidebarItem label="Alert" href="/components/alert" />
           <SidebarItem label="Avatar" href="/components/avatar" />
@@ -128,7 +128,7 @@
           <SidebarItem label="Tooltip" href="/components/tooltip" />
           <SidebarItem label="Video" href="/components/video" />
         </SidebarDropdownWrapper>
-        <SidebarDropdownWrapper label="Forms" isOpen={hasPath("forms")} svgClass="me-4">
+        <SidebarDropdownWrapper spanClass="font-bold" label="FORMS" isOpen={hasPath("forms")} svgClass="me-4">
           <SidebarItem label="Checkbox" href="/forms/checkbox" />
           <SidebarItem label="File input" href="/forms/file-input" />
           <SidebarItem label="Floating label" href="/forms/floating-label" />
@@ -141,7 +141,7 @@
           <SidebarItem label="Textarea" href="/forms/textarea" />
           <SidebarItem label="Toggle" href="/forms/toggle" />
         </SidebarDropdownWrapper>
-        <SidebarDropdownWrapper label="Typography" isOpen={hasPath("typography")} svgClass="me-4">
+        <SidebarDropdownWrapper spanClass="font-bold" label="TYPOGRAPHY" isOpen={hasPath("typography")} svgClass="me-4">
           <SidebarItem label="Blockquote" href="/typography/blockquote" />
           <SidebarItem label="Heading/Mark" href="/typography/heading" />
           <SidebarItem label="HR" href="/typography/hr" />
@@ -152,7 +152,7 @@
           <SidebarItem label="Paragraph" href="/typography/paragraph" />
           <SidebarItem label="Span" href="/typography/span" />
         </SidebarDropdownWrapper>
-        <SidebarDropdownWrapper label="Plugins" svgClass="me-4">
+        <SidebarDropdownWrapper spanClass="font-bold" label="PLUGINS" svgClass="me-4">
           <SidebarItem label="Chart" href="/plugins/chart" />
         </SidebarDropdownWrapper>
       </SidebarGroup>
