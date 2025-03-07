@@ -1,3 +1,3 @@
 - [ ] Add missing docs to some components changes
-- [ ] Add popover to Dropdown to make it auto positioning
+- [X] Add popover to Dropdown to make it auto positioning and better!
 - [ ] Update Drawer default design, backdrop transitions and ESC

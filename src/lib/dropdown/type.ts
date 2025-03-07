@@ -2,17 +2,22 @@ import type { Snippet } from "svelte";
 import type { ParamsType, TransitionFunc } from "../types";
 import type { HTMLAttributes, HTMLAnchorAttributes } from "svelte/elements";
 
+type Placement = "top" | "top-start" | "top-end" | "bottom" | "bottom-start" | "bottom-end" | "left" | "left-start" | "left-end" | "right" | "right-start" | "right-end" | undefined;
+
 interface DropdownProps extends HTMLAttributes<HTMLDivElement> {
   children: Snippet;
-  dropdownStatus: boolean;
-  closeDropdown?: () => void;
+  open: boolean;
+  triggeredBy: string;
+  position?: Placement;
+  offset?: number;
   divClass?: string;
   footerClass?: string;
   headerClass?: string;
   ulClass?: string;
-  backdropClass?: string;
-  params?: ParamsType;
-  transition?: TransitionFunc;
+  transitionIn?: TransitionFunc;
+  transitionInParams?: ParamsType;
+  transitionOut?: TransitionFunc;
+  transitionOutParams?: ParamsType;
   activeUrl?: string;
   lock?: boolean;
 }

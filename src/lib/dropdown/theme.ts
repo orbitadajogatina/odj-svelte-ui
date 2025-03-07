@@ -2,8 +2,7 @@ import { tv } from "tailwind-variants";
 
 export const dropdown = tv({
   slots: {
-    base: "z-10 w-max mt-2 rounded-xl shadow-lg bg-white dark:bg-dark-surface-700 text-light-surface-700 dark:text-dark-surface-200 border border-light-surface-200 dark:border-dark-surface-600 divide-y divide-light-surface-100 dark:divide-dark-surface-600 overflow-hidden",
-    backdrop: "fixed top-0 start-0 w-full h-full"
+    base: "z-10 w-max rounded-xl shadow-lg bg-white dark:bg-dark-surface-700 text-light-surface-700 dark:text-dark-surface-200 border border-light-surface-200 dark:border-dark-surface-600 divide-y divide-light-surface-100 dark:divide-dark-surface-600 overflow-hidden"
   }
 });
 
