@@ -19,15 +19,7 @@
     activeUrl = $page.url.pathname;
   });
 
-  let dropdownDividerHeaderFooter = uiHelpers();
   let dropdownDividerHeaderFooterStatus = $state(false);
-  let closeDropdownDividerHeaderFooter = dropdownDividerHeaderFooter.close;
-
-  $effect(() => {
-    // this can be done adding nav.navStatus directly to DOM element
-    // without using effect
-    dropdownDividerHeaderFooterStatus = dropdownDividerHeaderFooter.isOpen;
-  });
 
   // for examples section that dynamically changes the svelte component and svelteCode content
   import * as ExampleComponents from "./examples";
@@ -57,17 +49,18 @@
   // transition
   type TransitionOption = {
     name: string;
-    transition: typeof fly | typeof blur | typeof slide | typeof scale;
-    params: FlyParams | BlurParams | SlideParams | ScaleParams;
+    transition?: typeof fly | typeof blur | typeof slide | typeof scale;
+    params?: FlyParams | BlurParams | SlideParams | ScaleParams;
   };
 
   const transitions: TransitionOption[] = [
+    { name: "Default" },
     { name: "Fly", transition: fly, params: { y: 0, duration: 200, easing: sineIn } },
     { name: "Blur", transition: blur, params: { y: 0, duration: 400, easing: linear } },
     { name: "Slide", transition: slide, params: { x: -100, duration: 300, easing: sineIn } },
     { name: "Scale", transition: scale, params: { duration: 300, easing: linear } }
   ];
-  let selectedTransition = $state("Fly");
+  let selectedTransition = $state("Default");
   let currentTransition = $derived(transitions.find((t) => t.name === selectedTransition) || transitions[0]);
 
   // code generator
@@ -94,10 +87,10 @@
         : "";
       let props = [];
       if (currentTransition !== transitions[0]) {
-        props.push(` transition={${currentTransition.transition.name}}`);
+        props.push(` transitionIn={${currentTransition?.transition?.name}} transitionOut={${currentTransition?.transition?.name}}`);
 
         // Generate params string without quotes and handle functions
-        const paramsString = Object.entries(currentTransition.params)
+        const paramsString = Object.entries(currentTransition.params || {})
           .map(([key, value]) => {
             if (typeof value === "function") {
               return `${key}:${value.name}`;
@@ -105,17 +98,17 @@
             return `${key}:${value}`;
           })
           .join(",");
-        props.push(` params={{${paramsString}}}`);
+        props.push(` transitionInParams={{${paramsString}}} transitionOutParams={{${paramsString}}}`);
       }
 
       const propsString = props.length > 0 ? props.map((prop) => `\n  ${prop}`).join("") + "\n" : "";
 
       return `<div class="flex items-start justify-center">
-  <Button onclick={dropdownA.toggle}>Dropdown
+  <Button id="id">Dropdown
     <ChevronDownOutline class="ms-2 h-5 w-5 text-white dark:text-white" />
   </Button>
-  <div class="relative h-96">
-    <Dropdown {activeUrl}${propsString} dropdownStatus={dropdownAStatus} closeDropdown={closeDropdownA} class="absolute -left-[150px] top-[40px]">${headerContent}
+  <div class="h-96">
+    <Dropdown {activeUrl}${propsString} dropdownStatus={dropdownAStatus} triggedBy="#id">${headerContent}
       <DropdownUl>
         <DropdownLi href="/">Dashboard</DropdownLi>${dividerContent}
         <DropdownLi href="/components/dropdown">Dropdown</DropdownLi>
@@ -146,12 +139,12 @@
 <H2>Interactive Dropdown Builder</H2>
 <CodeWrapper>
   <div class="flex items-start justify-center">
-    <Button onclick={dropdownDividerHeaderFooter.toggle}>
+    <Button id="dropdownDividerHeaderFooter">
       Dropdown
       <ChevronDownOutline class="ms-2 h-5 w-5 text-white dark:text-white" />
     </Button>
-    <div class="relative h-96">
-      <Dropdown {activeUrl} dropdownStatus={dropdownDividerHeaderFooterStatus} closeDropdown={closeDropdownDividerHeaderFooter} transition={currentTransition.transition} params={currentTransition.params} class="absolute -left-[150px] top-[40px]" lock={lockStatus}>
+    <div class="h-96">
+      <Dropdown {activeUrl} open={dropdownDividerHeaderFooterStatus} triggeredBy="#dropdownDividerHeaderFooter" transitionIn={currentTransition.transition} transitionInParams={currentTransition.params} transitionOut={currentTransition.transition} transitionOutParams={currentTransition.params} lock={lockStatus}>
         {#if headerStatus}
           <DropdownHeader>
             <div>Bonnie Green</div>
@@ -187,7 +180,7 @@
     <Button onclick={changeDividerStatus}>
       Divider {#if dividerStatus}on{:else}off{/if}
     </Button>
-    <Button onclick={changeLockStatus}>
+    <Button color="secondary" onclick={changeLockStatus}>
       Lock {#if lockStatus}on{:else}off{/if}
     </Button>
   </div>
@@ -258,7 +251,7 @@
   {/snippet}
 </CodeWrapper>
 
-<H2>Notifictiaon bell</H2>
+<H2>Notification bell</H2>
 <CodeWrapper>
   <ExampleComponents.NotificationBell />
   {#snippet codeblock()}

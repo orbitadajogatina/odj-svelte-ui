@@ -25,20 +25,18 @@
     <NavUl>
       <NavLi href="/">Home</NavLi>
       <NavLi href="/components/navbar">Navbar</NavLi>
-      <div class="relative">
-        <NavLi onclick={dropdownNav.toggle} class="cursor-pointer">
-          Dropdown<ChevronDownOutline class="ms-2 inline h-6 w-6 text-primary-800 dark:text-white" />
-        </NavLi>
-        <Dropdown dropdownStatus={dropdownNavStatus} closeDropdown={closeDropdownNav} class="absolute -top-[20px] left-[120px] md:-left-[20px] md:top-[20px]">
-          <DropdownUl class="p-2">
-            <DropdownLi href="/">Home</DropdownLi>
-            <DropdownDivider />
-            <DropdownLi href="/components/drawer">Drawer</DropdownLi>
-            <DropdownLi href="/components/footer">Footer</DropdownLi>
-            <DropdownLi href="/components/alert">Alert</DropdownLi>
-          </DropdownUl>
-        </Dropdown>
-      </div>
+      <NavLi id="dropdownNav" class="cursor-pointer">
+        Dropdown<ChevronDownOutline class="text-primary-800 ms-2 inline h-6 w-6 dark:text-white" />
+      </NavLi>
+      <Dropdown open={dropdownNavStatus} triggeredBy="#dropdownNav">
+        <DropdownUl class="p-2">
+          <DropdownLi href="/">Home</DropdownLi>
+          <DropdownDivider />
+          <DropdownLi href="/components/drawer">Drawer</DropdownLi>
+          <DropdownLi href="/components/footer">Footer</DropdownLi>
+          <DropdownLi href="/components/alert">Alert</DropdownLi>
+        </DropdownUl>
+      </Dropdown>
       <NavLi href="/components/footer">Footer</NavLi>
     </NavUl>
   </Navbar>

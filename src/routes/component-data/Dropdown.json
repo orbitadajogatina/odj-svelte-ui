@@ -2,12 +2,19 @@
   "name": "Dropdown",
   "props": [
     ["children", "any", ""],
-    ["dropdownStatus", "any", "$bindable()"],
-    ["closeDropdown", "any", ""],
+    ["open", "boolean", "$bindable(false)"],
+    ["triggeredBy", "string", ""],
+    ["position", "Placement", "\"bottom\" as Placement"],
+    ["offset", "number", "8"],
     ["class", "string", ""],
-    ["backdropClass", "any", ""],
-    ["params", "any", ""],
-    ["transition", "any", "fly"],
+    ["divClass", "string", ""],
+    ["footerClass", "string", ""],
+    ["headerClass", "string", ""],
+    ["ulClass", "string", ""],
+    ["transitionIn", "any", "fade"],
+    ["transitionInParams", "object", "{ duration: 200 }"],
+    ["transitionOut", "any", "fly"],
+    ["transitionOutParams", "object", "{ y: -5 }"],
     ["activeUrl", "any", "\"\""]
   ]
 }
