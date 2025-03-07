@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.2.2 (2025-03-04)
+
+### Changes
+- (Dropdown) New strategy to show `Dropdown`. See the docs.
+
 ## 0.2.1 (2025-03-04)
 
 ### Features
