@@ -19,9 +19,9 @@
 
   // let currentUrl = $state();
   let isActive = $derived(navUrl ? href === navUrl : false);
-  $effect(() => {
-    $inspect("navUrl: ", navUrl);
-  });
+  // $effect(() => {
+  //   $inspect("navUrl: ", navUrl);
+  // });
 
   const { base, link } = $derived(navLi({ active: isActive, breakPoint }));
 </script>
