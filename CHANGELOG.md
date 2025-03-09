@@ -1,6 +1,13 @@
 # Changelog
 
-## 0.2.2 (2025-03-04)
+## 0.2.3 (2025-03-09)
+
+### Changes
+- (uiHelpers) Add initial value to uiHelpers function, from [#47](https://github.com/shinokada/svelte-5-ui-lib/pull/47).
+- (Nav & MegaMenu) Uncommented $inspect is now commented
+- (Sidebar) Wrong border-radius on div when it's acting like tabs
+
+## 0.2.2 (2025-03-07)
 
 ### Changes
 - (Dropdown) New strategy to show `Dropdown`. See the docs.
