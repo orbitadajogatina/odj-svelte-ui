@@ -3,7 +3,7 @@ import { tv } from "tailwind-variants";
 export const sidebar = tv({
   slots: {
     base: "top-0 left-0 z-10 min-w-full",
-    div: "overflow-y-auto p-2 rounded-lg bg-light-surface-100 dark:bg-dark-surface-800",
+    div: "overflow-y-auto p-2 rounded-xl bg-light-surface-100 dark:bg-dark-surface-800",
     active: "cursor-pointer flex items-center p-2 rounded-lg text-base font-normal text-light-surface-900 dark:text-white bg-light-surface-300 dark:bg-dark-surface-700 hover:bg-light-surface-300/50 dark:hover:bg-dark-surface-600",
     nonactive: "cursor-pointer flex items-center p-2 rounded-lg text-base font-normal text-light-surface-700 dark:text-dark-surface-400 hover:bg-light-surface-300/50 dark:hover:bg-dark-surface-600 hover:text-light-surface-800 dark:hover:text-dark-surface-200"
   },
