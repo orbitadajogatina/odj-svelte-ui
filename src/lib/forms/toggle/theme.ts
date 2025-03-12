@@ -2,13 +2,16 @@ import { tv } from "tailwind-variants";
 
 export const toggle = tv({
   slots: {
-    span: "me-3 shrink-0 bg-gray-200 rounded-full peer-focus-visible:ring-4 peer-checked:after:translate-x-full peer-checked:rtl:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:bg-white after:border-gray-300 after:border after:rounded-full after:transition-all dark:bg-gray-600 dark:border-gray-500 relative cursor-pointer",
+    span: "me-3 shrink-0 bg-light-surface-200 rounded-full peer-focus-visible:ring-4 peer-checked:after:translate-x-full peer-checked:rtl:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:bg-white after:border-light-surface-300 after:border after:rounded-full after:transition-all dark:bg-dark-surface-600 dark:border-dark-surface-500 relative cursor-pointer",
     label: "flex items-center",
-    input: "w-4 h-4 bg-gray-100 border-gray-300 dark:ring-offset-gray-800 focus:ring-2 rounded-sm dark:bg-gray-700 dark:border-gray-600 sr-only peer"
+    input: "w-4 h-4 bg-light-surface-100 border-light-surface-300 dark:ring-offset-dark-surface-800 focus:ring-2 rounded-sm dark:bg-dark-surface-700 dark:border-dark-surface-600 sr-only peer"
   },
   variants: {
     disabled: {
-      true: { label: "cursor-not-allowed opacity-50" }
+      true: {
+        span: "cursor-not-allowed",
+        label: "cursor-not-allowed opacity-50"
+      }
     },
     checked: {
       true: "",
