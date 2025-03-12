@@ -1,8 +1,16 @@
 # Changelog
 
+## 0.2.4 (2025-03-11)
+
+### Bug Fixes & Changes
+
+- (Dropzone) Events are working now and fixed colors;
+- (Toggle) Fixed colors;
+
 ## 0.2.3 (2025-03-09)
 
 ### Changes
+
 - (uiHelpers) Add initial value to uiHelpers function, from [#47](https://github.com/shinokada/svelte-5-ui-lib/pull/47).
 - (Nav & MegaMenu) Uncommented $inspect is now commented
 - (Sidebar) Wrong border-radius on div when it's acting like tabs
@@ -10,11 +18,13 @@
 ## 0.2.2 (2025-03-07)
 
 ### Changes
+
 - (Dropdown) New strategy to show `Dropdown`. See the docs.
 
 ## 0.2.1 (2025-03-04)
 
 ### Features
+
 - (Header) New design;
 - (Toggle) Focus is visible only with keyboard;
 - (Dropdown) Modern design and `lock` prop to lock page scroll;
@@ -26,12 +36,14 @@
 ## 0.2.0 (2025-02-17)
 
 ### Features
+
 - Migration to Tailwind v4;
 - (Radio) Animated and new design;
 - (Label) Added `default` color variant using `dark-surface` and `light-surface`;
 - (Label) Added `disabled` prop.
 
 ### Bug Fixes & Changes
+
 - (Select) Missing `disabled` classes.
 
 ## 0.1.1 (2025-02-11)
