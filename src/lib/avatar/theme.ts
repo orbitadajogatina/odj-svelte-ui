@@ -16,11 +16,11 @@ const avatar = tv({
       false: ""
     },
     size: {
-      xs: "w-6 h-6",
-      sm: "w-8 h-8",
-      md: "w-10 h-10",
-      lg: "w-20 h-20",
-      xl: "w-36 h-36"
+      xs: "size-6",
+      sm: "size-8",
+      md: "size-10",
+      lg: "size-20",
+      xl: "size-36"
     }
   },
   defaultVariants: {
@@ -47,11 +47,11 @@ const fallback = tv({
       false: ""
     },
     size: {
-      xs: "w-6 h-6",
-      sm: "w-8 h-8",
-      md: "w-10 h-10",
-      lg: "w-20 h-20",
-      xl: "w-36 h-36"
+      xs: "size-6",
+      sm: "size-8",
+      md: "size-10",
+      lg: "size-20",
+      xl: "size-36"
     }
   },
   defaultVariants: {
