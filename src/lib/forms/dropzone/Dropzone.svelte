@@ -8,6 +8,9 @@
     children,
     files = $bindable<FileList | null>(),
     class: className,
+    ondrop,
+    ondragover,
+    onchange,
     ...restProps
   }: Props & {
     ondrop?: DragEventHandler<HTMLButtonElement>;
