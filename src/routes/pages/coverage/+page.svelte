@@ -80,7 +80,7 @@
     },
     dropdown: {
       checked: true,
-      problems: "apply floating-ui"
+      // problems: "apply floating-ui"
       //   'Sizes, Placement, Double placement, Events'
       // notes: 'Variants checked'
     },
@@ -183,7 +183,7 @@
     },
     fileInput: {
       checked: true,
-      problems: "Dropzone example"
+      // problems: "Dropzone example"
       // notes: 'Variants, reactive examples'
     },
     floatingLabel: {
@@ -368,7 +368,7 @@
       {/if}
       <a href="/components/{convertStringToKebabCase(key)}" class="text-blue-800 underline hover:text-blue-500 dark:text-blue-300 dark:hover:text-blue-200">{key}</a>
       {#if problems}
-        <span class="ml-4 text-red-500">( {problems})</span>{/if}{#if notes}<span class="ml-4 text-green-500">(DONE: {notes})</span>
+        <span class="ml-4 text-red-500">({problems})</span>{/if}{#if notes}<span class="ml-4 text-green-500">(DONE: {notes})</span>
       {/if}
     </Li>
   {/each}
@@ -387,7 +387,7 @@
       {/if}
       <a href="/forms/{convertStringToKebabCase(key)}" class="text-blue-800 underline hover:text-blue-500 dark:text-blue-300 dark:hover:text-blue-200">{key}</a>
       {#if problems}
-        <span class="ml-4 text-red-500">( {problems})</span>{/if}{#if notes}<span class="ml-4 text-green-500">(DONE: {notes})</span>
+        <span class="ml-4 text-red-500">({problems})</span>{/if}{#if notes}<span class="ml-4 text-green-500">(DONE: {notes})</span>
       {/if}
     </Li>
   {/each}
@@ -406,7 +406,7 @@
       {/if}
       <a href="/typography/{convertStringToKebabCase(key)}" class="text-blue-800 underline hover:text-blue-500 dark:text-blue-300 dark:hover:text-blue-200">{key}</a>
       {#if problems}
-        <span class="ml-4 text-red-500">( {problems})</span>{/if}{#if notes}<span class="ml-4 text-green-500">(DONE: {notes})</span>
+        <span class="ml-4 text-red-500">({problems})</span>{/if}{#if notes}<span class="ml-4 text-green-500">(DONE: {notes})</span>
       {/if}
     </Li>
   {/each}
