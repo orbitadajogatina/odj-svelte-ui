@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.5 (2025-03-30)
+
+### Changes
+
+- (Cards) Fixed colors and new `clickable` prop;
+
 ## 0.2.4 (2025-03-11)
 
 ### Bug Fixes & Changes

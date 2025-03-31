@@ -5,6 +5,7 @@ This is a fork from [Flowbite for Svelte 5 with Runes](https://svelte-5-ui-lib.c
 - [Original Docs](https://svelte-5-ui-lib.codewithshin.com/)
 
 ## Differences to Flowbite
+
 - Migration to Tailwind v4;
 - You can choose the "background" color instead of using the hard-coded `gray` color. You have to choose your colors defining `light-surface` and `dark-surface` on `app.css`;
 - Some components have the design slightly different:
@@ -31,7 +32,7 @@ This is a fork from [Flowbite for Svelte 5 with Runes](https://svelte-5-ui-lib.c
 - `Avatar` supports a `fallback` snippet to show when the image is loading or can't be loaded;
 - `Sidebar` can not be opened or closed anymore. If you want this behaviour, this component should be inside the `Drawer` component. On mobile, `Sidebar` will look like tabs;
 - `SidebarButton` has been removed. Please use the `Drawer` component to maintain the old sidebar behaviour;
-
+- `Card` can be a button now adding `clickable` prop;
 
 ## Installation
 
@@ -46,6 +47,7 @@ bun dev
 ```
 
 Add the following to app.css:
+
 > 💡 TIP: Get colors' codes [here](https://tailwindcss.com/docs/colors#default-color-palette-reference).
 
 ```js
