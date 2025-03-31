@@ -3,7 +3,7 @@
   import { onMount } from "svelte";
   import { type AvatarProps as Props, avatar, fallback as fallbackTheme } from ".";
 
-  let { children, src, href, target, cornerStyle = "circular", border = false, stacked = false, dot, class: className, alt, size = "md", onclick, fallback, fallbackClass: fallbackClassName, ...restProps }: Props = $props();
+  let { children, src, href, target, cornerStyle = "circular", border = false, stacked = false, dot, class: className, alt, size = "md", onclick, fallback, fallbackClass: fallbackClassName, placeholderClass, ...restProps }: Props = $props();
 
   dot = dot && { placement: "top-right", color: "red", size: "lg", ...dot };
 
@@ -56,7 +56,7 @@
     {:else if children}
       {@render children()}
     {:else}
-      <svg class="h-full w-full {cornerStyle === 'circular' ? 'rounded-full' : 'rounded-sm'}" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+      <svg class="h-full w-full {placeholderClass} {cornerStyle === 'circular' ? 'rounded-full' : 'rounded-sm'}" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
         <path fill-rule="evenodd" d="M8 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path>
       </svg>
     {/if}

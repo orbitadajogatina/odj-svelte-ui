@@ -15,6 +15,7 @@ interface AvatarProps extends HTMLAttributes<HTMLDivElement> {
   border?: boolean;
   fallback?: Snippet;
   fallbackClass?: string;
+  placeholderClass?: string;
 }
 
 export { type AvatarProps };
