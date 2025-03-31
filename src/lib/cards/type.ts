@@ -25,6 +25,7 @@ interface BaseCardProps {
   class?: string;
   // onclick?: () => void;
   imgClass?: string;
+  clickable?: boolean;
   contentClass?: string;
 }
 type CardProps = BaseCardProps & (({ href: string } & HTMLAnchorAttributes) | ({ href?: never } & HTMLAttributes<HTMLDivElement>));

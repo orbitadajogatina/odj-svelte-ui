@@ -2,7 +2,7 @@ import { tv } from "tailwind-variants";
 
 export const card = tv({
   slots: {
-    base: "w-full flex max-w-sm bg-white border border-gray-200 rounded-lg dark:bg-gray-800 dark:border-gray-700",
+    base: "w-full flex max-w-sm bg-white border border-light-surface-200 rounded-lg dark:bg-dark-surface-700 dark:border-light-surface-600",
     image: "rounded-t-lg",
     content: ""
   },
@@ -65,7 +65,9 @@ export const card = tv({
       false: { base: "flex-col", image: "rounded-t-lg" }
     },
     href: {
-      true: "",
+      true: {
+        base: "cursor-pointer focus-visible:outline-hidden focus-visible:ring-4 focus-visible:ring-primary-300 dark:focus-visible:ring-primary-800 hover:bg-dark-surface-100 dark:hover:bg-dark-surface-600 dark:hover:border-dark-surface-500"
+      },
       false: ""
     },
     hasImage: {

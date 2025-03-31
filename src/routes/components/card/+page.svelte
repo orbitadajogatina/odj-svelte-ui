@@ -22,7 +22,7 @@
   const sizes = Object.keys(card.variants.size);
   let cardSize: CardProps["size"] = $state("sm");
   const colors = Object.keys(card.variants.color);
-  let color: CardProps["color"] = $state("gray");
+  let color: CardProps["color"] = $state();
   const paddings = Object.keys(card.variants.padding);
   let cardPadding: CardProps["padding"] = $state("lg");
   const shadows = Object.keys(card.variants.shadow);
@@ -54,7 +54,7 @@
     (() => {
       let props = [];
       if (cardSize !== "sm") props.push(` size="${cardSize}"`);
-      if (color !== "gray") props.push(` color="${color}"`);
+      if (color) props.push(` color="${color}"`);
       if (cardShadow !== "md") props.push(` shadow="${cardShadow}"`);
       if (cardClass) props.push(` class="${cardClass}"`);
       if (cardPadding !== "lg") props.push(` padding="${cardPadding}"`);
@@ -102,7 +102,7 @@
   <div class="flex justify-center">
     <Card size={cardSize} {color} padding={cardPadding} shadow={cardShadow} href={link ? link : ""} class={cardClass} img={cardImage} {horizontal} {reverse}>
       <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions</h5>
-      <p class="font-normal leading-tight text-gray-700 dark:text-gray-300">Here are the biggest enterprise technology acquisitions of so far, in reverse chronological order.</p>
+      <p class="leading-tight font-normal text-gray-700 dark:text-gray-300">Here are the biggest enterprise technology acquisitions of so far, in reverse chronological order.</p>
     </Card>
   </div>
   <div class="my-4 flex flex-wrap space-x-4">
@@ -113,6 +113,7 @@
   </div>
   <div class="flex flex-wrap space-x-2">
     <Label class="mb-4 w-full font-bold">Color</Label>
+    <Radio labelClass="w-24 my-1" name="alert_reactive" bind:group={color} value="default">default</Radio>
     {#each colors as colorOption}
       <Radio labelClass="w-24 my-1" name="alert_reactive" bind:group={color} color={colorOption as RadioColorType} value={colorOption}>{colorOption}</Radio>
     {/each}
@@ -147,6 +148,14 @@
   </div>
   {#snippet codeblock()}
     <DynamicCodeBlockHighlight handleExpandClick={handleBuilderExpandClick} expand={builderExpand} showExpandButton={showBuilderExpandButton} code={generatedCode} />
+  {/snippet}
+</CodeWrapper>
+
+<H2>Clickable</H2>
+<CodeWrapper>
+  <ExampleComponents.Clickable />
+  {#snippet codeblock()}
+    <HighlightCompo codeLang="ts" code={exampleModules["./examples/Clickable.svelte"] as string} />
   {/snippet}
 </CodeWrapper>
 

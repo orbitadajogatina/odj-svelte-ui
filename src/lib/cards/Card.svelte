@@ -1,8 +1,8 @@
 <script lang="ts">
   import { card, type CardProps as Props } from ".";
-  import type { HTMLAttributes, HTMLAnchorAttributes } from "svelte/elements";
+  import type { HTMLAttributes, HTMLAnchorAttributes, HTMLButtonAttributes } from "svelte/elements";
 
-  let { children, href, color = "gray", horizontal = false, shadow = "md", reverse = false, img, padding = "lg", size = "sm", class: className, imgClass, contentClass, ...restProps }: Props = $props();
+  let { children, href, color = "default", horizontal = false, shadow = "md", reverse = false, img, padding = "lg", size = "sm", clickable, class: className, imgClass, contentClass, ...restProps }: Props = $props();
 
   const { base, image, content } = $derived(
     card({
@@ -12,7 +12,7 @@
       padding,
       horizontal,
       reverse,
-      href: !!href
+      href: !!href || !!clickable
     })
   );
 
@@ -25,6 +25,10 @@
   const anchorProps: HTMLAnchorAttributes = $derived({
     ...commonProps,
     href
+  });
+
+  const buttonProps: HTMLButtonAttributes = $derived({
+    ...commonProps
   });
 
   const divProps: HTMLAttributes<HTMLDivElement> = $derived({
@@ -49,6 +53,10 @@
   <a {...anchorProps}>
     {@render childSlot()}
   </a>
+{:else if clickable}
+  <button {...buttonProps}>
+    {@render childSlot()}
+  </button>
 {:else}
   <div {...divProps}>
     {@render childSlot()}
