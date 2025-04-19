@@ -2,8 +2,8 @@ import { tv } from "tailwind-variants";
 
 export const card = tv({
   slots: {
-    base: "w-full flex max-w-sm bg-white border border-light-surface-200 rounded-lg dark:bg-dark-surface-700 dark:border-light-surface-600",
-    image: "rounded-t-lg",
+    base: "w-full flex max-w-sm bg-white border border-light-surface-200 rounded-xl dark:bg-dark-surface-700 dark:border-light-surface-600",
+    image: "rounded-t-xl",
     content: ""
   },
   variants: {
@@ -61,8 +61,8 @@ export const card = tv({
       }
     },
     reverse: {
-      true: { base: "flex-col-reverse", image: "rounded-b-lg rounded-tl-none" },
-      false: { base: "flex-col", image: "rounded-t-lg" }
+      true: { base: "flex-col-reverse", image: "rounded-b-xl rounded-tl-none" },
+      false: { base: "flex-col", image: "rounded-t-xl" }
     },
     href: {
       true: {
@@ -79,12 +79,12 @@ export const card = tv({
     {
       horizontal: true,
       reverse: true,
-      class: { base: "md:flex-row-reverse", image: "md:rounded-e-lg" }
+      class: { base: "md:flex-row-reverse", image: "md:rounded-e-xl" }
     },
     {
       horizontal: true,
       reverse: false,
-      class: { base: "md:flex-row", image: "md:rounded-s-lg" }
+      class: { base: "md:flex-row", image: "md:rounded-s-xl" }
     },
     // gray, primary, secondary, red, orange, amber, yellow, lime, green, emerald, teal, cyan, sky, blue, indigo, violet, purple, fuchsia, pink, rose
     {
