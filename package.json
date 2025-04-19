@@ -1,7 +1,7 @@
 {
   "name": "odj-svelte-ui",
   "author": "orbitadajogatina",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "description": "This is a fork from Flowbite Svelte 5 with Runes. I just made some changes that fits better my taste.",
   "license": "MIT",
   "main": "dist/index.js",

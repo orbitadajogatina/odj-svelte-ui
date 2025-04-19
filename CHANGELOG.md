@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.6 (2025-04-19)
+
+### Changes
+
+- (Cards) Making rounded-xl the default round;
+
 ## 0.2.5 (2025-03-30)
 
 ### Changes

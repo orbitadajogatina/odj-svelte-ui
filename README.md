@@ -22,6 +22,7 @@ This is a fork from [Flowbite for Svelte 5 with Runes](https://svelte-5-ui-lib.c
   - `Dropdown` is more modern;
   - `Avatar` has better borders;
   - `Sidebar` has better hover colors and some other design tweaks, like border radius;
+  - `Card` is now rounded-xl;
 - `Tabs` styles are fixed and introduced underline animations and a complete modern redesign for "Full" style;
 - The `Tooltip` component received a rework;
 - `Modal` has <kbd>Esc</kbd> to close again;
