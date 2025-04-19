@@ -5,8 +5,8 @@ export const tabs = tv({
     base: "flex space-x-2 rtl:space-x-reverse",
     content: "rounded-lg mt-2",
     divider: "h-px bg-light-surface-200 dark:bg-dark-surface-700",
-    active: "p-4 text-primary-600 bg-light-surface-100 rounded-t-lg",
-    inactive: "p-4 text-light-surface-500 rounded-t-lg",
+    active: "p-4 text-primary-600 bg-light-surface-100",
+    inactive: "p-4 text-light-surface-500",
     slider: ""
   },
   variants: {
@@ -28,8 +28,8 @@ export const tabs = tv({
         slider: "absolute bottom-0 transition-all duration-200 border-b-2 border-primary-600 dark:border-primary-500 m-0! z-10"
       },
       none: {
-        active: "dark:bg-dark-surface-800 dark:text-primary-500",
-        inactive: "hover:text-light-surface-600 hover:bg-light-surface-50 dark:text-dark-surface-400 dark:hover:bg-dark-surface-800 dark:hover:text-dark-surface-300"
+        active: "dark:bg-dark-surface-800 dark:text-primary-500 rounded-t-lg",
+        inactive: "hover:text-light-surface-600 hover:bg-light-surface-50 dark:text-dark-surface-400 dark:hover:bg-dark-surface-800 dark:hover:text-dark-surface-300 rounded-t-lg"
       }
     },
     hasDivider: {
