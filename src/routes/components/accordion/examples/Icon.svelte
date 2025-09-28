@@ -11,7 +11,7 @@
         <span>My Header 1</span>
       </span>
     {/snippet}
-    <p class="mb-2 text-gray-500 dark:text-gray-400">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo ab necessitatibus sint explicabo...</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo ab necessitatibus sint explicabo...</p>
   </AccordionItem>
   <AccordionItem>
     {#snippet header()}
@@ -20,6 +20,6 @@
         <span>My Header 2</span>
       </span>
     {/snippet}
-    <p class="mb-2 text-gray-500 dark:text-gray-400">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo ab necessitatibus sintexplicabo...</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo ab necessitatibus sintexplicabo...</p>
   </AccordionItem>
 </Accordion>

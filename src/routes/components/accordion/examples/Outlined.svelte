@@ -2,7 +2,7 @@
   import { Accordion, AccordionItem } from "$lib";
 </script>
 
-<Accordion accordionStyle="flush">
+<Accordion accordionStyle="outlined">
   <AccordionItem>
     {#snippet header()}
       Header 2-1

@@ -22,13 +22,13 @@
     {#snippet header()}
       My Header 1
     {/snippet}
-    <p class="mb-2 text-gray-500 dark:text-gray-400">Lorem ipsum dolor sit amet ...</p>
+    <p>Lorem ipsum dolor sit amet ...</p>
   </AccordionItem>
   <AccordionItem bind:open={item1}>
     {#snippet header()}
       My Header 2
     {/snippet}
-    <p class="mb-2 text-gray-500 dark:text-gray-400">Lorem ipsum dolor sit amet...</p>
+    <p>Lorem ipsum dolor sit amet...</p>
   </AccordionItem>
   <AccordionItem bind:open={item2}>
     {#snippet header()}
