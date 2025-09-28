@@ -9,6 +9,9 @@ import tailwindcssPackage from "./node_modules/tailwindcss/package.json" with { 
 
 export default defineConfig({
   plugins: [enhancedImages(), sveltekit()],
+  optimizeDeps: {
+    exclude: ['@sveltejs/kit', 'svelte']
+  },
   build: {
     minify: false
   },
