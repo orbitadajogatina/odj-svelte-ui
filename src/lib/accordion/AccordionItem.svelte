@@ -25,40 +25,36 @@
 
   const handleToggle = () => selected.set(open ? {} : self);
 
-  const { base, button, content, active, inactive } = accordionitem({ flush: ctx.flush, open });
+  const { base, button, content, active, inactive } = accordionitem({ accordionStyle: ctx.accordionStyle, open });
 
-  let buttonClass = $derived(twMerge(button(), open && !ctx.flush && (activeClass || ctx.activeClass || active()), !open && !ctx.flush && (inactiveClass || ctx.inactiveClass || inactive()), className));
+  let baseClass = $derived(twMerge(base(), open && (activeClass || ctx.activeClass || active()), !open && (inactiveClass || ctx.inactiveClass || inactive()), className));
 </script>
 
-<h2 class={base()}>
-  <button onclick={handleToggle} class={buttonClass} aria-expanded={open}>
-    {#if header}
-      {@render header()}
-      {#if open}
-        {#if !arrowup}
-          <svg class="h-3 w-3 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+<div class={baseClass}>
+  <h3>
+    <button onclick={handleToggle} class={button()} aria-expanded={open}>
+      {#if header}
+        {@render header()}
+        {#if open && arrowup}
+          {@render arrowup()}
+        {:else if !open && arrowdown}
+          {@render arrowdown()}
+        {:else}
+          <svg class="text-light-surface-800 h-3 w-3 dark:text-white transition-all duration-400" class:rotate-180={!open} aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5" />
           </svg>
-        {:else}
-          {@render arrowup()}
         {/if}
-      {:else if !arrowdown}
-        <svg class="h-3 w-3 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4" />
-        </svg>
-      {:else}
-        {@render arrowdown()}
       {/if}
-    {/if}
-  </button>
-</h2>
-{#if open}
-  <div transition:transition={params as ParamsType}>
-    <div class={content()}>
-      {@render children()}
+    </button>
+  </h3>
+  {#if open}
+    <div transition:transition={params as ParamsType}>
+      <div class={content()}>
+        {@render children()}
+      </div>
     </div>
-  </div>
-{/if}
+  {/if}
+</div>
 
 <!--
 @component

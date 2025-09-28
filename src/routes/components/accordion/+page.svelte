@@ -19,7 +19,6 @@
 <H1>Accordion</H1>
 
 <H2>Default Accordion</H2>
-
 <CodeWrapper>
   <ExampleComponents.Default />
   {#snippet codeblock()}
@@ -28,19 +27,10 @@
 </CodeWrapper>
 
 <H2>Open</H2>
-
 <CodeWrapper>
   <ExampleComponents.Open />
   {#snippet codeblock()}
     <HighlightCompo codeLang="ts" code={exampleModules["./examples/Open.svelte"] as string} />
-  {/snippet}
-</CodeWrapper>
-
-<H2>Color</H2>
-<CodeWrapper>
-  <ExampleComponents.Color />
-  {#snippet codeblock()}
-    <HighlightCompo codeLang="ts" code={exampleModules["./examples/Color.svelte"] as string} />
   {/snippet}
 </CodeWrapper>
 
@@ -49,6 +39,30 @@
   <ExampleComponents.Flush />
   {#snippet codeblock()}
     <HighlightCompo codeLang="ts" code={exampleModules["./examples/Flush.svelte"] as string} />
+  {/snippet}
+</CodeWrapper>
+
+<H2>Outlined</H2>
+<CodeWrapper>
+  <ExampleComponents.Outlined />
+  {#snippet codeblock()}
+    <HighlightCompo codeLang="ts" code={exampleModules["./examples/Outlined.svelte"] as string} />
+  {/snippet}
+</CodeWrapper>
+
+<H2>Card</H2>
+<CodeWrapper>
+  <ExampleComponents.Card />
+  {#snippet codeblock()}
+    <HighlightCompo codeLang="ts" code={exampleModules["./examples/Card.svelte"] as string} />
+  {/snippet}
+</CodeWrapper>
+
+<H2>Color</H2>
+<CodeWrapper>
+  <ExampleComponents.Color />
+  {#snippet codeblock()}
+    <HighlightCompo codeLang="ts" code={exampleModules["./examples/Color.svelte"] as string} />
   {/snippet}
 </CodeWrapper>
 

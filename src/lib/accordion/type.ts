@@ -3,7 +3,7 @@ import type { Snippet } from "svelte";
 import type { ParamsType, TransitionFunc } from "../types";
 import type { HTMLAttributes } from "svelte/elements";
 interface AccordionCtxType {
-  flush: boolean;
+  accordionStyle: 'none' | 'outlined' | 'card' | 'flush';
   activeClass: string | undefined | null;
   inactiveClass: string | undefined | null;
   selected?: Writable<object>;
@@ -14,7 +14,7 @@ interface AccordionCtxType {
 
 interface AccordionProps extends HTMLAttributes<HTMLDivElement> {
   children: Snippet;
-  flush?: boolean;
+  accordionStyle?: 'none' | 'outlined' | 'card' | 'flush';
   isSingle?: boolean;
   activeClass?: string;
   inactiveClass?: string;
