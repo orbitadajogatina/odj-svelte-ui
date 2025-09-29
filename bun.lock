@@ -10,6 +10,7 @@
         "apexcharts": "^3.54.1",
         "clsx": "^2.1.1",
         "deepmerge": "^4.3.1",
+        "svelte-multiselect": "^11.2.3",
         "tailwind-merge": "^2.6.0",
         "tailwind-variants": "^0.3.1",
         "tailwindcss": "^4.1.13",
@@ -913,6 +914,8 @@
     "svelte-eslint-parser": ["svelte-eslint-parser@0.43.0", "", { "dependencies": { "eslint-scope": "7.2.2", "eslint-visitor-keys": "3.4.3", "espree": "9.6.1", "postcss": "8.4.49", "postcss-scss": "4.0.9" }, "optionalDependencies": { "svelte": "5.16.0" } }, "sha512-GpU52uPKKcVnh8tKN5P4UZpJ/fUDndmq7wfsvoVXsyP+aY0anol7Yqo01fyrlaWGMFfm4av5DyrjlaXdLRJvGA=="],
 
     "svelte-lib-helpers": ["svelte-lib-helpers@0.4.31", "", { "dependencies": { "jsonc-parser": "^3.3.1" }, "bin": { "svelte-lib-helpers": "index.js" } }, "sha512-wLhMXwfJymd4IHMFIs7/vEWv2fkzbITPvYEDd2brox3b28t6oxR+iQB7WdNKuKbn/bLaLzu8CJpZeRsYyhjUkw=="],
+
+    "svelte-multiselect": ["svelte-multiselect@11.2.3", "", { "peerDependencies": { "svelte": "^5.35.6" } }, "sha512-nm4ShKfRQPkrHZhH/jfWaW+21jSODLBwBF9UuKFE+2yV0RSaOuItsYUW32hk9VGD3QI9DZvmyFtIex/fi9Byng=="],
 
     "svelte-parse-markup": ["svelte-parse-markup@0.1.5", "", { "peerDependencies": { "svelte": "5.16.0" } }, "sha512-T6mqZrySltPCDwfKXWQ6zehipVLk4GWfH1zCMGgRtLlOIFPuw58ZxVYxVvotMJgJaurKi1i14viB2GIRKXeJTQ=="],
 
