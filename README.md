@@ -34,6 +34,8 @@ This is a fork from [Flowbite for Svelte 5 with Runes](https://svelte-5-ui-lib.c
 - `Sidebar` can not be opened or closed anymore. If you want this behaviour, this component should be inside the `Drawer` component. On mobile, `Sidebar` will look like tabs;
 - `SidebarButton` has been removed. Please use the `Drawer` component to maintain the old sidebar behaviour;
 - `Card` can be a button now adding `clickable` prop;
+- `Accordion` has a new design and 4 options to the new prop `accordionStyle`: `none`, `flush`, `outlined` and `cards`;
+- New `MultiSelect` input.
 
 ## Installation
 

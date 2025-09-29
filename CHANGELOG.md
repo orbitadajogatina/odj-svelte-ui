@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.3.0 (2025-09-28)
+
+### Changes
+
+- Updated packages;
+- (MultiSelect) New MultiSelect component;
+- (Accordion) New design and 4 options to the new prop `accordionStyle`: `none`, `flush`, `outlined` and `cards`;
+- (InputAddon) Fixed colors.
+
 ## 0.2.6 (2025-04-19)
 
 ### Changes
