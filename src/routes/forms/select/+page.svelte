@@ -158,3 +158,16 @@
 
 <H2>Component data</H2>
 <CompoAttributesViewer {dirName} />
+
+<H1>MultiSelect</H1>
+
+<H2>Example</H2>
+<CodeWrapper>
+  <ExampleComponents.DefaultMultiSelect />
+  {#snippet codeblock()}
+    <HighlightCompo codeLang="ts" code={exampleModules["./examples/DefaultMultiSelect.svelte"] as string} />
+  {/snippet}
+</CodeWrapper>
+
+<H2>Component data</H2>
+<span>Check <a href="https://multiselect.janosh.dev/#--props" class="underline">svelte-multiselect docs</a></span>
