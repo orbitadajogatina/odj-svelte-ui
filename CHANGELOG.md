@@ -1,12 +1,27 @@
 # Changelog
 
+## 0.4.0 (2025-12-18)
+
+### Features
+
+- (ProgressRadial) New ProgressRadial component;
+
+### Changes
+
+- (Helper) Fixed colors.
+- (Progress) Fixed bases colors and added `secondary` and `surface` colors.
+- (Select) Placeholder value option should be undefined
+
 ## 0.3.0 (2025-09-28)
+
+### Features
+
+- (MultiSelect) New MultiSelect component;
+- (Accordion) New design and 4 options to the new prop `accordionStyle`: `none`, `flush`, `outlined` and `cards`;
 
 ### Changes
 
 - Updated packages;
-- (MultiSelect) New MultiSelect component;
-- (Accordion) New design and 4 options to the new prop `accordionStyle`: `none`, `flush`, `outlined` and `cards`;
 - (InputAddon) Fixed colors.
 
 ## 0.2.6 (2025-04-19)
