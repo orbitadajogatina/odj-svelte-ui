@@ -1,10 +1,10 @@
 import { tv } from "tailwind-variants";
 
 export const helper = tv({
-  base: "text-xs font-normal text-gray-500 dark:text-gray-300",
+  base: "text-xs font-normal text-light-surface-500 dark:text-dark-surface-300",
   variants: {
     color: {
-      disabled: "text-gray-400 dark:text-gray-500",
+      disabled: "text-light-surface-400 dark:text-dark-surface-500",
       primary: "text-primary-500 dark:text-primary-400",
       secondary: "text-secondary-500 dark:text-secondary-400",
       green: "text-green-500 dark:text-green-400",
