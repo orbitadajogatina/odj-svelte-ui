@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Progressbar, progressbar, Button, Label, Radio, type RadioColorType, type ProgressbarProps } from "$lib";
+  import { Progressbar, ProgressRadial, progressbar, Button, Label, Radio, type RadioColorType, type ProgressbarProps } from "$lib";
   import { sineOut } from "svelte/easing";
   import HighlightCompo from "../../utils/HighlightCompo.svelte";
   import CodeWrapper from "../../utils/CodeWrapper.svelte";
@@ -87,6 +87,17 @@
       return `<Progressbar${propsString} />`;
     })()
   );
+
+  let radialProgress = $state("45");
+  let radialSize = $state("h-24 w-24");
+  let radialThickness = $state(4);
+  let radialRadius = $state(42);
+  let radialStartingPosition = $state<"top" | "right" | "bottom" | "left">("top");
+  let radialLabelInside = $state(false);
+  let radialLabelOutside = $state("");
+  let radialColor: ProgressbarProps["color"] = $state("primary");
+  let radialAnimation = $state(false);
+  const radialSizes = ["h-16 w-16", "h-20 w-20", "h-24 w-24", "h-32 w-32"];
 </script>
 
 <H1>Progress bar</H1>
@@ -123,6 +134,84 @@
   </div>
   {#snippet codeblock()}
     <HighlightCompo code={generatedCode} />
+  {/snippet}
+</CodeWrapper>
+
+<H2>Interactive ProgressRadial Builder</H2>
+
+<CodeWrapper>
+  <div class="my-6 flex justify-center">
+    <ProgressRadial progress={radialProgress} size={radialSize} radius={radialRadius} thickness={radialThickness} startingPosition={radialStartingPosition} color={radialColor} labelInside={radialLabelInside} labelOutside={radialLabelOutside} animate={radialAnimation} />
+  </div>
+
+  <div class="mb-4 flex flex-wrap gap-2">
+    <Label class="w-full font-bold">Color</Label>
+    {#each colors as color}
+      <Radio name="radial_color" bind:group={radialColor} color={color as RadioColorType} value={color}>
+        {color}
+      </Radio>
+    {/each}
+  </div>
+
+  <div class="mb-4 flex flex-wrap gap-2">
+    <Label class="w-full font-bold">Starting position</Label>
+    {#each ["top", "right", "bottom", "left"] as pos}
+      <Radio name="radial_position" bind:group={radialStartingPosition} value={pos}>
+        {pos}
+      </Radio>
+    {/each}
+  </div>
+
+  <div class="mb-4 flex flex-wrap gap-2">
+    <Label class="w-full font-bold">Size</Label>
+    {#each radialSizes as size}
+      <Radio name="radial_size" bind:group={radialSize} value={size}>
+        {size}
+      </Radio>
+    {/each}
+  </div>
+
+  <div class="mb-4">
+    <Label class="mb-2 block font-bold">
+      Radius: {radialRadius}
+    </Label>
+
+    <input type="range" min="20" max="48" step="1" bind:value={radialRadius} class="w-full" />
+  </div>
+
+  <div class="mb-4">
+    <Label class="mb-2 block font-bold">
+      Thickness: {radialThickness}
+    </Label>
+
+    <input type="range" min="1" max="12" step="1" bind:value={radialThickness} class="w-full" />
+  </div>
+
+  <div class="flex flex-wrap gap-2">
+    <Button class="w-48" onclick={() => (radialLabelInside = !radialLabelInside)}>
+      {radialLabelInside ? "Remove inside label" : "Add inside label"}
+    </Button>
+
+    <Button class="w-48" onclick={() => (radialLabelOutside = radialLabelOutside ? "" : "Example")}>
+      {radialLabelOutside ? "Remove outside label" : "Add outside label"}
+    </Button>
+
+    <Button class="w-48" color="emerald" onclick={() => (radialProgress = `${Math.round(Math.random() * 100)}`)}>Randomize</Button>
+  </div>
+
+  {#snippet codeblock()}
+    <HighlightCompo
+      code={`<ProgressRadial
+  progress="${radialProgress}"
+  size="${radialSize}"
+  radius={${radialRadius}}
+  thickness={${radialThickness}}
+  startingPosition="${radialStartingPosition}"
+  color="${radialColor}"
+  ${radialLabelInside ? "labelInside" : ""}
+  ${radialLabelOutside ? `labelOutside="${radialLabelOutside}"` : ""}
+/>`}
+    />
   {/snippet}
 </CodeWrapper>
 

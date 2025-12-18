@@ -1,0 +1,28 @@
+{
+  "name": "ProgressRadial",
+  "props": [
+    ["progress", "any", "45"],
+    ["precision", "any", "0"],
+    ["tweenDuration", "any", "400"],
+    ["animate", "any", "false"],
+
+    ["size", "any", "\"h-24 w-24\""],
+    ["radius", "any", "42"],
+    ["thickness", "any", "4"],
+    ["startingPosition", "any", "\"top\""],
+
+    ["labelInside", "any", "false"],
+    ["labelOutside", "any", "\"\""],
+
+    ["easing", "any", "cubicOut"],
+    ["color", "any", "\"primary\""],
+
+    ["baseClass", "any", ""],
+    ["labelClass", "any", ""],
+    ["backgroundClass", "any", ""],
+    ["foregroundClass", "any", ""],
+    ["outsideClass", "any", ""],
+    ["spanClass", "any", ""],
+    ["progressClass", "any", ""]
+  ]
+}
