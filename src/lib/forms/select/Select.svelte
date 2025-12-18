@@ -8,12 +8,12 @@
 
 <select {...restProps} bind:value class={selectStyle}>
   {#if placeholder}
-    <option disabled selected value="">{placeholder}</option>
+    <option disabled selected value={undefined}>{placeholder}</option>
   {/if}
 
   {#if items}
     {#each items as { value, name }}
-      <option {value} class="text-dark-surface-950 dark:text-white required:invalid:text-dark-surface-400">{name}</option>
+      <option {value} class="text-dark-surface-950 required:invalid:text-dark-surface-400 dark:text-white">{name}</option>
     {/each}
   {/if}
 
