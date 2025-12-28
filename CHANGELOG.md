@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.4.1 (2025-12-28)
+
+### Features
+
+- (Rating) New `iconProps` prop;
+
+### Bug Fixes & Changes
+
+- (Rating) It wasn't reactive.
+
 ## 0.4.0 (2025-12-18)
 
 ### Features
