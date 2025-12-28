@@ -27,7 +27,7 @@
     {/if}
     <!-- eslint-disable @typescript-eslint/no-unused-vars-->
     {#each Array(grayStars) as _, index}
-      <Icon {size} fillPercent={0} iconIndex={index} groupId={`rating-${ratingGroupId}-empty`} {...iconProps} />
+      <Icon {size} fillPercent={0} iconIndex={fullStars + index + 1 - +!percentRating} groupId={`rating-${ratingGroupId}-empty`} {...iconProps} />
     {/each}
     {#if text}
       {@render text()}
