@@ -1,10 +1,16 @@
 # Changelog
 
+## 0.4.2 (2025-12-28)
+
+### Bug Fixes & Changes
+
+- (Rating) Wrong index for icons.
+
 ## 0.4.1 (2025-12-28)
 
 ### Features
 
-- (Rating) New `iconProps` prop;
+- (Rating) New `iconProps` prop.
 
 ### Bug Fixes & Changes
 
