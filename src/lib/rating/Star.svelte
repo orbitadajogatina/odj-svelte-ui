@@ -6,7 +6,7 @@
   const uniqueId = `${groupId}-${iconIndex}`;
 </script>
 
-<svg width={size} height={size} {...restProps} class={svgClass} aria-label={ariaLabel} viewBox="100 100 120 120" {role}>
+<svg width={size} height={size} {...restProps} class={svgClass} data-icon-index={iconIndex} aria-label={ariaLabel} viewBox="100 100 120 120" {role}>
   <defs>
     <linearGradient id={uniqueId}>
       {#if fillPercent !== 100}
