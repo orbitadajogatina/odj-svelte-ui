@@ -25,6 +25,7 @@ interface RatingProps {
   Icon?: Component;
   count?: boolean;
   pClass?: string;
+  iconProps?: RatingIconProps;
 }
 
 interface RatingCommentProps {
