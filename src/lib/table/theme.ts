@@ -3,12 +3,12 @@ import { tv } from "tailwind-variants";
 export const table = tv({
   slots: {
     base: "",
-    table: "w-full text-left text-sm"
+    table: "w-auto text-left text-sm"
   },
   variants: {
     color: {
       // default, primary, secondary, gray, red, orange, amber, yellow, lime, green, emerald, teal, cyan, sky, blue, indigo, violet, purple, fuchsia, pink, rose
-      default: { table: "text-gray-500 dark:text-gray-400" },
+      default: { table: "text-light-surface-500 dark:text-dark-surface-400" },
       primary: { table: "text-primary-100 dark:text-primary-100" },
       secondary: { table: "text-secondary-100 dark:text-secondary-100" },
       gray: { table: "text-gray-100 dark:text-gray-100" },
@@ -32,6 +32,9 @@ export const table = tv({
     },
     shadow: {
       true: { base: "shadow-md sm:rounded-lg" }
+    },
+    rounded: {
+      true: "rounded-lg"
     }
   }
 });
@@ -40,7 +43,7 @@ export const tablebodyrow = tv({
   base: "",
   variants: {
     color: {
-      default: "bg-white dark:bg-gray-800 dark:border-gray-700",
+      default: "bg-white dark:bg-dark-surface-800 dark:border-dark-surface-700",
       primary: "bg-white bg-primary-500 border-primary-400",
       secondary: "bg-white bg-secondary-500 border-secondary-400",
       gray: "bg-gray-500 border-gray-400",
@@ -76,7 +79,7 @@ export const tablebodyrow = tv({
     {
       hoverable: true,
       color: "default",
-      class: "hover:bg-gray-50 dark:hover:bg-gray-600"
+      class: "hover:bg-light-surface-50 dark:hover:bg-dark-surface-600"
     },
     {
       hoverable: true,
@@ -91,7 +94,7 @@ export const tablebodyrow = tv({
     {
       hoverable: true,
       color: "gray",
-      class: "hover:bg-gray-400 dark:hover:bg-gray-400"
+      class: "hover:bg-light-surface-400 dark:hover:bg-gray-400"
     },
     {
       hoverable: true,
@@ -181,7 +184,7 @@ export const tablebodyrow = tv({
     {
       striped: true,
       color: "default",
-      class: "odd:bg-white even:bg-gray-50 dark:odd:bg-gray-800 dark:even:bg-gray-700"
+      class: "odd:bg-white even:bg-light-surface-50 dark:odd:bg-dark-surface-800 dark:even:bg-dark-surface-700"
     },
     {
       striped: true,
@@ -293,10 +296,10 @@ export const tablehead = tv({
     color: {
       // default, primary, secondary, gray, red, orange, amber, yellow, lime, green, emerald, teal, cyan, sky, blue, indigo, violet, purple, fuchsia, pink, rose
 
-      default: "text-gray-700 dark:text-gray-400 bg-gray-50 dark:bg-gray-700",
+      default: "text-light-surface-700 dark:text-dark-surface-400 bg-light-surface-50 dark:bg-dark-surface-700",
       primary: "text-white dark:text-white bg-primary-700 dark:bg-primary-700",
       secondary: "text-white dark:text-white bg-secondary-700 dark:bg-secondary-700",
-      gray: "text-white dark:text-white bg-gray-700 dark:bg-gray-700",
+      gray: "text-white dark:text-white bg-light-surface-700 dark:bg-gray-700",
       red: "text-white dark:text-white bg-red-700 dark:bg-red-700",
       orange: "text-white dark:text-white bg-orange-700 dark:bg-orange-700",
       amber: "text-white dark:text-white bg-amber-700 dark:bg-amber-700",
@@ -333,7 +336,7 @@ export const tablehead = tv({
     {
       color: "default",
       striped: true,
-      class: "bg-transparent dark:bg-transparent border-gray-700"
+      class: "bg-transparent dark:bg-transparent border-light-surface-700"
     },
     {
       striped: true,
