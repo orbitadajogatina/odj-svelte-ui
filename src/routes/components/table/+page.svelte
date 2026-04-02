@@ -37,6 +37,10 @@
   const changeShadow = () => {
     shadow = !shadow;
   };
+  let rounded = $state(false);
+  const changeRounded = () => {
+    rounded = !rounded;
+  };
 
   const tableItems = [
     { name: 'Apple MacBook Pro 17"', color: "Sliver", type: "Laptop", price: "$2999" },
@@ -55,6 +59,7 @@
       if (hoverable) props.push(" hoverable");
       if (!noborder) props.push(" noborder");
       if (shadow) props.push(" shadow");
+      if (rounded) props.push(" rounded");
 
       const propsString = props.length > 0 ? props.map((prop) => `\n  ${prop}`).join("") + "\n" : "";
 
@@ -81,7 +86,7 @@
 
 <H2>Interactive Table Builder</H2>
 <CodeWrapper>
-  <Table {tableItems} {hoverable} {color} {striped} {noborder} {shadow} />
+  <Table {tableItems} {hoverable} {color} {striped} {noborder} {shadow} {rounded} />
   <div class="my-4 flex flex-wrap space-x-4">
     <Label class="mb-4 w-full font-bold">Color</Label>
     {#each colors as colorOption}
@@ -93,6 +98,7 @@
     <Button class="w-40" color="secondary" onclick={changeHoverable}>{hoverable ? "Unhoverable" : "Hoverable"}</Button>
     <Button class="w-40" color="indigo" onclick={changeNoborder}>{noborder ? "Borderless" : "Border"}</Button>
     <Button class="w-40" color="rose" onclick={changeShadow}>{shadow ? "No Shadow" : "Shadow"}</Button>
+    <Button class="w-40" color="rose" onclick={changeRounded}>{rounded ? "Not Rounded" : "Rounded"}</Button>
   </div>
   {#snippet codeblock()}
     <DynamicCodeBlockHighlight handleExpandClick={handleBuilderExpandClick} expand={builderExpand} showExpandButton={showBuilderExpandButton} code={generatedCode} />
