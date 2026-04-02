@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.4.4 (2026-04-02)
+
+### Bug Fixes & Changes
+
+- (Table) Reverted width.
+
 ## 0.4.3 (2026-04-02)
 
 ### Features
