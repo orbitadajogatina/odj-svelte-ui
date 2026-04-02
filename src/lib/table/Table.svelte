@@ -2,7 +2,7 @@
   import { setContext } from "svelte";
   import { type TableProps as Props, table as tableCls, type TableCtxType, TableHead, TableBody, type HeadItemType } from ".";
 
-  let { children, footerSlot, captionSlot, tableItems, divClass = "relative w-fit overflow-x-auto", striped, hoverable, noborder, shadow, rounded, color = "default", class: className, ...restProps }: Props = $props();
+  let { children, footerSlot, captionSlot, tableItems, divClass = "relative overflow-x-auto", striped, hoverable, noborder, shadow, rounded, color = "default", class: className, ...restProps }: Props = $props();
 
   const { base, table } = $derived(tableCls({ color, shadow, rounded }));
 

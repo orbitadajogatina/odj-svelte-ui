@@ -3,7 +3,7 @@ import { tv } from "tailwind-variants";
 export const table = tv({
   slots: {
     base: "",
-    table: "w-auto text-left text-sm"
+    table: "w-full text-left text-sm"
   },
   variants: {
     color: {
