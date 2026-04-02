@@ -2,9 +2,9 @@
   import { setContext } from "svelte";
   import { type TableProps as Props, table as tableCls, type TableCtxType, TableHead, TableBody, type HeadItemType } from ".";
 
-  let { children, footerSlot, captionSlot, tableItems, divClass = "relative overflow-x-auto", striped, hoverable, noborder, shadow, color = "default", class: className, ...restProps }: Props = $props();
+  let { children, footerSlot, captionSlot, tableItems, divClass = "relative overflow-x-auto", striped, hoverable, noborder, shadow, rounded, color = "default", class: className, ...restProps }: Props = $props();
 
-  const { base, table } = $derived(tableCls({ color, shadow }));
+  const { base, table } = $derived(tableCls({ color, shadow, rounded }));
 
   let tableCtx: TableCtxType = {
     get striped() {
@@ -60,6 +60,7 @@
 @props:hoverable: any;
 @props:noborder: any;
 @props:shadow: any;
+@props:rounded: any;
 @props:color: any = "default";
 @props:class: string;
 -->

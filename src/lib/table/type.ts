@@ -37,6 +37,7 @@ interface TableProps extends HTMLTableAttributes {
   hoverable?: boolean;
   noborder?: boolean;
   shadow?: boolean;
+  rounded?: boolean;
   color?: TableColrType;
   tableItems?: TableItemType[];
 }
