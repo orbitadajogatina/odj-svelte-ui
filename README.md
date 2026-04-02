@@ -23,6 +23,7 @@ This is a fork from [Flowbite for Svelte 5 with Runes](https://svelte-5-ui-lib.c
   - `Avatar` has better borders;
   - `Sidebar` has better hover colors and some other design tweaks, like border radius;
   - `Card` is now rounded-xl;
+  - `Table` is now w-auto;
 - `Tabs` styles are fixed and introduced underline animations and a complete modern redesign for "Full" style;
 - The `Tooltip` component received a rework;
 - `Modal` has <kbd>Esc</kbd> to close again;
@@ -36,6 +37,7 @@ This is a fork from [Flowbite for Svelte 5 with Runes](https://svelte-5-ui-lib.c
 - `Card` can be a button now adding `clickable` prop;
 - `Accordion` has a new design and 4 options to the new prop `accordionStyle`: `none`, `flush`, `outlined` and `cards`;
 - New `MultiSelect` input.
+- `Table` can be rounded with `rounded` prop.
 
 ## Installation
 

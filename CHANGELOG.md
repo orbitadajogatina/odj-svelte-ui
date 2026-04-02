@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.4.3 (2026-04-02)
+
+### Features
+
+- (Table) New `rounded` prop.
+
+### Bug Fixes & Changes
+
+- (Table) Fixed colors and width.
+
 ## 0.4.2 (2025-12-28)
 
 ### Bug Fixes & Changes
