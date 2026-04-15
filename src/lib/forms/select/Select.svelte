@@ -1,14 +1,14 @@
 <script lang="ts" generics="T">
   import { type SelectProps as Props, select as selectCls } from ".";
 
-  let { children, items, value = $bindable(), underline, size = "md", class: className, placeholder = "Choose option...", ...restProps }: Props<T> = $props();
+  let { children, items, value = $bindable(), underline, size = "md", class: className, placeholder = "Choose option...", placeholderValue = undefined, ...restProps }: Props<T> = $props();
 
   const selectStyle = $derived(selectCls({ underline, size, className }));
 </script>
 
 <select {...restProps} bind:value class={selectStyle}>
   {#if placeholder}
-    <option disabled selected value={undefined}>{placeholder}</option>
+    <option disabled selected value={placeholderValue}>{placeholder}</option>
   {/if}
 
   {#if items}
