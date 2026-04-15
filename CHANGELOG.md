@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.4.5 (2026-04-15)
+
+### Bug Fixes & Changes
+
+- (Select) Change the placeholder value.
+
 ## 0.4.4 (2026-04-02)
 
 ### Bug Fixes & Changes
