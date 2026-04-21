@@ -62,7 +62,7 @@
   const changeDiabled = () => {
     disabled = !disabled;
   };
-  let selected = $state("");
+  let selected = $state(undefined);
   let bindValue = $state(false);
   const changeBindValue = () => {
     bindValue = !bindValue;
