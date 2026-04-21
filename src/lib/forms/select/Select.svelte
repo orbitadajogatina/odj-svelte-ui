@@ -8,13 +8,6 @@
   const selectStyle = $derived(selectCls({ underline, size, customSelect, className }));
 </script>
 
-<!-- input ca
-VM28308:1 change 
-VM28308:2 input fr
-VM28308:1 change 
-VM28308:2 input us
-VM28308:1 change  -->
-
 <select class={selectStyle} class:custom-select={customSelect} bind:value {...restProps}>
   {#if customSelect}
     <!-- svelte-ignore node_invalid_placement_ssr -->
