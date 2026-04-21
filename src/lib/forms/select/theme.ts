@@ -10,14 +10,19 @@ export const select = tv({
       false: "text-light-surface-900 bg-light-surface-50 border border-light-surface-300 rounded-lg focus:ring-primary-500 focus:border-primary-500 dark:bg-dark-surface-700 dark:border-dark-surface-600 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:placeholder-dark-surface-400 required:invalid:text-dark-surface-400 outline-hidden focus:ring-1"
     },
     size: {
-      sm: "text-sm p-2",
-      md: "text-sm p-2.5",
-      lg: "text-base py-3 px-4"
+      sm: "text-xs ps-9 pe-9 p-2",
+      md: "text-sm ps-10 pe-10 p-2.5",
+      lg: "sm:text-base ps-11 pe-11 p-3"
+    },
+    customSelect: {
+      true: "",
+      false: ""
     }
   },
   defaultVariants: {
     underline: false,
-    size: "md"
+    size: "md",
+    customSelect: true
   }
 });
 
