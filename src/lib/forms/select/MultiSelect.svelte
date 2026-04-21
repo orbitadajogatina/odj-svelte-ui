@@ -5,6 +5,7 @@
   let {
     outerDivClass,
     ulOptionsClass,
+    liOptionsClass,
     ulSelectedClass,
     liSelectedClass,
     inputClass,
@@ -25,7 +26,7 @@
 
     ...restProps
   }: Props<T> = $props();
-  const { outerDiv: outerDivCls, ulOptions, ulSelected, liSelected, input: inputCls } = $derived(multiselect());
+  const { outerDiv: outerDivCls, ulOptions, ulSelected, liSelected, input: inputCls, liOptions } = $derived(multiselect());
 </script>
 
-<MultiSelect bind:selected bind:value bind:searchText bind:open bind:activeIndex bind:activeOption bind:invalid bind:input bind:outerDiv bind:form_input bind:options bind:matchingOptions {...restProps} outerDivClass={outerDivCls({ className: outerDivClass })} ulOptionsClass={ulOptions({ class: ulOptionsClass })} ulSelectedClass={ulSelected({ class: ulSelectedClass })} liSelectedClass={liSelected({ class: liSelectedClass })} inputClass={inputCls({ class: inputClass })} --sms-remove-btn-hover-color="white" />
+<MultiSelect bind:selected bind:value bind:searchText bind:open bind:activeIndex bind:activeOption bind:invalid bind:input bind:outerDiv bind:form_input bind:options bind:matchingOptions {...restProps} outerDivClass={outerDivCls({ className: outerDivClass })} ulOptionsClass={ulOptions({ class: ulOptionsClass })} ulSelectedClass={ulSelected({ class: ulSelectedClass })} liSelectedClass={liSelected({ class: liSelectedClass })} inputClass={inputCls({ class: inputClass })} liOptionClass={liOptions({ class: liOptionsClass })} --sms-remove-btn-hover-color="white" />

@@ -29,7 +29,8 @@ export const select = tv({
 export const multiselect = tv({
   slots: {
     outerDiv: "!text-light-surface-900 !bg-light-surface-50 !border !border-light-surface-300 !rounded-lg !outline-none focus-within:!ring-1 focus-within:!ring-primary-500 focus-within:!border-primary-500 dark:!bg-dark-surface-700 dark:!border-dark-surface-600 dark:!placeholder-dark-surface-400 dark:!text-white dark:focus-within:!ring-primary-500 dark:focus-within:!border-primary-500 !px-2 !py-1 !min-h-[2.7rem]",
-    ulOptions: "!bg-white dark:!bg-dark-surface-700 !max-h-40",
+    ulOptions: "!bg-white dark:!bg-dark-surface-700 !max-h-40 !border-1 !outline-none drop-shadow-lg dark:!border-dark-surface-600 !border-light-surface-200 !p-1 text-light-surface-700 dark:text-dark-surface-200",
+    liOptions: "!bg-transparent !text-dark-surface-950 required:invalid:!text-dark-surface-400 dark:!text-white hover:!bg-light-surface-200/70 dark:hover:!bg-dark-surface-600 hover:!text-light-surface-900 flex cursor-pointer flex-row items-center gap-3 rounded-md !px-3 !py-2 text-sm dark:hover:!text-white",
     ulSelected: "!flex !gap-1.5 !mx-2",
     liSelected: "!border-light-surface-200 dark:!border-dark-surface-700 !divide-light-surface-200 dark:!divide-dark-surface-700 !font-medium !text-xs !text-light-surface-800 dark:!text-dark-surface-300 !rounded !bg-light-surface-200 dark:!bg-dark-surface-600 !py-1 !px-2 !m-0",
     input: "placeholder:!text-light-surface-400"

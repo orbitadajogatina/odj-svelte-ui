@@ -21,6 +21,7 @@ interface SelectProps<T> extends Omit<HTMLSelectAttributes, "size"> {
 interface MultiSelectProps<T> extends MultiSelectParameters {
   outerDivClass?: string;
   ulOptionsClass?: string;
+  liOptionsClass?: string;
   ulSelectedClass?: string;
   liSelectedClass?: string;
   inputClass?: string;
