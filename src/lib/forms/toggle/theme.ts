@@ -3,7 +3,7 @@ import { tv } from "tailwind-variants";
 export const toggle = tv({
   slots: {
     span: "me-3 shrink-0 bg-light-surface-200 rounded-full peer-focus-visible:ring-4 peer-checked:after:translate-x-full peer-checked:rtl:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:bg-white after:border-light-surface-300 after:border after:rounded-full after:transition-all dark:bg-dark-surface-600 dark:border-dark-surface-500 relative cursor-pointer",
-    label: "flex items-center",
+    label: "flex items-center w-fit",
     input: "w-4 h-4 bg-light-surface-100 border-light-surface-300 dark:ring-offset-dark-surface-800 focus:ring-2 rounded-sm dark:bg-dark-surface-700 dark:border-dark-surface-600 sr-only peer"
   },
   variants: {
