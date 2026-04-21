@@ -11,20 +11,13 @@
 </script>
 
 {#if badgeStatus}
-  <div {...restProps} transition:transition={params as ParamsType} class={base({ className })}>
-    {#if href}
-      <a {href} {target} class={hrefClass({ class: aClass })}>
-        {@render children()}
-      </a>
-    {:else}
-      {@render children()}
-    {/if}
-
+  <svelte:element this={href ? "a" : "div"} {href} {target} {...restProps} transition:transition={params as ParamsType} class={[base({ className }), href && hrefClass({ class: aClass })]}>
+    {@render children()}
     {#if dismissable}
       {#if icon}
         <button
           type="button"
-          class="m-0.5 -me-1.5 ms-1.5 whitespace-normal rounded-sm p-0.5 text-primary-500 hover:bg-primary-200 focus:outline-hidden focus:ring-1 focus:ring-primary-400 dark:hover:bg-primary-800 dark:hover:text-primary-300"
+          class="text-primary-500 hover:bg-primary-200 focus:ring-primary-400 dark:hover:bg-primary-800 dark:hover:text-primary-300 m-0.5 ms-1.5 -me-1.5 rounded-sm p-0.5 whitespace-normal focus:ring-1 focus:outline-hidden"
           aria-label="Remove badge"
           onclick={() => {
             badgeStatus = false;
@@ -34,10 +27,10 @@
           {@render icon()}
         </button>
       {:else if onclick}
-        <CloseButton class="-me-1.5 ms-1.5" {color} size={large ? "sm" : "xs"} ariaLabel="Remove badge" {onclick} />
+        <CloseButton class="ms-1.5 -me-1.5" {color} size={large ? "sm" : "xs"} ariaLabel="Remove badge" {onclick} />
       {:else}
         <CloseButton
-          class="-me-1.5 ms-1.5"
+          class="ms-1.5 -me-1.5"
           {color}
           size={large ? "sm" : "xs"}
           ariaLabel="Remove badge"
@@ -47,7 +40,7 @@
         />
       {/if}
     {/if}
-  </div>
+  </svelte:element>
 {/if}
 
 <!--
