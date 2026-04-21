@@ -38,6 +38,7 @@ This is a fork from [Flowbite for Svelte 5 with Runes](https://svelte-5-ui-lib.c
 - New `MultiSelect` input;
 - `Table` can be rounded with `rounded` prop.
 - Change the placeholder value for `Select`.
+- Using custom `Select` for supported browsers with CSS-only approach.
 
 ## Installation
 

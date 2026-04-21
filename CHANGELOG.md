@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.5.0 (2026-04-21)
+
+### Features
+
+- (Input) Using custom `Select` for supported browsers with CSS-only approach.
+
+### Changes
+
+- (MultiSelect) Better design;
+- (Badge) The whole component becomes an anchor if `href` prop is defined;
+- (Toggle) Label should be `w-fit`;
+- (Sidebar) New colors in light mode.
+
 ## 0.4.5 (2026-04-15)
 
 ### Bug Fixes & Changes
