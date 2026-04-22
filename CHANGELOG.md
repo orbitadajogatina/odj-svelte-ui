@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.5.1 (2026-04-21)
+
+### Bug Fixes
+
+- (MultiSelect) Types;
+- (Sidebar) Fixed text-wrapping and padding on desktop and mobile;
+
 ## 0.5.0 (2026-04-21)
 
 ### Features
