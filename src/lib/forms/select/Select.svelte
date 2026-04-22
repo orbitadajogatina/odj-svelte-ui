@@ -11,9 +11,9 @@
 <select class={selectStyle} class:custom-select={customSelect} bind:value {...restProps}>
   {#if customSelect}
     <!-- svelte-ignore node_invalid_placement_ssr -->
-    <button class="flex w-full items-center justify-between" aria-label="Select Picker">
-      <selectedcontent></selectedcontent>
-      <span class="picker transition-rotate duration-400">
+    <button class="flex w-full items-center gap-2 justify-between min-w-0" aria-label="Select Picker">
+      <selectedcontent class="truncate"></selectedcontent>
+      <span class="picker transition-rotate duration-400 shrink-0">
         <svg class="text-light-surface-800 size-3 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
           <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5" />
         </svg>
@@ -72,6 +72,14 @@
       background-color: var(--color-dark-surface-700);
       color: var(--color-dark-surface-200);
       border-color: var(--color-dark-surface-600);
+    }
+
+    &:has(option:disabled:checked) button {
+      color: var(--color-light-surface-700);
+
+      :global(.dark) & {
+        color: var(--color-dark-surface-400);
+      }
     }
   }
 </style>
