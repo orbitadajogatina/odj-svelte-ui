@@ -1,5 +1,5 @@
 import type { Snippet } from "svelte";
-import type { MultiSelectParameters } from "svelte-multiselect";
+import type { MultiSelectProps as MultiSelectParameters } from "svelte-multiselect";
 import type { HTMLSelectAttributes } from "svelte/elements";
 
 type SelectSize = "sm" | "md" | "lg";
