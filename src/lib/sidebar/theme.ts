@@ -3,9 +3,9 @@ import { tv } from "tailwind-variants";
 export const sidebar = tv({
   slots: {
     base: "top-0 left-0 z-10 min-w-full",
-    div: "overflow-y-auto p-2 rounded-xl bg-light-surface-200 dark:bg-dark-surface-800",
-    active: "cursor-pointer flex items-center p-2 text-nowrap rounded-lg text-base font-normal text-light-surface-900 dark:text-white bg-light-surface-100 dark:bg-dark-surface-700 hover:bg-light-surface-300/50 dark:hover:bg-dark-surface-600",
-    nonactive: "cursor-pointer flex items-center p-2 text-nowrap rounded-lg text-base font-normal text-light-surface-700 dark:text-dark-surface-400 hover:bg-light-surface-300/50 dark:hover:bg-dark-surface-600 hover:text-light-surface-800 dark:hover:text-dark-surface-200"
+    div: "p-2 rounded-xl bg-light-surface-200 dark:bg-dark-surface-800",
+    active: "cursor-pointer flex items-center p-2 rounded-lg text-base font-normal text-light-surface-900 dark:text-white bg-light-surface-100 dark:bg-dark-surface-700 hover:bg-light-surface-300/50 dark:hover:bg-dark-surface-600",
+    nonactive: "cursor-pointer flex items-center p-2 rounded-lg text-base font-normal text-light-surface-700 dark:text-dark-surface-400 hover:bg-light-surface-300/50 dark:hover:bg-dark-surface-600 hover:text-light-surface-800 dark:hover:text-dark-surface-200"
   },
   variants: {
     position: {
@@ -14,19 +14,49 @@ export const sidebar = tv({
       static: { base: "static" }
     },
     breakpoint: {
-      none: { base: "min-w-64 h-full", div: "h-full sm:rounded-none" },
-      sm: { base: "sm:min-w-64 sm:h-full", div: "sm:h-full sm:rounded-none" },
-      md: { base: "md:min-w-64 md:h-full", div: "md:h-full md:rounded-none" },
-      lg: { base: "lg:min-w-64 lg:h-full", div: "lg:h-full lg:rounded-none" },
-      xl: { base: "xl:min-w-64 xl:h-full", div: "xl:h-full xl:rounded-none" },
-      "2xl": { base: "2xl:min-w-64 2xl:h-full", div: "2xl:h-full 2xl:rounded-none" }
+      none: {
+        base: "min-w-64 h-full",
+        div: "h-full sm:rounded-none",
+        active: "text-nowrap sm:text-wrap",
+        nonactive: "text-nowrap sm:text-wrap"
+      },
+      sm: {
+        base: "sm:min-w-64 sm:h-full",
+        div: "sm:h-full sm:rounded-none",
+        active: "text-nowrap sm:text-wrap",
+        nonactive: "text-nowrap sm:text-wrap"
+      },
+      md: {
+        base: "md:min-w-64 md:h-full",
+        div: "md:h-full md:rounded-none",
+        active: "text-nowrap md:text-wrap",
+        nonactive: "text-nowrap md:text-wrap"
+      },
+      lg: {
+        base: "lg:min-w-64 lg:h-full",
+        div: "lg:h-full lg:rounded-none",
+        active: "text-nowrap lg:text-wrap",
+        nonactive: "text-nowrap lg:text-wrap"
+      },
+      xl: {
+        base: "xl:min-w-64 xl:h-full",
+        div: "xl:h-full xl:rounded-none",
+        active: "text-nowrap xl:text-wrap",
+        nonactive: "text-nowrap xl:text-wrap"
+      },
+      "2xl": {
+        base: "2xl:min-w-64 2xl:h-full",
+        div: "2xl:h-full 2xl:rounded-none",
+        active: "text-nowrap 2xl:text-wrap",
+        nonactive: "text-nowrap 2xl:text-wrap"
+      }
     }
   }
 });
 
 export const sidebargroup = tv({
   slots: {
-    base: "flex flex-row gap-2"
+    base: "overflow-y-auto flex flex-row gap-2"
   },
   variants: {
     breakpoint: {
