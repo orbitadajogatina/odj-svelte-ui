@@ -9,8 +9,8 @@
   });
 </script>
 
-<div class="relative">
-  <Sidebar {activeUrl} position="absolute">
+<div class="flex flex-col gap-2 md:flex-row h-96">
+  <Sidebar {activeUrl} position="static" class="md:max-w-32">
     <SidebarGroup>
       <SidebarItem label="Without Icon" spanClass="" />
       <SidebarItem label="Dashboard" href="/">
@@ -34,15 +34,15 @@
           <span class="bg-primary-200 text-primary-600 dark:bg-primary-900 dark:text-primary-200 ms-3 inline-flex h-3 w-3 items-center justify-center rounded-full p-3 text-sm font-medium">3</span>
         {/snippet}
       </SidebarItem>
-      <SidebarItem label="Sidebar" href="/components/sidebar">
+      <SidebarItem label="Long Long Text in Sidebar, is it looking good?" href="/components/sidebar">
         {#snippet iconSlot()}
           <UserSolid />
         {/snippet}
       </SidebarItem>
     </SidebarGroup>
   </Sidebar>
-  <div class="h-96 overflow-auto px-4 md:ml-64">
-    <div class="rounded-lg border-2 border-dashed border-gray-200 p-4 dark:border-gray-700">
+  <div class="overflow-auto md:px-4 w-full">
+    <div class="rounded-lg border-2 w-full border-dashed border-gray-200 p-4 dark:border-gray-700">
       <PlusPlaceholder colnum={3} rownum={1} />
       <PlusPlaceholder />
       <PlusPlaceholder colnum={2} rownum={2} />
