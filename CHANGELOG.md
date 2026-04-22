@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.5.2 (2026-04-22)
+
+### Bug Fixes & Changes
+
+- (Select) Fixed text-wrapping;
+- (Select) Added placeholder colors.
+
 ## 0.5.1 (2026-04-21)
 
 ### Bug Fixes
