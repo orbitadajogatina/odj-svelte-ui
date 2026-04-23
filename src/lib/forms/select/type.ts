@@ -16,6 +16,7 @@ interface SelectProps<T> extends Omit<HTMLSelectAttributes, "size"> {
   size?: SelectSize;
   placeholder?: string;
   placeholderValue?: any;
+  disableCustomSelect?: boolean;
 }
 
 interface MultiSelectProps<T> extends MultiSelectParameters {

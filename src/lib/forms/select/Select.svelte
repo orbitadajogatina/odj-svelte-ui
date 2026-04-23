@@ -2,16 +2,16 @@
   import { browser } from "$app/environment";
   import { type SelectProps as Props, select as selectCls } from ".";
 
-  let { children, items, value = $bindable(), underline, size = "md", class: className, placeholder = "Choose option...", placeholderValue = undefined, ...restProps }: Props<T> = $props();
+  let { children, items, value = $bindable(), underline, size = "md", class: className, placeholder = "Choose option...", placeholderValue = undefined, disableCustomSelect = false, ...restProps }: Props<T> = $props();
 
-  const customSelect = $derived(browser ? CSS.supports("appearance: base-select") : true);
+  const customSelect = $derived(browser ? !disableCustomSelect && CSS.supports("appearance: base-select") : !disableCustomSelect);
   const selectStyle = $derived(selectCls({ underline, size, customSelect, className }));
 </script>
 
 <select class={selectStyle} class:custom-select={customSelect} bind:value {...restProps}>
   {#if customSelect}
     <!-- svelte-ignore node_invalid_placement_ssr -->
-    <button class="flex w-full items-center gap-2 justify-between min-w-0" aria-label="Select Picker">
+    <button class="flex w-full items-center gap-2.5 justify-between min-w-0" aria-label="Select Picker">
       <selectedcontent class="truncate"></selectedcontent>
       <span class="picker transition-rotate duration-400 shrink-0">
         <svg class="text-light-surface-800 size-3 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
