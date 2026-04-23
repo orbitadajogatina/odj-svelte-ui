@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.5.3 (2026-04-23)
+
+### Changes
+
+- (Select) Added disableCustomSelect prop.
+
 ## 0.5.2 (2026-04-22)
 
 ### Bug Fixes & Changes
